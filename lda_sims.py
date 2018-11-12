@@ -8,8 +8,8 @@ import re
 def news_ad_sims(news_context, ad_context_list):
 
 	jieba.load_userdict("/Users/jack/Desktop/LDA/dict.txt.big")
-	#處理廣告資料
-	#移除括號內的內容
+	# 處理廣告資料
+	# 移除括號內的內容
 	remover1=re.compile(r"\（.*?\）")
 	remover2=re.compile(r"\[.*?\]")
 	remover3=re.compile(r"\〔.*?\〕")
@@ -32,27 +32,37 @@ def news_ad_sims(news_context, ad_context_list):
 	    stopped_tokens = [i for i in tokens if not i in stop_word_list]
 	    texts.append(stopped_tokens)
 
-	dictionary = corpora.Dictionary(texts)
-
+	# load dictionary
+	dictionary = corpora.Dictionary.load('/Users/jack/Desktop/LDA/allnews_dictionary.dict')
+ 
+	# 建立語料庫
 	corpus = [dictionary.doc2bow(text) for text in texts]
 
-	# 創建 tfidf model
+	# load tfidf model
+	tfidfModel = models.tfidfmodel.TfidfModel.load("/Users/jack/Desktop/LDA/tfidf_model.tfidf")
+
+	'''
+	# 重建tfidf model
+	dictionary = corpora.Dictionary(texts)
+	corpus = [dictionary.doc2bow(text) for text in texts]
 	tfidfModel = models.TfidfModel(corpus)
+	'''
+
 	# 轉為向量表示
 	tfidfVectors = tfidfModel[corpus]
-	indexTfidf = similarities.MatrixSimilarity(tfidfVectors)
 
-	# 載入模型
+	# load lda model
 	ldamodel = models.ldamodel.LdaModel.load('/Users/jack/Desktop/LDA/allnews_LDA_model.lda')
 
-	corpus_lda = ldamodel[tfidfVectors]
+	corpus_lda = ldamodel.get_document_topics(tfidfVectors ,minimum_probability=0)
+	# 建立索引
+	#indexLDA = similarities.MatrixSimilarity(ldamodel[tfidfVectors])
 	indexLDA = similarities.MatrixSimilarity(corpus_lda)
 
-	doc = news_context
+	# 以新聞內容作為比較基準
 
-	vec_bow = dictionary.doc2bow(doc.split())
-	vec_lda = ldamodel[vec_bow]
-	ad_sims_list = indexLDA[vec_lda]
+	sims = indexLDA[ldamodel[dictionary.doc2bow(news_context.split())]]
+	# 排列相似度由大至小
 	ad_sims_list = sorted(enumerate(ad_sims_list), key=lambda item: -item[1])
 
-	return ad_sims_list
+	return ad_sims_list, corpus_lda
