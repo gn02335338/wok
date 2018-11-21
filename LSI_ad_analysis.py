@@ -152,10 +152,10 @@ for index in range(len(ad_data_list)):
     #相關性排序
     ad_sims = sorted(ad_sims, key=lambda x: x[1], reverse=True)
     context_sims_result_sort.append(ad_sims)
-    #print 相關性
+    #print 相關性前10
     print('廣告標題: ',ad_data_list[index][0])
     print('廣告內容: ',ad_data_list[index][1])
-    for i in range(len(index_list)):
+    for i in range(min(10,len(index_list))):
         print(i+1, news_data[0][index_list[ad_sims[i][0]]], ad_sims[i][1], ad_sims[i][0])
         print(news_context_list[ad_sims[i][0]])
 
