@@ -1,0 +1,717 @@
+{\rtf1\ansi\ansicpg950\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fnil\fcharset136 STHeitiTC-Light;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset128 HiraKakuProN-W3;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14460\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \'b0\'4f\'bf\'fd\'a8\'cf\'a5\'ce
+\f1 cnn rnn
+\f0 \'a4\'e5\'a5\'bb\'a4\'c0\'aa\'52\'b5\'b2\'aa\'47
+\f1 \
+
+\f0 \
+\'b8\'ea\'ae\'c6:\
+\'a8\'cf\'a5\'ceTHUCNews\'b8\'ea\'ae\'c6 {\field{\*\fldinst{HYPERLINK "http://thuctc.thunlp.org/sendMessage"}}{\fldrslt http://thuctc.thunlp.org/sendMessage}}\
+\'c1\'60\'a6\'40\'a6\'b314\'ad\'d3\'a5\'44\'c3\'44\
+\
+sport : 131604\
+fashion : 13367\
+political : 63085\
+finance : 37097\
+property : 20049\
+social : 50848\
+stock : 154397\
+constellation : 3577\
+technology : 162928\
+entertainment : 92631\
+household : 32585\
+lottery : 7587\
+education : 41935\
+game : 24372\
+\
+\'a8\'e4\'a4\'a4\'bc\'d6\'b3\'7a\'bb\'50\'ac\'50\'ae\'79\'a4\'e5\'b3\'b9\'b6\'71\'b8\'fb\'a4\'d6\'a1\'41\'ac\'47\'a5\'fd\'a4\'a3\'a9\'f1\'a4\'4a\'b0\'56\'bd\'6d\'b8\'ea\'ae\'c6\
+\'a8\'cf\'a5\'ce12\'ad\'d3\'a5\'44\'c3\'44\'a6\'5512000\'bd\'67\'a4\'e5\'b3\'b9\'a1\'41\'a8\'e4\'a4\'a48000\'bd\'67\'ac\'b0training set\'a1\'412000\'bd\'67\'ac\'b0validation set\'a1\'412000\'bd\'67\'ac\'b0testing set\
+\'a8\'c3\'b1\'4e\'a4\'ba\'a4\'e5\'c2\'e0\'ac\'b0\'c1\'63\'c5\'e9\'a4\'a4\'a4\'e5(\'ad\'ec\'ac\'b0\'c2\'b2\'c5\'e9\'a4\'a4\'a4\'e5)\
+\
+\'bc\'d2\'ab\'ac:\
+\'a4\'c0\'a7\'4f\'a8\'cf\'a5\'ceCNN.RNN-LSTM.RNN-GRU\'b4\'fa\'b8\'d5\
+\
+CNN\
+training:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 Training and evaluating...\
+Epoch: 1\
+Iter:      0, Train Loss:    2.5, Train Acc:  10.94%, Val Loss:    2.5, Val Acc:   8.34%, Time: 0:01:37 *\
+Iter:    100, Train Loss:    1.4, Train Acc:  64.06%, Val Loss:    1.5, Val Acc:  62.18%, Time: 0:05:40 *\
+Iter:    200, Train Loss:   0.54, Train Acc:  84.38%, Val Loss:   0.78, Val Acc:  74.34%, Time: 0:09:39 *\
+Iter:    300, Train Loss:   0.43, Train Acc:  87.50%, Val Loss:   0.59, Val Acc:  81.21%, Time: 0:13:38 *\
+Iter:    400, Train Loss:   0.36, Train Acc:  89.06%, Val Loss:   0.52, Val Acc:  83.00%, Time: 0:17:46 *\
+Iter:    500, Train Loss:   0.15, Train Acc:  96.88%, Val Loss:   0.48, Val Acc:  84.38%, Time: 0:22:09 *\
+Iter:    600, Train Loss:    0.3, Train Acc:  92.19%, Val Loss:   0.42, Val Acc:  86.97%, Time: 0:26:21 *\
+Iter:    700, Train Loss:   0.29, Train Acc:  89.06%, Val Loss:   0.43, Val Acc:  86.12%, Time: 0:30:24 \
+Iter:    800, Train Loss:   0.38, Train Acc:  87.50%, Val Loss:   0.37, Val Acc:  88.72%, Time: 0:34:24 *\
+Iter:    900, Train Loss:   0.58, Train Acc:  85.94%, Val Loss:   0.41, Val Acc:  88.31%, Time: 0:38:21 \
+Iter:   1000, Train Loss:   0.34, Train Acc:  92.19%, Val Loss:    0.4, Val Acc:  87.43%, Time: 0:42:22 \
+Iter:   1100, Train Loss:    0.2, Train Acc:  93.75%, Val Loss:   0.38, Val Acc:  88.45%, Time: 0:46:20 \
+Iter:   1200, Train Loss:   0.24, Train Acc:  93.75%, Val Loss:   0.43, Val Acc:  87.40%, Time: 0:50:17 \
+Iter:   1300, Train Loss:   0.27, Train Acc:  90.62%, Val Loss:   0.41, Val Acc:  87.55%, Time: 0:54:14 \
+Iter:   1400, Train Loss:   0.13, Train Acc:  93.75%, Val Loss:   0.33, Val Acc:  90.28%, Time: 0:58:11 *\
+Epoch: 2\
+Iter:   1500, Train Loss:   0.11, Train Acc:  95.31%, Val Loss:   0.34, Val Acc:  89.91%, Time: 1:02:09 \
+Iter:   1600, Train Loss:   0.11, Train Acc:  95.31%, Val Loss:   0.35, Val Acc:  89.90%, Time: 1:06:45 \
+Iter:   1700, Train Loss:  0.043, Train Acc: 100.00%, Val Loss:   0.35, Val Acc:  88.76%, Time: 1:10:44 \
+Iter:   1800, Train Loss:  0.066, Train Acc:  98.44%, Val Loss:   0.38, Val Acc:  88.49%, Time: 1:14:39 \
+Iter:   1900, Train Loss:   0.17, Train Acc:  92.19%, Val Loss:   0.39, Val Acc:  88.12%, Time: 1:18:36 \
+Iter:   2000, Train Loss:  0.061, Train Acc:  98.44%, Val Loss:   0.37, Val Acc:  89.18%, Time: 1:22:38 \
+Iter:   2100, Train Loss:   0.07, Train Acc:  98.44%, Val Loss:   0.34, Val Acc:  90.08%, Time: 1:26:43 \
+Iter:   2200, Train Loss:  0.082, Train Acc:  95.31%, Val Loss:   0.32, Val Acc:  90.82%, Time: 1:30:46 *\
+Iter:   2300, Train Loss:  0.023, Train Acc: 100.00%, Val Loss:   0.38, Val Acc:  88.67%, Time: 1:34:44 \
+Iter:   2400, Train Loss:   0.11, Train Acc:  98.44%, Val Loss:   0.35, Val Acc:  90.00%, Time: 1:38:45 \
+Iter:   2500, Train Loss:    0.2, Train Acc:  93.75%, Val Loss:   0.31, Val Acc:  90.82%, Time: 1:42:48 *\
+Iter:   2600, Train Loss:  0.072, Train Acc:  96.88%, Val Loss:   0.34, Val Acc:  89.60%, Time: 1:46:46 \
+Iter:   2700, Train Loss:    0.1, Train Acc:  96.88%, Val Loss:   0.34, Val Acc:  89.95%, Time: 1:50:48 \
+Iter:   2800, Train Loss:  0.096, Train Acc:  96.88%, Val Loss:    0.3, Val Acc:  90.63%, Time: 1:54:48 \
+Iter:   2900, Train Loss: 0.0084, Train Acc: 100.00%, Val Loss:   0.33, Val Acc:  89.72%, Time: 1:58:44 \
+Epoch: 3\
+Iter:   3000, Train Loss:  0.076, Train Acc:  98.44%, Val Loss:   0.32, Val Acc:  90.48%, Time: 2:02:40 \
+Iter:   3100, Train Loss:  0.044, Train Acc:  98.44%, Val Loss:   0.36, Val Acc:  89.91%, Time: 2:06:42 \
+Iter:   3200, Train Loss:  0.044, Train Acc: 100.00%, Val Loss:   0.33, Val Acc:  90.13%, Time: 2:10:42 \
+Iter:   3300, Train Loss:  0.083, Train Acc:  96.88%, Val Loss:   0.31, Val Acc:  90.78%, Time: 2:14:38 \
+Iter:   3400, Train Loss:   0.17, Train Acc:  96.88%, Val Loss:   0.36, Val Acc:  89.27%, Time: 2:19:09 \
+Iter:   3500, Train Loss:  0.033, Train Acc:  96.88%, Val Loss:   0.33, Val Acc:  90.73%, Time: 2:23:28 \
+No optimization for a long time, auto-stopping...\
+\
+testing:\
+Test Loss:   0.27, Test Acc:  92.36%\
+Precision, Recall and F1-Score...\
+               precision    recall  f1-score   support\
+\
+        sport       0.98      0.98      0.98      2000\
+      finance       0.96      0.96      0.96      2000\
+     property       0.99      0.97      0.98      2000\
+    household       0.92      0.91      0.92      2000\
+    education       0.88      1.00      0.93      2000\
+   technology       0.92      0.97      0.95      2000\
+      fashion       0.89      0.77      0.83      2000\
+    political       0.93      0.92      0.93      2000\
+         game       0.96      0.98      0.97      2000\
+entertainment       0.95      0.74      0.83      2000\
+       social       0.79      0.93      0.86      2000\
+        stock       0.94      0.95      0.94      2000\
+\
+    micro avg       0.92      0.92      0.92     24000\
+    macro avg       0.93      0.92      0.92     24000\
+ weighted avg       0.93      0.92      0.92     24000\
+\
+Confusion Matrix...\
+[[1968    2    0    0    9    3    2    1    2    8    4    1]\
+ [   0 1915    1    2    0    0    0    4    0    0    0   78]\
+ [   0    9 1934   40    6    2    4    0    1    2    1    1]\
+ [   0   11    3 1827   13   16   43   18    6   10   33   20]\
+ [   0    0    0    0 1999    0    0    0    0    1    0    0]\
+ [   2    0    0    5    3 1948   18    1   19    1    2    1]\
+ [   3    0    0   44   85  101 1546   20   11   38  152    0]\
+ [   1   11    3    4   41   13    1 1840    1    5   54   26]\
+ [   1    2    0    0   10    7    8    1 1959    5    6    1]\
+ [  25    8    2   23   55    5  116   39   16 1480  230    1]\
+ [   4    9    0    5   55   10    2   39    5   12 1859    0]\
+ [   0   24    5   43    1    9    5    7   13    2    0 1891]]\
+Time usage: 0:03:18\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 RNN-LSTM\
+training:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 Training and evaluating...\
+Epoch: 1\
+Iter:      0, Train Loss:    2.5, Train Acc:  13.28%, Val Loss:    2.5, Val Acc:  10.57%, Time: 0:06:14 *\
+Iter:    100, Train Loss:    1.4, Train Acc:  48.44%, Val Loss:    1.6, Val Acc:  37.81%, Time: 0:23:33 *\
+Iter:    200, Train Loss:    1.2, Train Acc:  63.28%, Val Loss:    1.6, Val Acc:  48.19%, Time: 0:40:53 *\
+Iter:    300, Train Loss:    1.7, Train Acc:  44.53%, Val Loss:    2.2, Val Acc:  31.64%, Time: 0:58:15 \
+Iter:    400, Train Loss:    1.0, Train Acc:  66.41%, Val Loss:    1.2, Val Acc:  60.18%, Time: 1:15:37 *\
+Iter:    500, Train Loss:    1.1, Train Acc:  60.94%, Val Loss:    1.4, Val Acc:  58.01%, Time: 1:33:01 \
+Iter:    600, Train Loss:   0.92, Train Acc:  63.28%, Val Loss:    1.3, Val Acc:  57.42%, Time: 1:50:33 \
+Iter:    700, Train Loss:    1.0, Train Acc:  66.41%, Val Loss:    1.3, Val Acc:  55.69%, Time: 2:08:04 \
+Epoch: 2\
+Iter:    800, Train Loss:   0.77, Train Acc:  77.34%, Val Loss:    1.0, Val Acc:  67.05%, Time: 2:25:42 *\
+Iter:    900, Train Loss:    1.3, Train Acc:  59.38%, Val Loss:    1.4, Val Acc:  55.15%, Time: 2:43:12 \
+Iter:   1000, Train Loss:    1.4, Train Acc:  55.47%, Val Loss:    1.4, Val Acc:  53.78%, Time: 3:00:08 \
+Iter:   1100, Train Loss:   0.97, Train Acc:  64.06%, Val Loss:    1.1, Val Acc:  64.03%, Time: 3:17:05 \
+Iter:   1200, Train Loss:    1.3, Train Acc:  63.28%, Val Loss:    1.4, Val Acc:  58.40%, Time: 3:34:01 \
+Iter:   1300, Train Loss:    1.2, Train Acc:  60.16%, Val Loss:    1.4, Val Acc:  58.50%, Time: 3:50:58 \
+Iter:   1400, Train Loss:   0.75, Train Acc:  76.56%, Val Loss:    1.1, Val Acc:  64.79%, Time: 4:07:53 \
+Epoch: 3\
+Iter:   1500, Train Loss:   0.75, Train Acc:  76.56%, Val Loss:    1.0, Val Acc:  66.36%, Time: 4:24:55 \
+Iter:   1600, Train Loss:   0.75, Train Acc:  73.44%, Val Loss:    1.1, Val Acc:  65.30%, Time: 4:41:51 \
+Iter:   1700, Train Loss:   0.79, Train Acc:  71.09%, Val Loss:    1.1, Val Acc:  62.30%, Time: 4:58:48 \
+Iter:   1800, Train Loss:   0.89, Train Acc:  70.31%, Val Loss:    1.1, Val Acc:  65.92%, Time: 5:15:45 \
+No optimization for a long time, auto-stopping...\
+\
+
+\f0 \'a4\'a3\'aa\'be\'b9\'44\'ac\'b0\'a4\'b0\'bb\'f2\'ae\'c4\'aa\'47\'ab\'dc\'ae\'74\'a1\'41\'ac\'47\'b5\'4c\'b6\'69\'a6\'e6test\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\fs24 \cf0 \CocoaLigature1 RNN-GRU\
+training:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 Training and evaluating...\
+Epoch: 1\
+Iter:      0, Train Loss:    2.5, Train Acc:   8.59%, Val Loss:    2.5, Val Acc:   7.40%, Time: 0:05:12 *\
+Iter:    100, Train Loss:   0.83, Train Acc:  72.66%, Val Loss:    1.0, Val Acc:  65.85%, Time: 0:21:38 *\
+Iter:    200, Train Loss:   0.46, Train Acc:  85.16%, Val Loss:   0.77, Val Acc:  74.61%, Time: 0:37:51 *\
+Iter:    300, Train Loss:   0.53, Train Acc:  83.59%, Val Loss:    0.8, Val Acc:  76.34%, Time: 0:53:46 *\
+Iter:    400, Train Loss:    0.3, Train Acc:  92.19%, Val Loss:   0.68, Val Acc:  79.39%, Time: 1:10:25 *\
+Iter:    500, Train Loss:   0.48, Train Acc:  88.28%, Val Loss:   0.69, Val Acc:  79.25%, Time: 1:28:09 \
+Iter:    600, Train Loss:   0.32, Train Acc:  88.28%, Val Loss:    0.6, Val Acc:  81.85%, Time: 1:48:14 *\
+Iter:    700, Train Loss:   0.27, Train Acc:  90.62%, Val Loss:   0.67, Val Acc:  78.73%, Time: 2:08:49 \
+Epoch: 2\
+Iter:    800, Train Loss:   0.32, Train Acc:  89.06%, Val Loss:   0.57, Val Acc:  82.67%, Time: 2:27:48 *\
+Iter:    900, Train Loss:   0.22, Train Acc:  92.97%, Val Loss:   0.51, Val Acc:  84.75%, Time: 2:47:46 *\
+Iter:   1000, Train Loss:   0.44, Train Acc:  87.50%, Val Loss:   0.59, Val Acc:  82.57%, Time: 3:06:53 \
+Iter:   1100, Train Loss:   0.42, Train Acc:  88.28%, Val Loss:   0.51, Val Acc:  84.87%, Time: 3:25:52 *\
+Iter:   1200, Train Loss:   0.33, Train Acc:  91.41%, Val Loss:   0.52, Val Acc:  85.16%, Time: 3:43:03 *\
+Iter:   1300, Train Loss:  0.059, Train Acc:  98.44%, Val Loss:   0.57, Val Acc:  84.28%, Time: 4:01:18 \
+Iter:   1400, Train Loss:   0.28, Train Acc:  92.97%, Val Loss:   0.49, Val Acc:  84.65%, Time: 4:19:59 \
+Epoch: 3\
+Iter:   1500, Train Loss:   0.27, Train Acc:  92.97%, Val Loss:   0.51, Val Acc:  84.95%, Time: 4:38:02 \
+Iter:   1600, Train Loss:   0.17, Train Acc:  95.31%, Val Loss:   0.47, Val Acc:  86.97%, Time: 4:56:25 *\
+Iter:   1700, Train Loss:   0.19, Train Acc:  93.75%, Val Loss:   0.46, Val Acc:  86.36%, Time: 5:14:46 \
+Iter:   1800, Train Loss:   0.22, Train Acc:  93.75%, Val Loss:   0.53, Val Acc:  85.10%, Time: 5:34:09 \
+Iter:   1900, Train Loss:   0.14, Train Acc:  96.09%, Val Loss:   0.44, Val Acc:  87.04%, Time: 5:51:08 *\
+Iter:   2000, Train Loss:    0.1, Train Acc:  99.22%, Val Loss:   0.41, Val Acc:  87.84%, Time: 6:08:05 *\
+Iter:   2100, Train Loss:   0.15, Train Acc:  94.53%, Val Loss:   0.48, Val Acc:  86.03%, Time: 6:23:57 \
+Iter:   2200, Train Loss:   0.18, Train Acc:  93.75%, Val Loss:   0.47, Val Acc:  85.96%, Time: 6:39:26 \
+Epoch: 4\
+Iter:   2300, Train Loss:   0.13, Train Acc:  97.66%, Val Loss:   0.44, Val Acc:  87.86%, Time: 6:54:53 *\
+Iter:   2400, Train Loss:   0.24, Train Acc:  93.75%, Val Loss:   0.39, Val Acc:  88.68%, Time: 7:10:21 *\
+Iter:   2500, Train Loss:  0.069, Train Acc:  97.66%, Val Loss:   0.38, Val Acc:  89.43%, Time: 7:26:16 *\
+Iter:   2600, Train Loss:    0.2, Train Acc:  93.75%, Val Loss:   0.44, Val Acc:  87.65%, Time: 7:42:53 \
+Iter:   2700, Train Loss:   0.21, Train Acc:  94.53%, Val Loss:    0.4, Val Acc:  89.05%, Time: 7:58:37 \
+Iter:   2800, Train Loss:  0.097, Train Acc:  98.44%, Val Loss:   0.38, Val Acc:  89.17%, Time: 8:14:11 \
+Iter:   2900, Train Loss:   0.21, Train Acc:  93.75%, Val Loss:   0.41, Val Acc:  89.09%, Time: 8:29:52 \
+Epoch: 5\
+Iter:   3000, Train Loss:   0.21, Train Acc:  95.31%, Val Loss:   0.35, Val Acc:  89.78%, Time: 8:45:40 *\
+Iter:   3100, Train Loss:  0.066, Train Acc:  96.88%, Val Loss:   0.36, Val Acc:  89.75%, Time: 9:01:22 \
+Iter:   3200, Train Loss:   0.13, Train Acc:  94.53%, Val Loss:   0.37, Val Acc:  89.81%, Time: 9:16:47 *\
+Iter:   3300, Train Loss:   0.16, Train Acc:  96.88%, Val Loss:   0.42, Val Acc:  88.35%, Time: 9:32:05 \
+Iter:   3400, Train Loss:   0.11, Train Acc:  96.09%, Val Loss:    0.4, Val Acc:  88.44%, Time: 9:47:23 \
+Iter:   3500, Train Loss:   0.14, Train Acc:  97.66%, Val Loss:   0.39, Val Acc:  89.04%, Time: 10:02:42 \
+Iter:   3600, Train Loss:  0.089, Train Acc:  98.44%, Val Loss:   0.42, Val Acc:  88.62%, Time: 10:18:00 \
+Iter:   3700, Train Loss:   0.13, Train Acc:  96.09%, Val Loss:   0.39, Val Acc:  88.93%, Time: 10:36:00 \
+Epoch: 6\
+Iter:   3800, Train Loss:  0.076, Train Acc:  97.66%, Val Loss:   0.38, Val Acc:  89.73%, Time: 10:51:32 \
+Iter:   3900, Train Loss:   0.17, Train Acc:  95.31%, Val Loss:   0.41, Val Acc:  89.02%, Time: 11:06:48 \
+Iter:   4000, Train Loss:  0.072, Train Acc:  96.88%, Val Loss:   0.34, Val Acc:  90.11%, Time: 11:22:02 *\
+Iter:   4100, Train Loss:   0.16, Train Acc:  96.09%, Val Loss:   0.41, Val Acc:  89.33%, Time: 11:37:17 \
+Iter:   4200, Train Loss:   0.11, Train Acc:  95.31%, Val Loss:   0.44, Val Acc:  87.15%, Time: 11:52:33 \
+Iter:   4300, Train Loss:   0.16, Train Acc:  96.09%, Val Loss:   0.41, Val Acc:  88.77%, Time: 12:07:49 \
+Iter:   4400, Train Loss:  0.076, Train Acc:  97.66%, Val Loss:   0.46, Val Acc:  87.81%, Time: 12:23:04 \
+Epoch: 7\
+Iter:   4500, Train Loss:  0.072, Train Acc:  97.66%, Val Loss:   0.42, Val Acc:  89.03%, Time: 12:38:20 \
+Iter:   4600, Train Loss:  0.068, Train Acc:  98.44%, Val Loss:   0.45, Val Acc:  88.05%, Time: 12:53:34 \
+Iter:   4700, Train Loss:   0.26, Train Acc:  93.75%, Val Loss:   0.41, Val Acc:  89.91%, Time: 13:08:49 \
+Iter:   4800, Train Loss:   0.13, Train Acc:  95.31%, Val Loss:    0.4, Val Acc:  89.42%, Time: 13:24:04 \
+Iter:   4900, Train Loss:   0.18, Train Acc:  94.53%, Val Loss:   0.41, Val Acc:  88.97%, Time: 13:39:19 \
+Iter:   5000, Train Loss:   0.12, Train Acc:  95.31%, Val Loss:   0.38, Val Acc:  89.95%, Time: 13:54:35 \
+No optimization for a long time, auto-stopping...\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 testing:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f2\fs22 \cf0 \CocoaLigature0 Test Loss:   0.29, Test Acc:  92.37%\
+Precision, Recall and F1-Score...\
+               precision    recall  f1-score   support\
+\
+        sport       0.99      0.98      0.98      2000\
+      finance       0.92      0.98      0.95      2000\
+     property       1.00      0.96      0.98      2000\
+    household       0.88      0.91      0.89      2000\
+    education       0.94      1.00      0.97      2000\
+   technology       0.87      0.97      0.92      2000\
+      fashion       0.93      0.73      0.82      2000\
+    political       0.91      0.93      0.92      2000\
+         game       0.92      0.99      0.95      2000\
+entertainment       0.94      0.82      0.87      2000\
+       social       0.87      0.89      0.88      2000\
+        stock       0.95      0.93      0.94      2000\
+\
+    micro avg       0.92      0.92      0.92     24000\
+    macro avg       0.92      0.92      0.92     24000\
+ weighted avg       0.92      0.92      0.92     24000\
+\
+Confusion Matrix...\
+[[1951    1    0    0    9    3    0    5    2   15    3   11]\
+ [   1 1964    1    1    0    0    0    2    0    0    0   31]\
+ [   0    7 1920   57    4    2    2    3    1    2    0    2]\
+ [   0   17    2 1810    9   24   33   40   11   10   26   18]\
+ [   0    0    0    0 1994    0    0    4    0    1    0    1]\
+ [   0    0    0   12    0 1949    9    2   24    0    2    2]\
+ [   1    1    0   67   45  187 1460   19   99   53   68    0]\
+ [   1   29    0   14   10   14    1 1861    3    5   31   31]\
+ [   2    4    0    2    0    4    1    4 1973    5    4    1]\
+ [  19    9    2   49   27   13   67   17   20 1640  135    2]\
+ [   3   46    0    8   21   34    4   72    5   22 1784    1]\
+ [   0   66    2   37    0    3    0   18   10    1    0 1863]]\
+Time usage: 0:10:55\
+\
+
+\f0 \'b5\'b2\'aa\'47
+\f2 :\
+
+\f0 \'a8\'cf\'a5\'ce15\'bd\'67\'a4\'e5\'b3\'b9\'b4\'fa\'b8\'d5CNN\'a4\'ceRNN-GRU\'b5\'b2\'aa\'47\
+\
+\'a1\'65\'c5\'e9\'a8\'7c\'a4\'a4\'a4\'df\'a1\'fe\'ba\'ee\'a6\'58\'b3\'f8\'be\'c9\'a1\'66\'a6\'d1\'c6\'4e\'b6\'69\'a4\'4a\'ad\'ab\'ab\'d8\'bc\'d2\'a6\'a1\'a1\'41\'b0\'f6\'be\'69\'b7\'73\'a6\'e5\'a4\'7e\'ac\'4f\'ad\'ba\'ad\'6e\'a5\'d8\'bc\'d0\'a1\'41
+\f2 30
+\f0 \'b7\'b3\'aa\'4c\'ae\'d1\'bb\'a8\'a7\'40\'ac\'b0\'a4\'a4\'a5\'cd\'a5\'4e\'a1\'41\'b3\'51\'bd\'e1\'a4\'a9\'aa\'ba\'a5\'f4\'b0\'c8\'ac\'b0\'bb\'b2\'a6\'f5\'b5\'e6\'b3\'be\'a1\'41\'be\'a8\'ba\'de\'a6\'db\'ae\'61\'b2\'79\'ad\'fb\'a6\'b3\'ae\'c9\'a6\'62\'b3\'f5\'a4\'57\'aa\'ed\'b2\'7b\'a4\'a3\'a6\'70\'b9\'77\'b4\'c1\'a1\'41\'a6\'fd\'a5\'4c\'b7\'7c\'a5\'ce\'a1\'75\'a8\'53\'c3\'f6\'ab\'59\'a1\'76
+\f2 3
+\f0 \'a6\'72\'b9\'aa\'c0\'79\'b2\'79\'ad\'fb\'a1\'41\'aa\'4c\'ae\'d1\'bb\'a8\'a8\'fc\'b3\'58\'ae\'c9\'a4\'5d\'b3\'7a\'c5\'53\'a6\'b9\'a5\'79\'b8\'dc\'aa\'ba\'af\'75\'a5\'bf\'a5\'ce\'b7\'4e\'a1\'43\'aa\'4c\'ae\'d1\'bb\'a8\'b1\'b5\'a8\'fc\'a4\'a4\'b0\'ea\'b8\'60\'a5\'d8\'a1\'6d
+\f2 NBA
+\f0 \'b3\'cc\'ab\'65\'bd\'75\'a1\'6e\'b1\'c4\'b3\'58\'a1\'41\'a4\'c0\'a8\'c9\'a6\'62\'a6\'d1\'c6\'4e\'b1\'61\'b7\'73\'a4\'48\'aa\'ba\'be\'fa\'b5\'7b\'a1\'41\'a5\'4c\'bb\'a1\'a1\'47\'a1\'75\'a5\'48\'ab\'65\'b3\'a3\'ac\'4f\'b0\'b5\'b1\'6f\'a4\'f1\'b8\'fb\'a6\'68\'a1\'41\'a5\'69\'ac\'4f\'a6\'5d\'ac\'b0\'a7\'da\'ad\'cc\'ab\'dc\'a6\'7e\'bb\'b4\'a1\'41\'a9\'d2\'a5\'48\'a7\'da\'ad\'cc\'a4\'40\'aa\'bd\'b1\'d0\'a1\'42\'a4\'40\'aa\'bd\'b1\'d0\'a1\'41\'a9\'d2\'a5\'48\'ad\'6e\'c1\'bf\'a4\'f1\'b8\'fb\'a6\'68\'b8\'dc\'a1\'43\'a1\'76\'aa\'4c\'ae\'d1\'bb\'a8\'a4\'5d\'c2\'c7\'be\'f7\'a4\'c0\'a8\'c9\'a5\'4c\'aa\'ba
+\f2 3
+\f0 \'a6\'72\'ad\'f5\'be\'c7\'a1\'41\'a5\'4c\'bb\'a1\'a1\'47\'a1\'75\'a5\'b4\'c4\'78\'b2\'79\'aa\'ba\'ae\'c9\'ad\'d4\'a1\'41\'a6\'70\'aa\'47\'a7\'41\'b0\'b5\'bf\'f9\'a8\'c6\'a1\'41\'a7\'41\'a4\'40\'aa\'bd\'a5\'cd\'ae\'f0\'a9\'ce\'ac\'4f\'c3\'f8\'b9\'4c\'a1\'41\'a8\'ba\'a4\'55\'a4\'40\'ad\'d3
+\f2 Play
+\f0 \'a7\'41\'b4\'4e\'b7\'7c\'a6\'41\'a6\'b8\'a5\'c7\'bf\'f9\'a1\'41\'a7\'41\'bb\'dd\'ad\'6e\'a8\'b3\'b3\'74\'aa\'ba\'b1\'71\'bf\'f9\'bb\'7e\'a4\'a4\'a8\'ab\'a5\'58\'a8\'d3\'a1\'43\'a1\'76\'aa\'4c\'ae\'d1\'bb\'a8\'ae\'c9\'b1\'60\'a5\'48\'a1\'75\'a8\'53\'c3\'f6\'ab\'59\'a1\'76\'b9\'aa\'c0\'79\'b2\'79\'ad\'fb\'a1\'41\'a5\'4c\'bb\'7b\'ac\'b0\'bb\'50\'a8\'e4\'b3\'b4\'a4\'4a\'a6\'db\'b3\'64\'aa\'ba\'b1\'a1\'ba\'fc\'a4\'a4\'a1\'41\'c0\'b3\'b8\'d3\'ad\'6e\'b4\'a3\'bf\'f4\'a6\'db\'a4\'76\'ad\'fe\'b8\'cc\'a5\'c7\'bf\'f9\'a1\'41\'ba\'c9\'a5\'69\'af\'e0\'aa\'ba\'bb\'b0\'a7\'d6\'a7\'ef\'c5\'dc\'a1\'41\'a1\'75\'a7\'41\'a4\'a3\'af\'e0\'a4\'40\'aa\'bd\'a1\'47\'a1\'79\'b3\'e1\'a1\'41\'ac\'b0\'a4\'b0\'bb\'f2\'a7\'da\'b3\'6f\'bc\'cb\'a4\'6c\'a1\'41\'a9\'ce\'ac\'4f\'a7\'da\'a7\'eb\'c4\'78\'a8\'53\'b6\'69\'a1\'7a\'a1\'41\'b5\'4d\'ab\'e1\'a4\'55\'a6\'b8\'a7\'41\'a7\'eb\'c4\'78\'a1\'41\'a6\'70\'aa\'47\'a4\'40\'aa\'bd\'b7\'51\'a7\'41\'a4\'57\'a6\'b8\'a8\'53\'b6\'69\'a1\'41\'a8\'ba\'a7\'41\'a4\'55\'a6\'b8\'a7\'eb\'aa\'ba\'ae\'c9\'ad\'d4\'a4\'40\'a9\'77\'a4\'a3\'b7\'7c\'b6\'69\'a1\'41\'a9\'d2\'a5\'48\'c1\'d9\'ac\'4f\'a8\'53\'c3\'f6\'ab\'59\'a1\'41\'a4\'55\'a4\'40\'ad\'d3\'b2\'79\'a5\'b4\'a6\'6e\'b4\'4e\'a6\'6e\'a1\'43\'a1\'76\'a6\'d1\'c6\'4e\'a4\'57\'a9\'75\'b4\'4e\'a5\'b4\'b1\'bc\'ad\'ab\'ab\'d8\'a1\'41\'b0\'7d\'a4\'a4\'a6\'68\'a5\'48\'a6\'7e\'bb\'b4\'b2\'79\'ad\'fb\'ac\'b0\'a5\'44\'a1\'41\'b2\'79\'b6\'a4\'b0\'aa\'bc\'68\'a4\'5d\'a5\'48\'b0\'f6\'be\'69\'b7\'73\'a6\'e5\'ac\'b0\'a5\'44\'a1\'41
+\f2 30
+\f0 \'b7\'b3\'aa\'ba\'aa\'4c\'ae\'d1\'bb\'a8\'a6\'62
+\f2 NBA
+\f0 \'c2\'f4\'bf\'ba\'a6\'68\'a6\'7e\'a1\'41\'b2\'79\'b6\'a4\'a4\'5d\'ac\'db\'b7\'ed\'ac\'dd\'ad\'ab\'a5\'4c\'aa\'ba\'b8\'67\'c5\'e7\'a1\'41\'ac\'df\'af\'e0\'a6\'b3\'ae\'c4\'bb\'b2\'a6\'f5\'b0\'7d\'a4\'a4\'a4\'70\'b1\'4e\'a1\'43
+\f2 \
+cnn predict :  sport\
+rnn predict :  sport\
+\
+
+\f0 \'a8\'43\'a6\'7e\'b4\'bc\'bc\'7a\'ab\'ac\'a4\'e2\'be\'f7\'c1\'60\'ac\'4f\'a4\'a3\'c2\'5f\'b1\'c0\'b3\'af\'a5\'58\'b7\'73\'a1\'41\'a8\'73\'b3\'ba\'ad\'fe\'b4\'da\'a4\'e2\'be\'f7\'a9\'e7\'a5\'58\'a8\'d3\'aa\'ba\'ac\'db\'a4\'f9\'b3\'cc\'a6\'6e\'a1\'48\'a5\'7e\'b0\'ea\'aa\'be\'a6\'57\'ac\'ec\'a7\'de\'b6\'7d\'bd\'63
+\f2 YouTuber
+\f0 \'a4\'e9\'ab\'65\'b4\'4e\'a6\'62\'ba\'f4\'b8\'f4\'a4\'57\'c1\'7c\'bf\'ec\'a4\'40\'b3\'f5\'a4\'e2\'be\'f7\'ac\'db\'be\'f7\'aa\'bc\'b4\'fa\'ac\'a1\'b0\'ca\'a1\'41\'a8\'53\'b7\'51\'a8\'ec
+\f2 iPhone XS
+\f0 \'ab\'6f\'a6\'62\'b2\'c4\'a4\'40\'bd\'fc\'aa\'ba\'aa\'bc\'b4\'fa\'b7\'ed\'a4\'a4\'b4\'4e\'b3\'51
+\f2 BlackBerry Key2
+\f0 \'a5\'b4\'b1\'d1\'a1\'41\'a6\'d3
+\f2 iPhone X
+\f0 \'ab\'68\'ac\'4f\'b1\'d1\'b5\'b9\'a4\'70\'a6\'cc\'aa\'ba
+\f2 Pocophone F1
+\f0 \'a1\'43
+\f2 YouTube
+\f0 \'aa\'be\'a6\'57\'ac\'ec\'a7\'de\'c0\'57\'b9\'44\'a1\'6d
+\f2 Marques Brownlee
+\f0 \'a1\'6e\'c1\'7c\'bf\'ec
+\f2 2018
+\f0 \'b4\'bc\'bc\'7a\'ab\'ac\'a4\'e2\'be\'f7\'aa\'bc\'b4\'fa\'a1\'41\'b4\'fa\'b8\'d5\'aa\'ba\'a4\'e2\'be\'f7\'a5\'5d\'ac\'41\'c4\'ab\'aa\'47
+\f2 iPhone X
+\f0 \'a1\'42
+\f2 iPhoneXS
+\f0 \'a1\'42\'a8\'a6\'ba\'71
+\f2 Pixel 2
+\f0 \'a1\'42
+\f2 Pixel 3
+\f0 \'a1\'42\'a4\'54\'ac\'50
+\f2 Note 9
+\f0 \'a1\'42
+\f2 HTC U12+
+\f0 \'b5\'a5
+\f2 16
+\f0 \'a4\'e4\'a6\'55\'a4\'6a\'ab\'7e\'b5\'50\'b4\'bc\'bc\'7a\'ab\'ac\'a4\'e2\'be\'f7\'a1\'43\'b4\'fa\'b8\'d5\'a4\'e8\'a6\'a1\'ab\'68\'ac\'4f\'a8\'43\'a8\'e2\'b2\'d5\'a4\'e2\'be\'f7\'ac\'b0\'a4\'40\'b2\'d5\'a1\'41\'a4\'c0\'a7\'4f\'a8\'d3\'a6\'db\'a4\'a3\'a6\'50\'ab\'7e\'b5\'50\'a1\'41\'a4\'a7\'ab\'e1\'a6\'41\'b3\'7a\'b9\'4c\'a4\'e2\'be\'f7\'a9\'e7\'c4\'e1\'a5\'58\'a8\'d3\'aa\'ba\'b7\'d3\'a4\'f9\'a8\'d1\'ba\'f4\'a4\'cd\'a7\'eb\'b2\'bc\'a1\'41\'a4\'f1\'c1\'c9\'c1\'60\'a6\'40\'a4\'c0\'ac\'b0\'a5\'7c\'bd\'fc\'a1\'41\'a8\'43\'b1\'69\'b7\'d3\'a4\'f9\'b3\'a3\'ac\'4f\'a6\'62\'ac\'db\'a6\'50\'aa\'ba\'b1\'f8\'a5\'f3\'a4\'55\'a9\'e7\'c4\'e1\'a1\'43\'a6\'62\'b2\'b3\'a9\'d2\'c6\'66\'a5\'d8\'aa\'ba
+\f2 iPhone
+\f0 \'aa\'ed\'b2\'7b\'a4\'57\'a1\'41
+\f2 iPhone XS
+\f0 \'a6\'62\'b2\'c4\'a4\'40\'bd\'fc\'a7\'eb\'b2\'bc\'a4\'a4\'b9\'ef\'a4\'57
+\f2 BlackBerry Key2
+\f0 \'a1\'41
+\f2 iPhone X
+\f0 \'ab\'68\'b9\'ef\'a4\'57\'a4\'70\'a6\'cc
+\f2 Pocophone F1
+\f0 \'a1\'43\'a5\'58\'a4\'48\'b7\'4e\'ae\'c6\'a6\'61\'a1\'41
+\f2 iPhone XS
+\f0 \'a4\'ce
+\f2 iPhone X
+\f0 \'a6\'62\'b2\'c4\'a4\'40\'bd\'fc\'aa\'bc\'b4\'fa\'a4\'a4\'b3\'a3\'a4\'c0\'a7\'4f\'b1\'d1\'b5\'b9\'b9\'ef\'a4\'e2\'a1\'41\'b5\'4c\'bd\'74\'ae\'ca\'af\'c5\'b2\'c4\'a4\'47\'bd\'fc\'a4\'f1\'c1\'c9\'a1\'43\'a6\'d3\'a6\'62\'a8\'e4\'a5\'4c\'b9\'ef\'a8\'4d\'b3\'a1\'a4\'c0\'a1\'41\'a4\'54\'ac\'50
+\f2 Note9
+\f0 \'a5\'b4\'b1\'d1
+\f2 HTC U12+
+\f0 \'a1\'41\'ae\'ca\'af\'c5\'b2\'c4\'a4\'47\'bd\'fc\'a4\'f1\'c1\'c9\'a1\'41\'b3\'cc\'ab\'e1\'a5\'7c\'bd\'fc\'a7\'eb\'b2\'bc\'ab\'e1\'a1\'41\'b5\'d8\'ac\'b0
+\f2 Mate 20 Pro
+\f0 \'ba\'61\'b5\'6e\'ac\'db\'be\'f7\'a4\'f1\'c1\'c9\'b2\'c4
+\f2 1
+\f0 \'a6\'57\'a1\'41\'b6\'5e\'af\'7d\'a4\'a3\'a4\'d6\'ac\'ec\'a7\'de
+\f2 YouTuber
+\f0 \'aa\'ba\'b2\'b4\'c3\'e8\'a1\'43\'a1\'75\'a6\'62\'a8\'43\'a4\'40\'bd\'fc\'aa\'ba\'a7\'eb\'b2\'bc\'a4\'a4\'a1\'41\'b8\'fb\'ac\'b0\'a9\'fa\'ab\'47\'aa\'ba\'ac\'db\'a4\'f9\'c1\'60\'ac\'4f\'af\'e0\'b3\'d3\'a5\'58\'a1\'41\'a1\'76\'b9\'ef\'a9\'f3\'b3\'6f\'ba\'d8\'b5\'b2\'aa\'47\'a1\'41\'a5\'44\'ab\'f9\'a4\'48\'aa\'ed\'a5\'dc\'a1\'47\'a1\'75\'c1\'f6\'b5\'4d\'b3\'6f\'bc\'cb\'aa\'ba\'bd\'d5\'ac\'64\'a4\'e8\'a6\'a1\'a4\'a3\'a4\'40\'a9\'77\'ac\'ec\'be\'c7\'a1\'41\'a6\'fd\'ab\'6f\'a4\'cf\'ac\'4d\'a4\'46\'ba\'f4\'a4\'cd\'a6\'62\'ac\'44\'bf\'ef\'a4\'e2\'be\'f7\'a5\'5c\'af\'e0\'a4\'57\'a1\'41\'b3\'cc\'a6\'62\'a5\'47\'aa\'ba\'a8\'e4\'b9\'ea\'ac\'4f\'bc\'76\'b9\'b3\'aa\'ba\'aa\'ed\'b2\'7b\'ac\'4f\'a7\'5f\'a1\'79\'b0\'f7\'a9\'fa\'ab\'47\'a1\'7a\'a1\'41\'a6\'d3\'a4\'a3\'a4\'40\'a9\'77\'ac\'4f\'ac\'dd\'b0\'5f\'a8\'d3\'b3\'cc\'b1\'b5\'aa\'f1\'b9\'ea\'aa\'ab\'aa\'ba\'ac\'db\'a4\'f9\'a1\'41\'a1\'76\'a5\'4c\'b8\'d1\'c4\'c0\'a1\'43
+\f2 \
+cnn predict :  technology\
+rnn predict :  entertainment\
+\
+
+\f0 \'b5\'d8\'ac\'b0\'b0\'c6\'b8\'b3\'a8\'c6\'aa\'f8\'ad\'dd\'b0\'5d\'b0\'c8\'aa\'f8\'a9\'73\'b1\'df\'a6\'e0
+\f2 1
+\f0 \'a4\'e9\'a6\'62\'ac\'fc\'a4\'a4\'b6\'54\'a9\'f6\'bd\'cd\'a7\'50\'ad\'ab\'ad\'6e\'c3\'f6\'a4\'66\'b3\'51\'a5\'5b\'ae\'b3\'a4\'6a\'b7\'ed\'a7\'bd\'a9\'eb\'ae\'b7\'a1\'41\'a8\'c3\'a5\'69\'af\'e0\'a4\'de\'b4\'e7\'a8\'ec\'ac\'fc\'b0\'ea\'a8\'fc\'bc\'66\'a1\'41\'a5\'5f\'a8\'ca\'a4\'f5\'ab\'5f\'a4\'54\'a4\'56\'a1\'41\'ab\'c2\'af\'d9\'b1\'4e\'b3\'79\'a6\'a8\'a1\'75\'c4\'59\'ad\'ab\'ab\'e1\'aa\'47\'a1\'76\'a1\'43\'a4\'a4\'b0\'ea\'a5\'7e\'a5\'e6\'b3\'a1\'aa\'ba\'b5\'6f\'a8\'a5\'a4\'48\'b3\'b0\'ba\'42
+\f2 9
+\f0 \'a4\'e9\'b3\'51\'b0\'dd\'a8\'ec\'a4\'a4\'a4\'e8\'b7\'7c\'a7\'5f\'b1\'c4\'a8\'fa\'a1\'75\'b3\'f8\'b4\'5f\'a6\'e6\'b0\'ca\'a1\'76\'ae\'c9\'aa\'ed\'a5\'dc\'a1\'41\'a4\'a4\'b0\'ea\'a4\'40\'a6\'56\'a8\'cc\'aa\'6b\'ab\'4f\'c5\'40\'a5\'7e\'b0\'ea\'a4\'bd\'a5\'c1\'a6\'62\'a4\'a4\'b0\'ea\'a6\'58\'aa\'6b\'c5\'76\'af\'71\'a1\'41\'a6\'fd\'a5\'4c\'ad\'cc\'a6\'62\'a4\'a4\'b0\'ea\'b4\'c1\'b6\'a1\'a1\'41\'a1\'75\'a4\'5d\'c0\'b3\'bf\'ed\'a6\'75\'a4\'a4\'b0\'ea\'aa\'ba\'aa\'6b\'ab\'df\'aa\'6b\'b3\'57\'a1\'76\'a1\'43\'b0\'b2\'a6\'70\'ac\'fc\'b0\'ea\'b0\'ed\'ab\'f9\'a4\'a3\'ba\'4d\'b6\'65\'ae\'b7\'a5\'4f\'a1\'42\'a5\'5b\'ae\'b3\'a4\'6a\'b0\'ed\'ab\'f9\'a4\'a3\'a9\'f1\'a4\'48\'a1\'41\'a4\'a4\'b0\'ea\'b1\'4e\'b7\'7c\'a6\'b3\'ab\'e7\'bc\'cb\'aa\'ba\'ab\'e1\'c4\'f2\'b0\'ca\'a7\'40\'a1\'48\'a5\'5b\'ae\'b3\'a4\'6a\'a4\'a3\'a6\'43\'c4\'41\'ad\'f4\'ad\'db\'a4\'f1\'a8\'c8\'a4\'6a\'be\'c7\'a8\'c8\'ac\'77\'ac\'e3\'a8\'73\'a4\'a4\'a4\'df\'aa\'ba\'a4\'a4\'a5\'5b\'c3\'f6\'ab\'59\'b1\'4d\'ae\'61\'ae\'4a\'a4\'e5\'b4\'b5
+\f2 (Paul Evans)
+\f0 \'b9\'ef\'ad\'5e\'b0\'ea\'bc\'73\'bc\'bd\'a4\'bd\'a5\'71
+\f2 (BBC)
+\f0 \'aa\'ed\'a5\'dc\'a1\'41\'a5\'5b\'ae\'b3\'a4\'6a\'ac\'4f\'ad\'a2\'a4\'a3\'b1\'6f\'a4\'77\'a4\'7e\'b3\'51\'b1\'b2\'a4\'4a\'ac\'fc\'a4\'a4\'b6\'54\'a9\'f6\'be\'d4\'aa\'ba\'ba\'78\'b4\'f5\'a1\'41\'a4\'a4\'b0\'ea\'a6\'b3\'a6\'68\'ad\'d3\'a4\'e8\'aa\'6b\'a6\'56\'a5\'5b\'ae\'b3\'a4\'6a\'ac\'49\'c0\'a3\'a1\'41\'a9\'ce\'b7\'7c\'ad\'ad\'a8\'ee\'a4\'a4\'b0\'ea\'b8\'ea\'aa\'f7\'a6\'62\'a5\'5b\'ae\'b3\'a4\'6a\'aa\'ba\'a7\'eb\'b8\'ea\'a1\'41\'af\'53\'a7\'4f\'ac\'4f\'ac\'e3\'a8\'73\'a4\'ce\'b5\'6f\'ae\'69\'b6\'4f\'a5\'ce\'a1\'43\'a4\'a3\'b9\'4c\'a5\'4c\'bb\'7b\'ac\'b0\'a1\'41\'a5\'5b\'ae\'b3\'a4\'6a\'a5\'bf\'a6\'62\'bb\'7b\'af\'75\'a6\'d2\'bc\'7b\'c5\'fd\'b5\'d8\'ac\'b0\'a6\'62\'b8\'d3\'b0\'ea\'b5\'6f\'ae\'69
+\f2 5G
+\f0 \'a8\'74\'b2\'ce\'b7\'7e\'b0\'c8\'a1\'41\'b3\'6f\'a8\'cf\'b1\'6f\'b5\'d8\'ac\'b0\'aa\'ba\'b3\'42\'b9\'d2\'c5\'dc\'b1\'6f\'a7\'78\'c3\'f8\'a1\'41\'b5\'d8\'ac\'b0\'a5\'d8\'ab\'65\'aa\'ba\'a6\'5e\'c0\'b3\'ac\'4f\'a1\'75\'a6\'db\'b5\'4d\'a4\'cf\'c0\'b3\'a1\'76\'a1\'41\'a6\'fd\'b5\'a5\'ab\'dd\'ae\'d7\'a5\'f3\'b5\'6f\'ae\'69\'a4\'7e\'af\'e0\'a7\'40\'b6\'69\'a4\'40\'a8\'42\'ad\'70\'ba\'e2\'a4\'ce\'a6\'e6\'b0\'ca\'a1\'43\'ab\'65\'a5\'5b\'ae\'b3\'a4\'6a\'be\'6e\'a4\'a4\'b0\'ea\'a4\'6a\'a8\'cf\'b0\'a8\'a4\'6a\'ba\'fb
+\f2 (David Mulroney)
+\f0 \'b9\'ef\'b8\'f4\'b3\'7a\'aa\'ed\'a5\'dc\'a1\'41\'a4\'a4\'b0\'ea\'a9\'4d\'a5\'5b\'ae\'b3\'a4\'6a\'a6\'b3\'a5\'69\'af\'e0\'ad\'e1\'b5\'b2\'b0\'aa\'bc\'68\'a4\'ac\'b3\'58\'a5\'e6\'ac\'79\'ac\'a1\'b0\'ca\'a1\'41\'a8\'e2\'b0\'ea\'a6\'db\'a5\'d1\'b6\'54\'a9\'f6\'bd\'cd\'a7\'50\'a5\'e7\'a5\'69\'af\'e0\'a8\'fc\'a8\'ec\'bc\'76\'c5\'54\'a1\'43\'a1\'75\'a6\'fd\'a7\'da\'ad\'cc\'a4\'5d\'a8\'53\'bf\'ec\'aa\'6b\'a1\'41\'b3\'6f\'b4\'4e\'ac\'4f\'bb\'50\'a4\'a4\'b0\'ea\'b3\'6f\'ba\'d8\'b0\'ea\'ae\'61\'a5\'e6\'af\'41\'a9\'d2\'a5\'49\'a5\'58\'aa\'ba\'a5\'4e\'bb\'f9\'a1\'76\'a1\'43\'b8\'f4\'b3\'7a\'b3\'f8\'be\'c9\'a1\'41\'b5\'d8\'ac\'b0\'b0\'aa\'ba\'de\'b3\'51\'ae\'b7\'a4\'de\'b5\'6f\'ac\'fc\'b0\'ea\'aa\'ba\'a5\'f8\'b7\'7e\'b0\'aa\'ba\'de\'bc\'7e\'bc\'7b\'a1\'41\'a6\'ad\'ab\'65\'a6\'68\'a6\'57\'ac\'fc\'b0\'ea\'a4\'6a\'a4\'bd\'a5\'71\'b0\'aa\'ba\'de\'a6\'62\'b7\'73\'a5\'5b\'a9\'59\'a5\'58\'ae\'75\'a4\'40\'b3\'f5\'b3\'ac\'aa\'f9\'a6\'77\'a5\'fe\'b7\'7c\'c4\'b3\'ae\'c9\'a1\'41\'b4\'a3\'a8\'ec\'a4\'bd\'a5\'71\'a5\'bf\'a6\'d2\'bc\'7b\'ad\'ad\'a8\'ee\'a4\'a3\'a5\'b2\'ad\'6e\'aa\'ba\'a4\'a4\'b0\'ea\'ae\'c8\'a6\'e6\'a1\'41\'ac\'c6\'a6\'dc\'a6\'d2\'bc\'7b\'a7\'e2\'a4\'bd\'a5\'71\'b7\'7c\'c4\'b3\'b2\'be\'a6\'dc\'a4\'a4\'b0\'ea\'b9\'d2\'a5\'7e\'a1\'43\'ac\'fc\'b0\'ea\'a4\'e2\'be\'f7\'a4\'bd\'a5\'71\'ab\'e4\'ac\'ec\'aa\'ba\'ad\'fb\'a4\'75\'a6\'ac\'a8\'ec\'b9\'71\'b6\'6c\'a1\'41\'ab\'d8\'c4\'b3\'a5\'4c\'ad\'cc\'b0\'b1\'a4\'ee\'a4\'a3\'a5\'b2\'ad\'6e\'aa\'ba\'b3\'58\'b5\'d8\'a6\'e6\'b5\'7b\'a1\'41\'a6\'fd\'ab\'e4\'ac\'ec\'a8\'e4\'ab\'e1\'ba\'d9\'a1\'41\'b9\'71\'b6\'6c\'c4\'dd\'bb\'7e\'b5\'6f\'a1\'41\'a8\'c3\'a8\'53\'a6\'b3\'ad\'ad\'a8\'ee\'ad\'fb\'a4\'75\'b9\'ef\'a4\'a4\'b0\'ea\'b6\'69\'a6\'e6\'b0\'d3\'b0\'c8\'ae\'c8\'b9\'43\'a1\'43\'a6\'62\'a5\'5f\'a8\'ca\'aa\'ba\'ac\'fc\'b0\'ea\'b0\'d3\'b7\'7c\'a5\'44\'ae\'75\'bd\'b2\'b7\'e7\'bc\'77
+\f2 (William Zarit)
+\f0 \'bb\'7b\'ac\'b0\'a1\'41\'a4\'a4\'b0\'ea\'a4\'a3\'b7\'7c\'aa\'bd\'b1\'b5\'a6\'56\'ac\'fc\'b0\'ea\'b0\'aa\'ba\'de\'b3\'f8\'b4\'5f\'a1\'43\'a5\'4c\'b9\'ef\'a1\'75\'aa\'f7\'bf\'c4\'ae\'c9\'b3\'f8\'a1\'76\'bb\'a1\'a1\'41\'a1\'75\'a5\'4c\'ad\'cc\'a4\'a3\'b7\'51\'b1\'fe\'a6\'ba\'a5\'cd\'aa\'f7\'b3\'4a\'aa\'ba\'c3\'5a\'a1\'41\'a5\'4c\'a4\'a3\'b7\'51\'a6\'56\'b2\'c4\'a4\'54\'b0\'ea\'a7\'eb\'b8\'ea\'aa\'cc\'b5\'6f\'a9\'f1\'ad\'74\'ad\'b1\'b0\'54\'b8\'b9\'a1\'76\'a1\'43\'ad\'bb\'b4\'e4\'ad\'5e\'a4\'e5\'a1\'75\'ab\'6e\'b5\'d8\'a6\'ad\'b3\'f8\'a1\'76\'ab\'fc\'a5\'58\'a1\'41\'a5\'d1\'a4\'a4\'b0\'ea\'a5\'7e\'a5\'e6\'b3\'a1\'a1\'42\'b7\'73\'b5\'d8\'aa\'c0\'a9\'4d\'a1\'75\'a4\'48\'a5\'c1\'a4\'e9\'b3\'f8\'a1\'76\'c1\'70\'a6\'58\'b5\'6f\'a5\'58\'b9\'ef\'a5\'5b\'ae\'b3\'a4\'6a\'aa\'ba\'c4\'fe\'b3\'64\'a1\'75\'ac\'4f\'ab\'dc\'a4\'a3\'b4\'4d\'b1\'60\'aa\'ba\'a4\'40\'a8\'42\'a1\'76\'a1\'43\'c1\'f6\'b5\'4d\'a4\'a4\'a4\'e8\'c1\'d9\'a5\'bc\'aa\'ed\'a9\'fa\'b7\'7c\'b9\'ef\'a5\'5b\'ae\'b3\'a4\'6a\'b1\'c4\'a8\'fa\'a6\'f3\'ba\'d8\'a6\'e6\'b0\'ca\'a1\'41\'a6\'fd\'b1\'71\'a9\'78\'a4\'e8\'a9\'4d\'a9\'78\'b4\'43\'a5\'ce\'a6\'72\'bb\'ba\'b5\'fc\'aa\'ba\'b1\'6a\'af\'50\'a1\'41\'a5\'69\'ac\'dd\'a5\'58\'a4\'a4\'a4\'e8\'ac\'4f\'a6\'b3\'b3\'f8\'b4\'5f\'ad\'70\'b5\'65\'aa\'ba\'a1\'43
+\f2 \
+cnn predict :  education\
+rnn predict :  political\
+\
+
+\f0 \'a4\'e9\'a5\'bb\'a6\'40\'a6\'50\'aa\'c0\'b3\'f8\'be\'c9\'a1\'41\'a4\'e9\'a5\'bb\'ac\'46\'a9\'b2
+\f2 10
+\f0 \'a4\'e9\'a6\'62\'ad\'ba\'ac\'db\'a9\'78\'aa\'f3\'a5\'6c\'b6\'7d\'a6\'55\'a9\'b2\'ac\'d9\'c6\'55\'ba\'f4\'b8\'f4\'a7\'f0\'c0\'bb\'b9\'ef\'b5\'a6\'ad\'74\'b3\'64\'a4\'48\'a5\'58\'ae\'75\'aa\'ba\'b7\'7c\'c4\'b3\'a1\'41\'a8\'4d\'a9\'77\'b1\'4e\'a4\'a4\'b0\'ea\'b3\'71\'ab\'48\'b3\'5d\'b3\'c6\'a5\'a8\'c0\'59\'b5\'d8\'ac\'b0\'a7\'de\'b3\'4e\'a9\'4d\'a4\'a4\'bf\'b3\'b3\'71\'b0\'54\'a1\'5d
+\f2 ZTE
+\f0 \'a1\'5e\'aa\'ba\'b2\'a3\'ab\'7e\'b1\'c6\'b0\'a3\'a5\'58\'ac\'46\'a9\'b2\'b1\'c4\'c1\'ca\'b2\'4d\'b3\'e6\'a1\'43\'ac\'fc\'b0\'ea\'a4\'74\'b4\'b6\'ac\'46\'a9\'b2\'be\'e1\'a4\'df\'a4\'a4\'b0\'ea\'a4\'6a\'b3\'b0\'aa\'ba\'ab\'44\'aa\'6b\'ba\'ca\'c5\'a5\'b5\'a5\'a5\'69\'af\'e0\'ba\'63\'a6\'a8\'b0\'ea\'ae\'61\'a6\'77\'a5\'fe\'a4\'57\'aa\'ba\'ab\'c2\'af\'d9\'a1\'41\'a4\'e9\'a5\'bb\'a4\'5d\'bb\'7b\'ac\'b0\'a7\'40\'ac\'b0\'a6\'50\'b7\'f9\'b0\'ea\'a1\'75\'a6\'b3\'a5\'b2\'ad\'6e\'b2\'ce\'a4\'40\'a8\'42\'bd\'d5\'a1\'76\'a1\'43\'a6\'40\'a6\'50\'aa\'c0\'b3\'f8\'be\'c9\'a1\'41\'b3\'6f\'ac\'4f\'c5\'b2\'a9\'f3\'a8\'e2\'a4\'bd\'a5\'71\'b3\'51\'ab\'fc\'bb\'50\'a4\'a4\'b0\'ea\'b1\'a1\'b3\'f8\'be\'f7\'ba\'63\'a6\'b3\'c3\'f6\'aa\'ba\'c1\'7c\'b1\'b9\'a1\'43\'a4\'e9\'a5\'bb\'a9\'78\'a9\'d0\'aa\'f8\'a9\'78\'b5\'d5\'b8\'71\'b0\'b6
+\f2 10
+\f0 \'a4\'e9\'a6\'62\'b0\'4f\'aa\'cc\'b7\'7c\'a4\'57\'ab\'fc\'a5\'58\'a1\'47\'a1\'75\'a4\'a3\'b1\'c4\'c1\'ca\'b3\'51\'b4\'d3\'a4\'4a\'c5\'d1\'a8\'fa\'a1\'42\'af\'7d\'c3\'61\'ab\'48\'ae\'a7\'a9\'4d\'a5\'4f\'ab\'48\'ae\'a7\'a8\'74\'b2\'ce\'b0\'b1\'a4\'ee\'b5\'a5\'b4\'63\'b7\'4e\'a5\'5c\'af\'e0\'aa\'ba\'b3\'5d\'b3\'c6\'b7\'a5\'a8\'e4\'ad\'ab\'ad\'6e\'a1\'43\'a1\'76\'a5\'4c\'c1\'d9\'aa\'ed\'a5\'dc\'a1\'75\'a5\'d8\'aa\'ba\'a8\'c3\'ab\'44\'b1\'c6\'b0\'a3\'af\'53\'a9\'77\'aa\'ba\'a5\'f8\'b7\'7e\'a9\'4d\'b3\'5d\'b3\'c6\'a1\'76\'a1\'41\'c1\'d7\'b6\'7d\'b9\'ef\'a8\'e2\'ae\'61\'a4\'bd\'a5\'71\'aa\'bd\'b1\'b5\'c2\'49\'a6\'57\'a1\'43\'be\'da\'a4\'c0\'aa\'52\'a1\'41\'a6\'b9\'c1\'7c\'ac\'4f\'c5\'55\'a4\'ce\'a4\'46\'b3\'42\'a9\'f3\'a7\'ef\'b5\'bd\'ba\'41\'b6\'d5\'aa\'ba\'a4\'e9\'a4\'a4\'c3\'f6\'ab\'59\'a1\'43\'a4\'e9\'a5\'bb\'b4\'43\'c5\'e9\'a4\'57\'a9\'50\'b4\'4e\'b1\'6f\'a8\'ec\'ac\'db\'c3\'f6\'ae\'f8\'ae\'a7\'a1\'43\'a4\'e9\'a5\'bb\'a6\'40\'a6\'50\'aa\'c0
+\f2 12
+\f0 \'a4\'eb
+\f2 7
+\f0 \'a4\'e9\'b3\'f8\'be\'c9\'a1\'41\'a6\'68\'a6\'57\'a4\'e9\'a5\'bb\'ac\'46\'a9\'b2\'ae\'f8\'ae\'a7\'a4\'48\'a4\'68\'b7\'ed\'a6\'61\'ae\'c9\'b6\'a1
+\f2 12
+\f0 \'a4\'eb
+\f2 7
+\f0 \'a4\'e9\'b3\'7a\'c5\'53\'a1\'41\'a4\'e9\'a5\'bb\'ac\'46\'a9\'b2\'a4\'77\'b8\'67\'a8\'4d\'a9\'77\'a4\'a3\'b1\'c4\'c1\'ca\'b5\'d8\'ac\'b0\'bb\'50\'a4\'a4\'bf\'b3\'aa\'ba\'b3\'71\'b0\'54\'b2\'a3\'ab\'7e\'a1\'43\'a4\'e9\'a5\'bb\'a4\'a4\'a5\'a1\'ac\'46\'a9\'b2\'a6\'55\'b3\'a1\'aa\'f9
+\f2 12
+\f0 \'a4\'eb
+\f2 10
+\f0 \'a4\'e9\'b1\'4e\'a5\'6c\'b6\'7d\'b7\'7c\'c4\'b3\'a1\'41\'a5\'bf\'a6\'a1\'bd\'54\'bb\'7b\'a6\'b9\'a8\'c6\'a1\'43\'ad\'c8\'b1\'6f\'aa\'60\'b7\'4e\'aa\'ba\'ac\'4f\'a1\'41\'a4\'e9\'a5\'bb\'a1\'75\'b2\'a3\'b8\'67\'b7\'73\'bb\'44\'a1\'76
+\f2 8
+\f0 \'a4\'eb
+\f2 26
+\f0 \'a4\'e9\'b4\'4e\'b4\'bf\'b4\'a9\'a4\'de\'a4\'a3\'a8\'e3\'a6\'57\'ae\'f8\'ae\'a7\'a4\'48\'a4\'68\'aa\'ba\'b8\'dc\'ba\'d9\'a1\'41\'a4\'e9\'a5\'bb\'ac\'46\'a9\'b2\'ad\'70\'b5\'65\'b8\'54\'a4\'ee\'b5\'d8\'ac\'b0\'bb\'50\'a4\'a4\'bf\'b3\'b0\'d1\'bb\'50\'ab\'d8\'b3\'5d\'b8\'ea\'b0\'54\'a8\'74\'b2\'ce\'aa\'ba\'a7\'eb\'bc\'d0\'ac\'a1\'b0\'ca\'a1\'41\'ad\'ec\'a6\'5d\'ac\'4f\'b0\'f2\'a9\'f3\'a1\'75\'a6\'77\'a5\'fe\'ab\'4f\'bb\'d9\'a1\'76\'a6\'d2\'bc\'7b\'a1\'41\'ac\'fc\'b0\'ea\'a9\'4d\'bf\'44\'ac\'77\'a7\'a1\'a7\'e2\'b3\'6f\'a8\'e2\'ae\'61\'a4\'a4\'b0\'ea\'a5\'f8\'b7\'7e\'b5\'f8\'ac\'b0\'a1\'75\'b0\'dd\'c3\'44\'a4\'bd\'a5\'71\'a1\'76\'a1\'43\'b3\'f8\'be\'c9\'bb\'a1\'a1\'41\'a6\'62\'c0\'b3\'b9\'ef\'ac\'aa\'c5\'53\'be\'f7\'b1\'4b\'b1\'a1\'b3\'f8\'a1\'42\'ba\'f4\'b8\'f4\'a7\'f0\'c0\'bb\'b5\'a5\'a4\'e8\'ad\'b1\'a1\'41\'a4\'e9\'a5\'bb\'ac\'46\'a9\'b2\'b7\'4e\'a6\'62\'a9\'4d\'a8\'e4\'a5\'4c\'b0\'ea\'ae\'61\'ab\'4f\'ab\'f9\'a1\'75\'a8\'42\'bd\'d5\'a4\'40\'ad\'50\'a1\'76\'a1\'43\'ac\'fc\'b0\'ea\'b5\'b2\'b7\'f9\'bf\'44\'ac\'77\'a1\'42\'af\'c3\'a6\'e8\'c4\'f5\'a1\'42\'ad\'5e\'b0\'ea\'a9\'e8\'a8\'ee\'b5\'d8\'ac\'b0\'a4\'a7\'ab\'e1\'a1\'41\'b6\'c7\'a5\'58\'a4\'e9\'a5\'bb\'a4\'5d\'a5\'5b\'a4\'4a\'b3\'f2\'b0\'f4\'a6\'e6\'a6\'43\'a1\'43\'a4\'e9\'a5\'bb\'a1\'75\'c5\'aa\'bd\'e6\'b7\'73\'bb\'44\'a1\'76
+\f2 7
+\f0 \'a4\'e9\'b3\'f8\'be\'c9\'a1\'41\'a4\'e9\'a5\'bb\'b1\'4e\'b9\'ea\'bd\'e8\'b8\'54\'a4\'ee\'a5\'bb\'b0\'ea\'ac\'46\'a9\'b2\'a6\'56\'b5\'d8\'ac\'b0\'a9\'4d\'a4\'a4\'bf\'b3\'b3\'71\'b0\'54\'b1\'c4\'c1\'ca\'b9\'71\'ab\'48\'b2\'a3\'ab\'7e\'a1\'41\'be\'e1\'a4\'df\'b5\'6f\'a5\'cd\'b1\'a1\'b3\'f8\'ac\'aa\'ba\'7c\'a5\'48\'a4\'ce\'be\'44\'a8\'ec\'ba\'f4\'b8\'f4\'a7\'f0\'c0\'bb\'a1\'43\'b9\'ef\'a9\'f3\'ac\'db\'c3\'f6\'ae\'f8\'ae\'a7\'a1\'41\'a6\'62\'a5\'5f\'a8\'ca\'ae\'c9\'b6\'a1
+\f2 7
+\f0 \'a4\'e9\'a4\'55\'a4\'c8\'c1\'7c\'a6\'e6\'aa\'ba\'a4\'a4\'a6\'40\'a5\'7e\'a5\'e6\'b3\'a1\'a8\'d2\'a6\'e6\'b0\'4f\'aa\'cc\'b7\'7c\'a4\'57\'a1\'41\'a4\'a4\'a6\'40\'a5\'7e\'a5\'e6\'b3\'a1\'b5\'6f\'a8\'a5\'a4\'48\'af\'d5\'b2\'6e\'b9\'ef\'a6\'b9\'a6\'5e\'c0\'b3\'ba\'d9\'a1\'41\'a1\'75\'a7\'da\'ad\'cc\'b9\'ef\'a6\'b3\'c3\'f6\'b3\'f8\'be\'c9\'aa\'ed\'a5\'dc\'c4\'59\'ad\'ab\'c3\'f6\'a4\'c1\'a1\'43\'a4\'a4\'b0\'ea\'ac\'46\'a9\'b2\'a4\'40\'b3\'65\'b9\'aa\'c0\'79\'a4\'a4\'b0\'ea\'a5\'f8\'b7\'7e\'ab\'f6\'b7\'d3\'a5\'ab\'b3\'f5\'ad\'ec\'ab\'68\'a9\'4d\'b0\'ea\'bb\'da\'b3\'57\'ab\'68\'a1\'41\'a6\'62\'bf\'ed\'a6\'75\'b7\'ed\'a6\'61\'aa\'6b\'ab\'df\'aa\'ba\'b0\'f2\'c2\'a6\'a4\'57\'b6\'7d\'ae\'69\'b9\'ef\'a5\'7e\'a4\'cd\'a6\'6e\'a6\'58\'a7\'40\'a1\'43\'a4\'a4\'a4\'e9\'b8\'67\'b6\'54\'a6\'58\'a7\'40\'a5\'bb\'bd\'e8\'ac\'4f\'a4\'ac\'a7\'51\'a6\'40\'c4\'b9\'aa\'ba\'a1\'41\'b5\'d8\'ac\'b0\'a9\'4d\'a4\'a4\'bf\'b3\'a4\'bd\'a5\'71\'aa\'f8\'b4\'c1\'a6\'62\'a4\'e9\'a5\'bb\'a6\'58\'aa\'6b\'b8\'67\'c0\'e7\'a1\'43\'a7\'da\'ad\'cc\'a7\'c6\'b1\'e6\'a4\'e9\'a4\'e8\'ac\'b0\'a4\'a4\'b0\'ea\'a5\'f8\'b7\'7e\'a6\'62\'a4\'e9\'b9\'42\'c0\'e7\'b4\'a3\'a8\'d1\'a4\'bd\'a5\'ad\'aa\'ba\'c4\'76\'aa\'a7\'c0\'f4\'b9\'d2\'a1\'41\'a4\'a3\'ad\'6e\'b0\'b5\'a6\'b3\'b7\'6c\'c2\'f9\'a4\'e8\'a4\'ac\'ab\'48\'a9\'4d\'a4\'cd\'a6\'6e\'a6\'58\'a7\'40\'aa\'ba\'a8\'c6\'b1\'a1\'a1\'43\'a1\'76
+\f2 \
+cnn predict :  political\
+rnn predict :  political\
+\
+
+\f0 \'a6\'5e\'c5\'55
+\f2 2018
+\f0 \'a4\'45\'a6\'58\'a4\'40\'a4\'6a\'bf\'ef\'a1\'41\'a4\'a3\'a4\'d6\'ad\'d4\'bf\'ef\'a4\'48\'b8\'f3\'ac\'c9\'bb\'50\'ba\'f4\'b8\'f4\'ac\'f5\'a4\'48\'a6\'58\'a7\'40\'a1\'41\'c0\'57\'a4\'57\'aa\'bd\'bc\'bd\'b8\'60\'a5\'d8\'a9\'4d\'c6\'5b\'b2\'b3\'a4\'ac\'b0\'ca\'a1\'42\'a9\'d4\'aa\'f1\'b6\'5a\'c2\'f7\'a1\'41\'bf\'ef\'be\'d4\'b5\'b2\'aa\'47\'a4\'5d\'a6\'41\'a6\'41\'c5\'e3\'a5\'dc\'ba\'f4\'b8\'f4\'c1\'6e\'b6\'71\'a4\'77\'a4\'a3\'ac\'4f\'aa\'c5\'ae\'f0\'b2\'bc\'a1\'43\'be\'d6\'a6\'b3\'b6\'57\'b0\'aa\'a4\'48\'ae\'f0\'aa\'ba\'ba\'f4\'ac\'f5\'a1\'75\'c0\'5d\'aa\'f8\'a1\'76\'b3\'af\'a4\'a7\'ba\'7e\'a1\'41\'a4\'e9\'ab\'65\'a4\'a3\'b6\'c8\'b3\'51\'a5\'78\'a5\'5f\'a5\'ab\'aa\'f8\'ac\'5f\'a4\'e5\'ad\'f5\'c2\'49\'a6\'57\'a1\'75\'a6\'70\'aa\'47\'bf\'ef\'c4\'b3\'ad\'fb\'a4\'40\'a9\'77\'a4\'57\'a1\'76\'a1\'41\'a4\'5d\'a8\'fc\'a8\'ec\'bc\'73\'a4\'6a\'af\'bb\'b5\'b7\'b9\'aa\'a7\'6a\'a4\'e4\'ab\'f9\'a1\'75\'a5\'58\'a8\'d3\'bf\'ef\'a1\'76\'a1\'41\'ad\'b1\'b9\'ef\'a5\'7e\'ac\'c9\'bc\'f6\'c4\'b3\'a4\'a3\'c2\'5f\'a1\'41\'a5\'4c\'a4\'b5\'a1\'5d
+\f2 10
+\f0 \'a1\'5e\'a4\'e9\'ad\'e2\'b1\'e1\'a6\'62\'c1\'79\'ae\'d1
+\f2 PO
+\f0 \'a4\'e5\'a1\'41\'bc\'67\'a4\'55
+\f2 12
+\f0 \'a6\'72\'a6\'5e\'c0\'b3\'a1\'41\'b1\'6a\'bd\'d5\'b5\'b4\'b9\'ef\'a4\'a3\'b0\'d1\'bf\'ef\'a1\'43\'ba\'f4\'ac\'f5\'a1\'75\'c0\'5d\'aa\'f8\'a1\'76\'a5\'ad\'ae\'c9\'a6\'62\'aa\'c0\'b8\'73\'b4\'43\'c5\'e9\'a4\'57\'aa\'bd\'bc\'bd\'a1\'41\'bc\'f6\'b7\'52\'b0\'77\'af\'a2\'ae\'c9\'a8\'c6\'a1\'41\'bf\'ef\'ab\'65\'a7\'f3\'bb\'50\'a6\'68\'a6\'57\'ad\'d4\'bf\'ef\'a4\'48\'aa\'bd\'bc\'bd\'a4\'de\'b0\'5f\'bc\'f6\'af\'50\'b0\'6a\'c5\'54\'a1\'41
+\f2 8
+\f0 \'a4\'e9\'a5\'78\'a5\'5f\'a5\'ab\'aa\'f8\'ac\'5f\'a4\'e5\'ad\'f5\'ad\'75\'a5\'40\'b7\'73\'a4\'6a\'be\'c7\'ba\'74\'c1\'bf\'a1\'41\'bd\'cd\'a4\'ce\'a1\'75\'c0\'5d\'aa\'f8\'a1\'76\'a7\'f3\'a4\'a3\'bf\'d0\'a8\'a5\'a1\'75\'a8\'e4\'b9\'ea\'c0\'5d\'aa\'f8\'a5\'58\'a8\'d3\'bf\'ef\'a5\'df\'a9\'65\'aa\'ba\'b8\'dc\'a4\'40\'a9\'77\'b7\'7c\'a4\'57\'a1\'41\'be\'f7\'b7\'7c\'ab\'dc\'a4\'6a\'a1\'46\'bf\'ef\'c4\'b3\'ad\'fb\'a4\'40\'a9\'77\'b7\'7c\'a4\'57\'a1\'76\'a1\'41\'aa\'d6\'a9\'77\'a5\'4c\'aa\'ba\'ba\'f4\'b8\'f4\'b0\'aa\'c1\'6e\'b6\'71\'a1\'43\'b9\'ef\'a6\'b9\'a1\'41\'a1\'75\'c0\'5d\'aa\'f8\'a1\'76\'b9\'6a\'a4\'e9\'c0\'48\'a7\'59\'a6\'62\'c1\'79\'ae\'d1\'a4\'57
+\f2 PO
+\f0 \'a4\'e5\'a6\'5e\'c0\'b3\'a1\'41\'b7\'50\'c1\'c2\'ac\'5f\'a4\'e5\'ad\'f5\'aa\'ba\'ab\'43\'b7\'fd\'a1\'41\'a6\'fd\'aa\'ed\'a9\'fa\'a1\'75\'a6\'db\'a4\'76\'a4\'a3\'ac\'4f\'b7\'ed\'a9\'78\'aa\'ba\'ae\'c6\'a1\'41\'a6\'dc\'a4\'d6\'b2\'7b\'a6\'62\'c1\'d9\'a4\'a3\'a6\'e6\'a1\'43\'a1\'76\'a5\'4c\'a6\'50\'ae\'c9\'b1\'6a\'bd\'d5\'a1\'41\'ad\'59\'ac\'5f\'a4\'e5\'ad\'f5\'b0\'d1\'bf\'ef\'c1\'60\'b2\'ce\'a1\'41\'a5\'4c\'a5\'b2\'a9\'77\'b9\'a9\'a4\'4f\'a4\'e4\'ab\'f9\'a1\'43\'a4\'a3\'b9\'4c\'a4\'a3\'a4\'d6\'af\'bb\'b5\'b7\'a4\'b4\'b5\'4d\'b9\'ef\'c0\'5d\'aa\'f8\'b4\'c1\'b1\'e6\'ba\'a1\'ba\'a1\'a1\'41\'c0\'57\'c0\'57\'b8\'df\'b0\'dd\'a1\'42\'b9\'aa\'c4\'b7\'a5\'4c\'b6\'69\'a7\'f0\'a5\'df\'a9\'65\'c4\'5f\'ae\'79\'a1\'41\'a6\'5d\'a6\'b9\'c0\'5d\'aa\'f8\'a4\'b5\'ad\'e2\'b1\'e1\'a6\'62\'c1\'79\'ae\'d1\'a4\'57\'a5\'48
+\f2 12
+\f0 \'a6\'72\'b0\'ed\'a8\'4d\'b0\'fb\'a9\'da\'a1\'47\'a1\'75\'a7\'da\'a4\'a3\'b7\'7c\'a5\'58\'a8\'d3\'bf\'ef\'a1\'41\'a7\'da\'bf\'ef\'a7\'da\'b1\'44\'a4\'6c
+\f2 X
+\f0 \'a1\'49\'a1\'76\'a1\'43\'b6\'4b\'a4\'e5\'a4\'40\'a5\'58\'ba\'f4\'a4\'cd\'ad\'cc\'a4\'6a\'b9\'c4\'a5\'69\'b1\'a4\'a1\'41\'af\'c9\'af\'c9\'af\'64\'a8\'a5\'a1\'75\'a5\'58\'a8\'d3\'bf\'ef\'ac\'b0\'a5\'c1\'bd\'d0\'a9\'52\'a7\'61\'a1\'76\'a1\'42\'a1\'75\'c0\'5d\'aa\'f8\'a7\'41\'bf\'ef\'a1\'41\'a6\'d3\'a5\'42\'b7\'ed\'a5\'df\'aa\'6b\'b0\'7c\'b0\'7c\'aa\'f8\'a1\'41\'a7\'da\'ae\'bd
+\f2 20
+\f0 \'b8\'55\'b5\'b9\'b0\'ca\'aa\'ab\'ac\'db\'c3\'f6\'b9\'ce\'c5\'e9\'a1\'76\'a1\'42\'a1\'75\'c0\'5d\'aa\'f8\'a4\'a3\'af\'e0\'bf\'ef\'a5\'df\'a9\'65\'a1\'41\'b8\'55\'a4\'40\'a4\'57\'a4\'46\'a8\'e4\'a5\'4c\'a5\'df\'a9\'65\'b4\'4e\'a4\'a3\'b4\'b1\'a5\'b4\'ac\'5b\'a1\'42\'c5\'51\'a5\'65\'a5\'44\'ae\'75\'a5\'78
+\f2 ...
+\f0 \'a8\'ba\'ab\'e7\'bb\'f2\'a9\'ec\'a9\'b5\'b7\'7c\'b4\'c1\'a1\'76\'a1\'43\'a4\'a3\'b9\'4c\'a4\'5d\'a6\'b3\'a4\'48\'c4\'55\'c0\'5d\'aa\'f8\'a5\'fd\'a7\'4f\'a7\'e2\'b8\'dc\'bb\'a1\'a6\'ba\'a1\'41\'a1\'75\'b1\'71\'ac\'46\'a4\'a3\'b1\'71\'ac\'46\'a1\'41\'a8\'e4\'b9\'ea\'c0\'5d\'aa\'f8\'a4\'5d\'a4\'a3\'a5\'ce\'a7\'e2\'b8\'dc\'c1\'bf\'ba\'a1\'a1\'41\'a9\'ce\'ac\'4f\'c1\'bf\'a6\'ba\'a1\'41\'c0\'48\'bd\'74\'a1\'49\'a4\'5d\'b5\'4c\'bb\'dd\'ad\'6e\'b8\'f2\'a5\'4c\'a4\'48\'ac\'79\'a8\'a5\'b0\'5f\'bb\'52\'a1\'41\'a4\'5a\'a8\'c6\'b5\'4c\'b7\'5c\'a9\'f3\'a4\'df\'bb\'50\'a4\'d1\'a6\'61\'a7\'59\'a5\'69\'a1\'76\'a1\'43
+\f2 \
+cnn predict :  social\
+rnn predict :  political\
+\
+
+\f0 \'a4\'45\'a6\'58\'a4\'40\'a4\'6a\'bf\'ef\'a5\'c1\'b6\'69\'c4\'d2\'ba\'47\'b1\'d1\'a1\'41\'bd\'b2\'ad\'5e\'a4\'e5\'c0\'48\'a7\'59\'c3\'e3\'a5\'68\'c4\'d2\'a5\'44\'ae\'75\'a8\'ad\'a4\'c0\'ad\'74\'b3\'64\'a1\'41\'a5\'74\'a5\'7e\'a6\'e6\'ac\'46\'b0\'7c\'aa\'f8\'bf\'e0\'b2\'4d\'bc\'77\'bd\'d0\'c3\'e3\'ab\'e1\'c0\'f2\'bc\'a2\'af\'64\'a1\'41\'ac\'51\'a4\'d1\'a4\'53\'c1\'7c\'bf\'ec\'b0\'4f\'aa\'cc\'b7\'7c\'bb\'a1\'a1\'75\'ae\'c9\'b6\'a1\'a4\'40\'a8\'ec\'a1\'41\'a7\'da\'a4\'5d\'b7\'7c\'b0\'ed\'a9\'77\'a6\'61\'c2\'f7\'b6\'7d\'a1\'41\'b2\'76\'bb\'e2\'a4\'ba\'bb\'d5\'c1\'60\'c3\'e3\'a1\'41\'ad\'74\'b0\'5f\'ac\'46\'aa\'76\'b3\'64\'a5\'f4\'a1\'41\'a4\'a3\'c5\'fd\'c0\'cb\'b0\'51\'ac\'79\'ac\'b0\'aa\'c5\'a8\'a5\'a1\'76\'a1\'41\'c4\'b3\'ad\'fb\'a4\'fd\'a5\'40\'b0\'ed\'a4\'57\'ac\'46\'bd\'d7\'b8\'60\'a5\'d8\'ae\'c9\'a1\'41\'ba\'d9\'c6\'67\'bf\'e0\'b4\'7d\'b0\'4f\'aa\'cc\'b7\'7c\'a6\'70\'a5\'58\'ae\'76\'aa\'ed\'b4\'64\'a7\'a7\'a1\'41\'ae\'c7\'c3\'e4\'a6\'b6\'be\'c7\'f9\'da\'aa\'ba\'b8\'d8\'b1\'69\'aa\'ed\'b1\'a1\'c5\'fd\'a4\'6a\'ae\'61\'b3\'a3\'af\'ba\'ac\'6e\'a4\'46\'a1\'43\'a4\'fd\'a5\'40\'b0\'ed\'a4\'57\'ac\'46\'bd\'d7\'b8\'60\'a5\'d8\'a1\'6d\'c3\'f6\'c1\'e4\'ae\'c9\'a8\'e8\'a1\'6e\'a4\'57\'aa\'ed\'a5\'dc\'a1\'41\'bd\'b2\'ad\'5e\'a4\'e5\'aa\'be\'b9\'44\'bf\'e0\'b2\'4d\'bc\'77\'ac\'4f\'a4\'48\'a4\'7e\'a1\'41\'a5\'4c\'b2\'7b\'a6\'62\'af\'64\'a6\'ed\'b9\'ef\'a9\'f3\'a4\'6a\'a7\'bd\'a6\'b3\'ab\'dc\'a4\'6a\'aa\'ba\'c0\'b0\'a7\'55\'a1\'41\'a9\'d2\'a5\'48\'a4\'a3\'c4\'40\'b7\'4e\'c5\'fd\'bf\'e0\'b2\'4d\'bc\'77\'c2\'f7\'b6\'7d\'a1\'41\'a6\'fd\'a6\'5d\'ac\'b0\'ac\'4f\'b3\'64\'a5\'f4\'ac\'46\'aa\'76\'a1\'41\'a9\'d2\'a5\'48\'bf\'e0\'b2\'4d\'bc\'77\'b4\'4e\'a4\'a3\'b1\'6f\'a4\'a3\'a8\'ab\'a1\'41\'b9\'ef\'a9\'f3\'bf\'e0\'b2\'4d\'bc\'77\'a6\'62\'b0\'4f\'aa\'cc\'b7\'7c\'a4\'57\'aa\'ba\'a8\'a5\'bd\'d7\'a1\'41\'a4\'fd\'a5\'40\'b0\'ed\'bb\'a1\'a1\'75\'a6\'b3\'a6\'70\'ac\'dd\'a8\'ec\'a5\'58\'ae\'76\'aa\'ed\'c1\'7b\'aa\'ed\'ae\'f7\'aa\'5f\'a1\'76\'a1\'42\'a1\'75\'bc\'67\'b1\'6f\'ab\'dc\'b2\'60\'bc\'68\'b4\'64\'a7\'a7\'a1\'76\'a1\'43\'b9\'ef\'a9\'f3\'a4\'fd\'a5\'40\'b0\'ed\'aa\'ba\'a8\'a5\'bd\'d7\'a1\'41\'a5\'fe\'b3\'f5\'af\'ba\'c1\'6e\'a4\'a3\'c2\'5f\'a1\'41\'ae\'c7\'c3\'e4\'aa\'ba\'a8\'d3\'bb\'ab\'a6\'b6\'be\'c7\'f9\'da\'a7\'f3\'ac\'4f\'c5\'53\'a5\'58\'a4\'46\'c2\'bd\'a5\'d5\'b2\'b4\'a6\'52\'a6\'de\'c0\'59\'aa\'ba\'aa\'ed\'b1\'a1\'a1\'41\'b3\'cc\'ab\'e1\'c1\'d9\'ac\'4f\'a7\'d4\'a4\'a3\'a6\'ed\'aa\'ba\'af\'ba\'a4\'46\'a5\'58\'a8\'d3\'a1\'41\'a4\'fd\'a5\'40\'b0\'ed\'bb\'a1\'bf\'e0\'b2\'4d\'bc\'77\'b9\'4a\'a8\'ec\'a4\'6a\'b1\'d1\'b0\'ed\'a9\'77\'af\'64\'a4\'55\'b3\'42\'b2\'7a\'a1\'46\'b1\'b5\'b5\'db\'ad\'74\'b0\'5f\'b3\'64\'a5\'f4\'b0\'ed\'a9\'77\'aa\'ba\'a8\'ab\'a1\'41\'bf\'e0\'b2\'4d\'bc\'77\'a4\'77\'b8\'67\'a9\'fa\'a7\'d3\'a4\'46\'a1\'41\'a4\'fd\'a5\'40\'b0\'ed\'b3\'cc\'ab\'e1\'a4\'5d\'bb\'a1\'a4\'46\'a1\'75\'b3\'6f\'a6\'b8\'bf\'e0\'b2\'4d\'bc\'77\'a4\'a3\'a5\'ce\'ae\'f0\'be\'6b\'a1\'41\'a6\'5d\'ac\'b0\'a5\'4c\'b4\'4e\'a6\'70\'a1\'79\'ab\'44\'be\'d4\'a4\'a7\'b8\'6f\'a1\'7a\'a1\'43
+\f2 \
+cnn predict :  political\
+rnn predict :  political\
+\
+
+\f0 \'c4\'ab\'aa\'47\'a5\'48\'b7\'73\'b3\'d0\'ab\'7e\'b5\'50
+\f2 Beddit
+\f0 \'a6\'57\'ba\'d9
+\f2  
+\f0 \'b1\'c0\'a5\'58\'ad\'ba\'b4\'da\'ba\'ce\'af\'76\'ab\'7e\'bd\'e8\'ba\'ca\'b1\'b1\'be\'b9
+\f2  
+\f0 \'b0\'e2\'bb\'f9
+\f2 149.95
+\f0 \'ac\'fc\'aa\'f7
+\f2  
+\f0 \'c4\'ab\'aa\'47\'b1\'4e\'a5\'48
+\f2 Beddit
+\f0 \'ab\'7e\'b5\'50\'b1\'c0\'a5\'58\'ba\'ce\'af\'76\'ba\'ca\'b1\'b1\'be\'b9\'a1\'41\'b3\'7a\'b9\'4c\'a5\'69\'a9\'f1\'a6\'62\'a7\'c9\'b9\'d4\'a4\'55\'aa\'ba\'c1\'a1\'ab\'ac\'b7\'50\'b4\'fa\'b1\'61\'a1\'41\'c2\'c7\'a6\'b9\'b0\'6c\'c2\'dc\'b3\'cc\'a6\'68\'a8\'e2\'a6\'57\'a8\'cf\'a5\'ce\'aa\'cc\'aa\'ba\'be\'e3\'c5\'e9\'ba\'ce\'af\'76\'ae\'c9\'b6\'a1\'a1\'42\'a4\'df\'b8\'f5\'a1\'42\'a9\'49\'a7\'6c\'a1\'41\'a5\'48\'a4\'ce\'ac\'4f\'a7\'5f\'a6\'b3\'a5\'b4\'a9\'49\'a1\'42\'c2\'4d\'c1\'6e\'b0\'dd\'c3\'44\'a1\'41\'a8\'c3\'a5\'42\'af\'e0\'b6\'69\'a4\'40\'a8\'42\'bd\'54\'bb\'7b\'a9\'d0\'b6\'a1\'a4\'ba\'aa\'ba\'b7\'c5\'ab\'d7\'bb\'50\'c0\'e3\'ab\'d7\'c5\'dc\'a4\'c6\'a1\'41\'c5\'fd\'a8\'cf\'a5\'ce\'aa\'cc\'a5\'69\'bd\'54\'bb\'7b\'a6\'70\'a6\'f3\'b9\'46\'a8\'ec\'b3\'cc\'a8\'ce\'ba\'ce\'af\'76\'ab\'7e\'bd\'e8\'a1\'41\'ab\'d8\'c4\'b3\'b0\'e2\'bb\'f9\'ac\'b0
+\f2 149.95
+\f0 \'ac\'fc\'a4\'b8\'a1\'43\'c4\'ab\'aa\'47\'a5\'fd\'ab\'65\'ab\'f9\'c4\'f2\'b6\'c7\'a5\'58\'a5\'69\'af\'e0\'a5\'b4\'b3\'79\'a4\'40\'b4\'da\'b0\'77\'b9\'ef\'ba\'ce\'af\'76\'ab\'7e\'bd\'e8\'ba\'ca\'b1\'b1\'b2\'a3\'ab\'7e\'a1\'41\'ac\'c6\'a6\'dc\'a6\'62\'a5\'68\'a6\'7e\'aa\'ec\'a6\'ac\'c1\'ca\'a4\'40\'ae\'61\'b6\'7d\'b5\'6f\'ba\'ce\'af\'76\'ab\'7e\'bd\'e8\'b0\'6c\'c2\'dc\'a7\'de\'b3\'4e\'aa\'ba\'b7\'73\'b3\'d0\'a4\'bd\'a5\'71
+\f2 Beddit
+\f0 \'a1\'41\'a7\'f3\'a4\'de\'b0\'5f\'a4\'a3\'a4\'d6\'b2\'71\'b4\'fa\'bb\'7b\'ac\'b0\'c4\'ab\'aa\'47\'b7\'c7\'b3\'c6\'b1\'4e\'ba\'ce\'af\'76\'ab\'7e\'bd\'e8\'b0\'bb\'b4\'fa\'a5\'5c\'af\'e0\'a5\'5b\'b6\'69
+\f2 AppleWatch
+\f0 \'a8\'74\'a6\'43\'b2\'a3\'ab\'7e\'a1\'43\'a4\'a3\'b9\'4c\'a1\'41\'c4\'ab\'aa\'47\'b3\'cc\'b2\'d7\'a8\'cc\'b5\'4d\'a5\'bc\'b1\'4e\'ba\'ce\'af\'76\'ab\'7e\'bd\'e8\'b0\'6c\'c2\'dc\'a5\'5c\'af\'e0\'a5\'5b\'a4\'4a\'ab\'e1\'a8\'d3\'b1\'c0\'a5\'58\'aa\'ba
+\f2 AppleWatchseries3
+\f0 \'a1\'41\'b4\'4e\'b3\'73\'a4\'b5\'a6\'7e\'b1\'c0\'a5\'58\'aa\'ba
+\f2 AppleWatchserie\
+cnn predict :  household\
+rnn predict :  technology\
+\
+
+\f0 \'c2\'45\'ae\'fc
+\f2 (2317)11
+\f0 \'a4\'eb\'a6\'58\'a8\'d6\'c0\'e7\'a6\'ac
+\f2 6014.41
+\f0 \'bb\'f5\'a4\'b8\'a1\'41\'b3\'d0\'a4\'55\'be\'fa\'a5\'76\'a6\'50\'b4\'c1\'b7\'73\'b0\'aa\'a1\'41\'a6\'50\'ae\'c9\'a4\'5d\'ac\'4f\'be\'fa\'a5\'76\'b3\'e6\'a4\'eb\'a6\'b8\'b0\'aa\'a1\'41\'c0\'e7\'a6\'ac\'aa\'ed\'b2\'7b\'ac\'db\'b8\'fb\'aa\'d1\'a4\'fd\'a4\'6a\'a5\'df\'a5\'fa\'a4\'ce\'c5\'76\'a4\'fd\'a5\'78\'bf\'6e\'b9\'71\'a5\'58\'b2\'7b\'a4\'eb\'b4\'ee\'aa\'ba\'b1\'a1\'aa\'70\'c0\'75\'a1\'41\'a4\'b5
+\f2 (11)
+\f0 \'a4\'e9\'aa\'d1\'bb\'f9\'a4\'ee\'b6\'5e\'a1\'41\'bc\'c8\'ae\'c9\'a4\'c6\'b8\'d1\'b1\'b4\'a9\'b3\'a6\'4d\'be\'f7\'a1\'41\'bd\'4c\'a4\'a4\'ba\'a6\'b4\'54
+\f2 1.92%
+\f0 \'a1\'43\'c2\'45\'ae\'fc
+\f2 11
+\f0 \'a4\'eb\'a6\'58\'a8\'d6\'c0\'e7\'a6\'ac\'a4\'eb\'bc\'57
+\f2 1.99%
+\f0 \'a1\'41\'a6\'7e\'bc\'57
+\f2 5.59%
+\f0 \'a1\'41\'b2\'d6\'ad\'70\'ab\'65\'a4\'51\'a4\'40\'a4\'eb\'c0\'e7\'a6\'ac
+\f2 4
+\f0 \'a5\'fc
+\f2 6770.37
+\f0 \'bb\'f5\'a4\'b8\'a1\'41\'a6\'7e\'bc\'57
+\f2 15.99%
+\f0 \'a1\'46\'b8\'b3\'a8\'c6\'aa\'f8\'b3\'a2\'a5\'78\'bb\'ca\'a5\'fd\'ab\'65\'b4\'bf\'b3\'7a\'c5\'53\'a1\'41\'ac\'dd\'a6\'6e\'c0\'e7\'b9\'42\'b1\'4e\'a9\'f4\'a8\'ec\'a9\'fa\'a6\'7e
+\f2 1
+\f0 \'a4\'eb\'aa\'ba\'b0\'54\'ae\'a7\'a1\'41\'aa\'6b\'a4\'48\'b9\'77\'a6\'f4\'a1\'41\'b2\'c4
+\f2 4
+\f0 \'a9\'75\'c0\'e7\'a6\'ac\'a6\'b3\'be\'f7\'b7\'7c\'ac\'44\'be\'d4\'b3\'e6\'a9\'75\'c0\'e7\'a6\'ac\'be\'fa\'a5\'76\'b7\'73\'b0\'aa\'a1\'43\'c2\'45\'ae\'fc\'aa\'f1\'b4\'c1\'aa\'d1\'bb\'f9\'a8\'fc\'a8\'ec\'a4\'a3\'a4\'d6\'c2\'f8\'ad\'b5\'aa\'ba\'bc\'76\'c5\'54\'a1\'41\'a4\'40\'ab\'d7\'a4\'55\'b1\'b4\'a6\'dc
+\f2 67.6
+\f0 \'a4\'b8\'aa\'ba
+\f2 7
+\f0 \'a6\'7e\'a6\'68\'aa\'69\'ac\'71\'a7\'43\'c2\'49\'a1\'41\'a4\'b5\'a4\'e9\'a4\'cf\'bc\'75\'a1\'41\'a6\'ad\'bd\'4c\'a5\'48
+\f2 68.5
+\f0 \'a4\'b8\'b6\'7d\'a5\'58\'a1\'41\'a4\'40\'ab\'d7\'a9\'d4\'a4\'c9\'a6\'dc
+\f2 69.1
+\f0 \'a4\'b8\'a1\'41\'a5\'f8\'b9\'cf\'ac\'44\'be\'d4
+\f2 5
+\f0 \'a4\'e9\'bd\'75\'a1\'41\'a4\'c6\'b8\'d1\'a6\'41\'b1\'b4\'a9\'b3\'a6\'4d\'be\'f7\'a1\'41\'bd\'4c\'a4\'a4\'ba\'a6\'b4\'54
+\f2 1.92%
+\f0 \'a1\'43
+\f2 \
+cnn predict :  stock\
+rnn predict :  stock\
+\
+
+\f0 \'bf\'ef\'ab\'e1\'b0\'aa\'b6\'af\'a9\'d0\'a5\'ab\'a6\'b3\'b7\'73\'ae\'f0\'b6\'48\'a1\'41\'b1\'71\'ab\'6e\'b0\'aa\'b6\'af\'a8\'ec\'a5\'5f\'b0\'aa\'b6\'af\'a1\'41\'ac\'c6\'a6\'dc\'c6\'5b\'ad\'b5\'a4\'73\'b8\'71\'a4\'6a\'ac\'d3\'ae\'61\'a7\'4f\'b9\'d6\'b3\'a3\'bc\'f6\'be\'78\'ba\'75\'ba\'75\'a1\'41\'a1\'75\'c1\'fa\'ac\'79\'ac\'f5\'a7\'51\'a1\'76\'bc\'f6\'bc\'e9\'a5\'ab\'b3\'f5\'a4\'cf\'c0\'b3\'bc\'f6\'af\'50\'a1\'41\'b6\'a9\'a4\'6a\'a1\'42\'a8\'ca\'ab\'b0\'a1\'42\'b8\'71\'c1\'70\'b6\'b0\'b9\'ce\'ab\'d8\'b3\'5d\'b3\'a1\'aa\'f9\'ab\'48\'a4\'df\'b0\'aa\'a9\'f9\'a1\'41\'b7\'7e\'ac\'c9\'b7\'50\'a8\'fc\'a8\'ec\'a5\'ab\'b3\'f5\'aa\'5e\'b3\'f2\'b0\'be\'a6\'68\'a1\'41\'b9\'ef\'a9\'fa\'a6\'7e\'ae\'69\'b1\'e6\'bc\'d6\'c6\'5b\'a1\'43\'b3\'d5\'ac\'4f\'b3\'d5\'a6\'e6\'be\'50\'c1\'60\'b8\'67\'b2\'7a\'a6\'b6\'c0\'d2\'aa\'ed\'a5\'dc\'a1\'41\'b7\'73\'b0\'aa\'b6\'af\'bd\'cf\'a5\'cd\'a1\'41\'ab\'6e\'b0\'aa\'b6\'af\'bb\'b7\'b6\'af\'a1\'75
+\f2 THE ONE
+\f0 \'a1\'76\'b5\'b2\'a6\'58\'b6\'ba\'a9\'b1\'a4\'ce\'bb\'a8\'a6\'76\'c0\'f2\'a5\'ab\'b3\'f5\'ab\'43\'b7\'fd\'a1\'41\'a4\'d7\'a8\'e4\'a8\'c8\'ac\'77\'b7\'73\'c6\'57\'b0\'cf\'ac\'4f\'b0\'aa\'b6\'af\'a5\'bc\'a8\'d3\'b5\'6f\'ae\'69\'ad\'ab\'c2\'49\'a1\'41\'a5\'7c\'a4\'6a\'b5\'77\'c5\'e9\'b0\'aa\'b6\'af\'ae\'69\'c4\'fd\'c0\'5d\'a1\'42\'ae\'fc\'ac\'76\'ac\'79\'a6\'e6\'ad\'b5\'bc\'d6\'a4\'a4\'a4\'df\'a1\'42\'b9\'cf\'ae\'d1\'c1\'60\'c0\'5d\'a5\'48\'a4\'ce\'b4\'e4\'b0\'f0\'ae\'c8\'b9\'42\'a4\'6a\'bc\'d3\'b5\'a5\'b3\'b0\'c4\'f2\'a7\'b9\'a6\'a8\'a1\'41\'a4\'48\'ac\'79\'bd\'77\'a8\'42\'be\'61\'c3\'6c\'a1\'41\'b7\'73\'c6\'57\'b0\'cf\'a4\'ba\'a4\'67\'a6\'61\'a5\'48\'a4\'ce\'c0\'75\'bd\'e8\'a6\'61\'c2\'49\'b7\'55\'c1\'cd\'b5\'7d\'a4\'d6\'a1\'41\'ab\'e1\'c4\'f2\'c0\'48\'b5\'db\'b4\'e4\'b3\'a3\'a6\'61\'b1\'61\'c1\'63\'ba\'61\'a1\'41\'b0\'d3\'a5\'ce\'a4\'a3\'b0\'ca\'b2\'a3\'a5\'48\'a4\'ce\'a9\'b1\'ad\'b1\'aa\'ba\'aa\'ed\'b2\'7b\'b1\'4e\'ac\'4f\'a5\'44\'ac\'79\'a1\'41\'a4\'d7\'a8\'e4\'ac\'4f\'a4\'54\'a6\'68\'b8\'f4\'a1\'42\'b7\'73\'a5\'fa\'b8\'f4\'a1\'42\'a4\'a4\'a4\'73\'b8\'f4\'a6\'61\'b1\'61\'ac\'4f\'b0\'aa\'b6\'af\'a6\'61\'a4\'fd\'a9\'d2\'a6\'62\'a1\'41\'ad\'c8\'b1\'6f\'a7\'eb\'b8\'ea\'aa\'cc\'b1\'4b\'a4\'c1\'c3\'f6\'aa\'60\'a1\'43\'a4\'45\'a6\'58\'a4\'40\'bf\'ef\'ab\'e1\'b2\'c4\'a4\'45\'a4\'d1\'a1\'41\'c1\'fa\'b0\'ea\'b7\'ec\'bf\'cb\'b3\'58\'b0\'aa\'b6\'af\'b3\'cc\'a4\'6a\'a5\'c1\'b6\'a1\'a5\'f8\'b7\'7e\'b8\'71\'c1\'70\'b6\'b0\'b9\'ce\'a1\'41\'b8\'71\'c1\'70\'b8\'b3\'a8\'c6\'aa\'f8\'aa\'4c\'b8\'71\'a6\'75\'bb\'a1\'a1\'41\'a5\'ab\'aa\'f8\'c1\'d9\'a8\'53\'a6\'b3\'a4\'57\'a5\'f4\'b4\'4e\'ab\'65\'a8\'d3\'a1\'41\'a9\'e9\'b8\'67\'c0\'d9\'aa\'ba\'b8\'db\'b7\'4e\'a5\'4f\'a4\'48\'b7\'50\'b0\'ca\'a1\'41\'a5\'bc\'a8\'d3\'a4\'40\'a9\'77\'a5\'5b\'a4\'6a\'a7\'eb\'b8\'ea\'a4\'4f\'b9\'44\'b0\'b5\'b7\'73\'a5\'ab\'a9\'b2\'aa\'ba\'ab\'e1\'ac\'de\'a1\'43\'a6\'68\'a6\'ec\'b0\'aa\'b6\'af\'ab\'d8\'b0\'d3\'a4\'ce\'a4\'a4\'a4\'70\'a5\'f8\'b7\'7e\'a5\'44\'aa\'ed\'a5\'dc\'a1\'41\'b7\'c7\'a5\'ab\'aa\'f8\'b8\'79\'c5\'73\'b1\'6f\'a4\'55\'a5\'68\'a1\'41\'c5\'fd\'a5\'f8\'b7\'7e\'b7\'50\'c4\'b1\'ab\'dc\'a6\'6e\'a1\'42\'a6\'4c\'b6\'48\'a4\'5d\'ab\'dc\'a6\'6e\'a1\'41\'ac\'db\'ab\'48\'a5\'4c\'a4\'40\'a9\'77\'b0\'b5\'b1\'6f\'a8\'ec\'a1\'43\'aa\'4c\'b8\'71\'a6\'75\'aa\'ed\'a5\'dc\'a1\'41\'a5\'4c\'a8\'c3\'a8\'53\'a6\'b3\'c0\'b0\'a7\'55\'c1\'fa\'b0\'ea\'b7\'ec\'aa\'ba\'bf\'ef\'c1\'7c\'a1\'41\'a8\'53\'b7\'51\'a8\'ec\'bf\'ef\'ab\'e1\'a4\'a3\'a8\'ec\'a4\'51\'a4\'d1\'a1\'41\'b7\'c7\'a5\'ab\'aa\'f8\'b4\'4e\'a8\'ec\'b6\'b0\'b9\'ce\'a8\'d3\'a1\'41\'a8\'cf\'a4\'48\'a6\'4c\'b6\'48\'a4\'d3\'b2\'60\'a8\'e8\'a4\'46\'a1\'43\'c1\'fa\'b0\'ea\'b7\'ec\'ad\'ab\'a5\'d3\'a1\'41\'a5\'f8\'b7\'7e\'a5\'75\'ad\'6e\'a7\'e2\'a5\'cd\'b7\'4e\'b0\'b5\'a6\'6e\'a1\'41\'c1\'c8\'a7\'f3\'a6\'68\'aa\'ba\'bf\'fa\'a1\'41\'b3\'d0\'b3\'79\'a7\'f3\'a6\'68\'aa\'ba\'a4\'75\'a7\'40\'be\'f7\'b7\'7c\'a1\'41\'b4\'4e\'ac\'4f\'b9\'ef\'b0\'aa\'b6\'af\'b3\'cc\'a4\'6a\'aa\'ba\'c0\'b0\'a7\'55\'a1\'43\'b8\'ea\'b2\'60\'ab\'d8\'b0\'d3\'bb\'a1\'a1\'41\'a4\'b5\'a6\'7e\'a4\'45\'a6\'58\'a4\'40\'bf\'ef\'c1\'7c\'b0\'aa\'b6\'af\'ac\'4f\'ad\'ab\'a4\'a4\'a4\'a7\'ad\'ab\'a1\'41\'b0\'aa\'b6\'af\'aa\'be\'a6\'57\'ab\'d7\'a4\'6a\'bc\'57\'b9\'ef\'a9\'d0\'a6\'61\'b2\'a3\'a6\'b3\'b0\'aa\'ab\'d7\'a5\'5b\'a4\'c0\'ae\'c4\'aa\'47\'a1\'43\'ab\'6e\'b0\'aa\'b6\'af\'a6\'61\'b0\'cf\'a5\'5d\'ac\'41\'b6\'a9\'a4\'6a\'a1\'42\'a4\'d3\'b4\'b6\'a1\'42\'ab\'b0\'b4\'ad\'a6\'62\'b0\'aa\'b6\'af\'a5\'ab\'ac\'46\'a9\'b2\'a5\'cd\'ac\'a1\'b0\'e9\'a6\'58\'b1\'c0\'a1\'75\'b7\'73\'b3\'a3\'c6\'55
+\f2 2
+\f0 \'b4\'c1\'a1\'76\'bf\'ef\'ab\'e1\'a4\'57\'a5\'ab\'a7\'6c\'a4\'de\'a4\'48\'bc\'e9\'a1\'43\'b6\'a9\'a4\'6a\'b8\'b3\'a8\'c6\'b3\'af\'a4\'53\'bb\'f4\'aa\'ed\'a5\'dc\'a1\'41\'bf\'ef\'ab\'e1\'a6\'55\'ac\'c9\'b4\'b6\'b9\'4d\'b9\'ef\'b0\'aa\'b6\'af\'a9\'d0\'a5\'ab\'a6\'b3\'ab\'48\'a4\'df\'a1\'41\'af\'75\'aa\'ba\'ad\'6e\'a6\'b3\'a6\'a8\'aa\'f8\'a1\'41\'b3\'cc\'ad\'ab\'ad\'6e\'c1\'d9\'ac\'4f\'ac\'dd\'b7\'73\'a5\'ab\'aa\'f8\'a4\'57\'a5\'f4\'ab\'e1\'b7\'7c\'ab\'e7\'bb\'f2\'b0\'b5\'a1\'41\'a6\'70\'aa\'47\'af\'e0\'b0\'f7\'a6\'b3\'ae\'c4\'a7\'6c\'a4\'de\'a4\'6a\'bc\'74\'a8\'ec\'b0\'aa\'b6\'af\'a7\'eb\'b8\'ea\'a1\'41\'b1\'61\'b0\'ca\'b0\'aa\'b6\'af\'a5\'ad\'a7\'a1\'c1\'7e\'b8\'ea\'a4\'57\'ba\'a6\'a1\'41\'b1\'71\'b0\'f2\'a5\'bb\'bd\'4c\'b3\'fe\'a9\'77\'b0\'f2\'c2\'a6\'a1\'41\'a5\'5f\'ba\'7d\'ab\'43\'a6\'7e\'a4\'ce\'a7\'f3\'a6\'68\'a4\'48\'a8\'ec\'b0\'aa\'b6\'af\'b4\'4e\'b7\'7e\'a9\'7e\'a6\'ed\'a1\'41\'a9\'d0\'a6\'61\'b2\'a3\'a5\'ab\'b3\'f5\'a6\'db\'b5\'4d\'b7\'7c\'a6\'b3\'a6\'6e\'aa\'ba\'aa\'ed\'b2\'7b\'a1\'43\'ab\'b0\'b4\'ad\'ab\'d8\'b3\'5d\'b8\'b3\'a8\'c6\'aa\'f8\'b7\'a8\'ae\'b6\'a9\'76\'a1\'42\'a4\'d3\'b4\'b6\'ab\'d8\'b3\'5d\'b8\'b3\'a8\'c6\'aa\'f8\'a4\'e8\'b0\'b7\'a8\'7d\'ab\'fc\'a5\'58\'a1\'41
+\f2 2018
+\f0 \'a6\'7e\'b0\'aa\'b6\'af\'a9\'d0\'a5\'ab\'aa\'ed\'b2\'7b\'a4\'a3\'bf\'f9\'a1\'41\'b9\'77\'b4\'c1
+\f2 2019
+\f0 \'a6\'7e\'b7\'7c\'a4\'f1\'a4\'b5\'a6\'7e\'a7\'f3\'a6\'6e\'a1\'41\'ad\'ec\'a5\'bb\'be\'50\'b0\'e2\'b6\'77\'a4\'c6\'aa\'ba\'a4\'a4\'a4\'6a\'a9\'57\'bc\'c6\'b2\'a3\'ab\'7e\'a1\'41\'a6\'b3\'be\'f7\'b7\'7c\'b3\'76\'a8\'42\'ab\'ec\'b4\'5f\'b0\'ca\'af\'e0\'a1\'43\'a6\'b9\'a5\'7e\'a1\'41\'a5\'5f\'b0\'aa\'b6\'af\'ad\'ec\'a5\'bb\'a4\'47\'ad\'d3\'a4\'eb\'bd\'e6\'a4\'a3\'a8\'ec\'a4\'40\'a4\'e1\'aa\'ba\'a4\'57\'bb\'f5\'a4\'b8\'bb\'a8\'a6\'76\'a1\'75\'a8\'ca\'ab\'b0\'a1\'76\'a1\'41\'bf\'ef\'ab\'e1\'a5\'58\'b2\'7b\'a4\'47\'a4\'d1\'b3\'73\'c4\'f2\'a6\'55\'bd\'e6\'a5\'58\'a4\'40\'a4\'e1\'a8\'ce\'c1\'5a\'a1\'41\'c5\'e3\'a5\'dc\'aa\'f7\'a6\'72\'b6\'f0\'b3\'bb\'af\'c5\'ab\'c8\'b7\'bd\'ad\'ab\'b7\'73\'be\'d6\'a9\'ea\'b0\'aa\'b6\'af\'a5\'ab\'b3\'f5\'a1\'43\'a8\'ca\'ab\'b0\'ab\'d8\'b3\'5d\'b8\'b3\'a8\'c6\'aa\'f8\'bd\'b2\'a4\'d1\'c3\'d9\'bb\'a1\'a1\'41\'b0\'aa\'b6\'af\'b7\'73\'a5\'ab\'aa\'f8\'c1\'fa\'b0\'ea\'b7\'ec\'a5\'bc\'a4\'57\'a5\'f4\'b4\'4e\'a6\'a8\'a5\'5c\'b3\'d0\'b3\'79\'b0\'aa\'b6\'af\'ac\'f5\'a7\'51\'a1\'41\'a6\'d3\'a5\'42\'a5\'bc\'a8\'d3\'a8\'e2\'a9\'a4\'b7\'7c\'a7\'f3\'a9\'4d\'bf\'d3\'a1\'41\'c6\'5b\'a5\'fa\'ab\'c8\'a4\'6a\'b6\'71\'a8\'ec\'b0\'aa\'b6\'af\'a1\'41\'a6\'61\'a4\'e8\'b8\'67\'c0\'d9\'c1\'63\'ba\'61\'a5\'69\'b4\'c1\'a1\'41\'bf\'45\'c0\'79\'bb\'a8\'a6\'76\'a5\'ab\'b3\'f5\'a1\'41\'ba\'f2\'b1\'b5\'b5\'db\'a4\'a4\'a9\'57\'bc\'c6\'b4\'ab\'ab\'ce\'ab\'d8\'ae\'d7\'a8\'fc\'b4\'66\'a1\'41\'b6\'52\'a9\'d0\'a4\'6c\'aa\'ba\'a4\'48\'b6\'5d\'a5\'58\'a8\'d3\'a1\'41\'b9\'ef\'ab\'d8\'bf\'76\'b7\'7e\'ac\'4f\'a4\'40\'a4\'6a\'b3\'df\'b0\'54\'a1\'43\'a8\'ca\'ab\'b0\'ab\'d8\'b3\'5d\'b8\'67\'b2\'7a\'a9\'50\'b7\'71\'ab\'ed\'aa\'ed\'a5\'dc\'a1\'41\'b3\'a3\'b7\'7c\'b8\'67\'c0\'d9\'c1\'63\'ba\'61\'a1\'41\'a9\'d0\'a6\'61\'b2\'a3\'a5\'ab\'b3\'f5\'a5\'b2\'a9\'77\'aa\'59\'ba\'61\'a6\'56\'a4\'57\'a1\'41\'a5\'5b\'a4\'57\'ab\'d8\'bf\'76\'b7\'7e\'ac\'4f\'a4\'f5\'a8\'ae\'c0\'59\'b2\'a3\'b7\'7e\'a1\'41\'a9\'d0\'a6\'61\'b2\'a3\'aa\'ed\'b2\'7b\'a6\'6e\'a1\'42\'a5\'69\'a5\'48\'b1\'61\'b0\'ca\'ab\'d8\'a7\'f7\'a1\'42\'ae\'61\'b9\'71\'b5\'a5\'a6\'ca\'b7\'7e\'bf\'b3\'b2\'b1\'a1\'41\'ac\'4f\'b8\'67\'c0\'d9\'b4\'ba\'ae\'f0\'aa\'ba\'ad\'ab\'ad\'6e\'b1\'c0\'b0\'ca\'a4\'4f\'a1\'43\'b7\'73\'b0\'aa\'b6\'af\'a5\'ab\'ac\'46\'a9\'b2\'b1\'6a\'bd\'d5\'a9\'e9\'b8\'67\'c0\'d9\'a1\'41\'a5\'4f\'a4\'48\'b9\'ef\'ab\'e1\'a5\'ab\'a6\'b3\'ab\'48\'a4\'df\'a1\'43
+\f2 \
+cnn predict :  household\
+rnn predict :  finance\
+\
+
+\f0 \'b0\'ea\'a5\'c1\'c4\'d2\'b0\'aa\'b6\'af\'a5\'ab\'aa\'f8\'ad\'d4\'bf\'ef\'a4\'48\'c1\'fa\'b0\'ea\'b7\'ec\'c4\'76\'bf\'ef\'bf\'ec\'a4\'bd\'ab\'c7\'a4\'b5\'a4\'d1\'aa\'ed\'a5\'dc\'a1\'41\'b1\'4e\'b0\'77\'b9\'ef\'b3\'cc\'aa\'f1\'a7\'f0\'c0\'bb\'c1\'fa\'b0\'ea\'b7\'ec\'aa\'ba\'a4\'a3\'b9\'ea\'a8\'a5\'bd\'d7\'a1\'42\'ba\'f4\'b6\'c7\'b0\'54\'ae\'a7\'b5\'a5\'bb\'50\'ab\'df\'ae\'76\'ac\'e3\'a8\'73\'a1\'41\'a4\'a3\'b1\'c6\'b0\'a3\'b4\'a3\'a7\'69\'a1\'43\'c1\'fa\'b0\'ea\'b7\'ec\'a4\'e9\'ab\'65\'a4\'77\'aa\'ed\'a5\'dc\'a1\'41\'a9\'fa\'a4\'d1\'ad\'6e\'a6\'62\'a5\'78\'a5\'5f\'b0\'77\'b9\'ef\'a6\'b3\'a4\'48\'b6\'c7\'a5\'ce
+\f2 line
+\f0 \'a1\'75\'a9\'d9\'ac\'f5\'a1\'76\'a5\'4c\'a4\'a7\'a8\'c6\'b4\'a3\'a7\'69\'a1\'41\'a4\'a3\'a6\'41\'c1\'f4\'a7\'d4\'a1\'43\'c1\'fa\'b0\'ea\'b7\'ec\'c4\'76\'bf\'ef\'bf\'ec\'a4\'bd\'ab\'c7\'a4\'b5\'a4\'d1\'a4\'5d\'bb\'50\'ab\'df\'ae\'76\'b9\'ce\'c1\'70\'b5\'b8\'a1\'41\'a4\'a3\'b1\'c6\'b0\'a3\'b4\'4e\'b3\'6f\'b4\'58\'a4\'d1\'ba\'f4\'b8\'f4\'a1\'42
+\f2 line
+\f0 \'a4\'57\'b6\'c7\'a8\'a5\'c1\'fa\'b0\'ea\'b7\'ec\'b6\'52\'b2\'bc\'a1\'42\'b5\'6f\'a8\'ab\'b8\'f4\'a4\'75\'a1\'42\'ac\'c6\'a6\'dc\'b5\'6f\'b6\'c7\'b3\'e6\'bb\'7a\'ab\'fc\'c1\'fa\'b0\'ea\'b7\'ec\'a6\'70\'b7\'ed\'bf\'ef\'a5\'ab\'aa\'f8\'b7\'7c\'a7\'e2\'aa\'4c\'b6\'e9\'c5\'dc\'a6\'a8\'c2\'6c\'b8\'ae\'b0\'cf\'b5\'a5\'b4\'a3\'a7\'69\'a1\'43\'a4\'b5\'a4\'d1\'c1\'fa\'b0\'ea\'b7\'ec\'bf\'ec\'a4\'bd\'ab\'c7\'b1\'b5\'a8\'ec\'a4\'e4\'ab\'f9\'aa\'cc\'c2\'e0\'aa\'ba
+\f2 Line
+\f0 \'a1\'41\'a6\'b3\'a4\'48\'b6\'c7\'c1\'fa\'b0\'ea\'b7\'ec\'b3\'79\'b6\'d5\'b3\'f5\'a6\'b3\'b5\'6f\'a8\'ab\'b8\'f4\'a4\'75\'a1\'41\'c1\'d9\'bb\'a1\'a8\'43\'a4\'48\'b5\'6f
+\f2 1500
+\f0 \'a4\'b8\'a1\'41\'a7\'f3\'a6\'b3\'a4\'48\'b6\'c7\'c1\'fa\'b0\'ea\'b7\'ec\'a6\'62\'a6\'55\'b0\'cf\'b6\'52\'b2\'bc\'a1\'41\'a4\'40\'b2\'bc
+\f2 3000
+\f0 \'a4\'b8\'a8\'ec
+\f2 6000
+\f0 \'a4\'b8\'a4\'a3\'b5\'a5\'a1\'43\'c1\'fa\'b0\'ea\'b7\'ec\'bf\'ec\'a4\'bd\'ab\'c7\'aa\'ed\'a5\'dc\'a1\'41\'b3\'6f\'a8\'c7
+\f2 line
+\f0 \'b0\'54\'ae\'a7\'b3\'a3\'ac\'4f\'b0\'b2\'ae\'f8\'ae\'a7\'a1\'41\'ac\'4f\'a6\'b3\'a4\'48\'ac\'47\'b7\'4e\'a4\'a4\'b6\'cb\'c1\'fa\'b0\'ea\'b7\'ec\'a1\'41\'a6\'d3\'a5\'42\'a6\'b3\'b9\'48\'a4\'cf\'bf\'ef\'bd\'7d\'aa\'6b\'a4\'a7\'b6\'fb\'a1\'41\'a4\'77\'bb\'50\'ab\'df\'ae\'76\'ac\'e3\'b0\'d3\'a1\'41\'a5\'69\'af\'e0\'b7\'7c\'b1\'c4\'a8\'fa\'aa\'6b\'ab\'df\'a6\'e6\'b0\'ca\'a1\'43\'c3\'f6\'a9\'f3\'aa\'4c\'b6\'e9\'ad\'6e\'b3\'5d\'c2\'6c\'b8\'ae\'b0\'cf\'aa\'ba\'a8\'c6\'a1\'41\'c1\'fa\'b0\'ea\'b7\'ec\'c4\'76\'bf\'ef\'bf\'ec\'a4\'bd\'ab\'c7\'b4\'78\'b4\'a4\'a4\'40\'a8\'c7\'a6\'62\'aa\'4c\'b6\'e9\'b4\'b2\'b5\'6f\'aa\'ba\'b6\'c7\'b3\'e6\'a1\'41\'a4\'5d\'bb\'50\'ab\'df\'ae\'76\'ac\'e3\'c4\'b3\'b4\'a3\'a7\'69\'a1\'41\'a6\'5d\'ac\'b0\'b6\'c7\'b3\'e6\'a4\'a4\'a9\'d2\'a8\'a5\'a4\'a3\'ac\'4f\'a8\'c6\'b9\'ea\'a1\'43
+\f2 \
+cnn predict :  political\
+rnn predict :  political\
+\
+
+\f0 \'c0\'52\'a9\'79\'a4\'6a\'be\'c7\'b8\'b9\'a5\'6c\'a5\'fe\'a5\'78
+\f2 47
+\f0 \'a9\'d2\'a4\'d1\'a5\'44\'b1\'d0\'be\'c7\'ae\'d5\'a1\'41\'b3\'7a\'b9\'4c\'a1\'75\'a4\'d1\'a5\'44\'b1\'d0\'be\'c7\'ae\'d5\'b6\'67\'a1\'76\'c0\'52\'c2\'49\'ab\'47\'b6\'48\'bc\'78\'b0\'f2\'b7\'fe\'a4\'a7\'a5\'fa\'aa\'ba\'b1\'6d\'bf\'4f\'a1\'41\'a8\'c3\'b6\'d2\'b6\'b0
+\f2 5200
+\f0 \'b1\'f8\'a1\'75
+\f2 520
+\f0 \'b7\'52\'a4\'df\'a4\'f2\'b4\'e0\'a1\'76\'b8\'ea\'aa\'f7\'a1\'41\'a4\'ce
+\f2 1
+\f0 \'b8\'55\'a5\'f7\'a5\'d1\'a5\'fe\'a5\'78\'a4\'d1\'a5\'44\'b1\'d0\'a4\'70\'be\'c7\'a1\'42\'b0\'ea\'a4\'a4\'a1\'42\'b0\'aa\'a4\'a4\'c2\'be\'a1\'42\'a4\'6a\'be\'c7\'a5\'cd\'bb\'73\'a7\'40\'aa\'ba\'a4\'e5\'a8\'e3\'c2\'a7\'aa\'ab\'a5\'5d\'a1\'41
+\f2 12
+\f0 \'a4\'eb\'a4\'a4\'a6\'af\'ad\'6e\'b0\'65\'b7\'52\'a8\'ec\'be\'a4\'a4\'da\'b9\'e0\'a1\'75\'b1\'d4\'a7\'51\'a8\'c8\'c3\'f8\'a5\'c1\'c0\'e7\'a1\'76\'a1\'43\'ad\'43\'bd\'cf\'b8\'60\'c1\'60\'ac\'4f\'a5\'52\'ba\'a1\'c5\'77\'bc\'d6\'a1\'42\'bc\'79\'af\'ac\'ae\'f0\'aa\'5e\'a1\'41\'a6\'fd\'c0\'52\'a9\'79\'a4\'6a\'be\'c7\'a7\'c6\'b1\'e6\'a7\'f3\'ac\'4f\'a1\'75\'b7\'52\'aa\'ba\'b4\'b2\'bc\'bd\'a1\'76\'a1\'41\'ae\'d5\'aa\'f8\'ad\'f0\'b6\'c7\'b8\'71\'bb\'a1\'a1\'41\'b3\'7a\'b9\'4c\'b8\'74\'bd\'cf\'c2\'49\'bf\'4f\'bb\'f6\'a6\'a1\'a1\'41\'c5\'fd\'a5\'4e\'aa\'ed\'a5\'fa\'a9\'fa\'bb\'50\'b7\'c5\'b7\'78\'aa\'ba\'a1\'75\'a5\'fa
+\f3 \'a3\'8f\'c6\'97\'ba\'8d\'5a\'89\'80\'81\'43\'96\'e7\'ea\'79\'97\'ba\uc0\u27599 \'8c\'c2\'90\'6c\u20839 \'90\'53\'93\'49\'90\'53\'93\'95\'81\'43\'e6\'a8\'8e\'d0\'98\'f0\'8f\'5b\'9f\'de\'e8\'90\'88\'a4\'81\'41\'98\'61\'e6\'7e\'81\'41\'90\'b3\'8b\'60\'e4\'6f\'8a\'ec\'9e\'d9\'81\'42\'e8\'ce\'8b\'58\'91\'e5\'9b\'7b\'81\'75\'90\'b9\'92\'61\'ea\'79\'93\'95\'81\'76\'8c\'6e\'97\'f1\'8a\'88\'93\'ae\'81\'43\'97\'52\'9b\'7b\'90\'b6\'8e\'d0\'9a\'a3\'90\'6c\'e3\'df\'9e\'d9\'9a\'a3\'81\'41\'89\'ce\'95\'91\'8e\'d0\'81\'41\'8a\'c7\'9e\'d9\'8e\'d0\'81\'41\'90\'bc\'95\'b6\'8c\'6e\'8e\'74\'90\'b6\'93\'49\'90\'bc\'95\'b6\'90\'b9\'92\'61\'89\'cc\'8b\'c8\'89\'89\'8f\'a5\u25581 \'8a\'4a\'8f\'98\'96\'8b\'81\'43\'92\'41\'91\'8a\'8a\'72\'89\'97\'8c\'63\'8f\'6a\'81\'43\'9b\'7b\'8d\'5a\'97\'4c\'88\'ea\'98\'41\'8b\'f8\'93\'49\'88\'a4\'90\'53\'8a\'88\'93\'ae\'81\'42\'e8\'ce\'8b\'58\'8d\'a1\'94\'4e\'8f\'41\'8b\'f8\'98\'41\'91\'53\'91\'e4
+\f2 47
+\f0 \'a9\'d2\'a4\'d1\'a5\'44\'b1\'d0\'be\'c7\'ae\'d5\'ae\'76\'a5\'cd\'a1\'41\'a6\'40\'b6\'d2\'b6\'b0
+\f2 5200
+\f0 \'b1\'f8\'b7\'52\'a4\'df\'a4\'f2\'b4\'e0\'aa\'ba\'b8\'ea\'aa\'f7\'a1\'46\'a5\'74\'a6\'58\'a4\'4f\'a7\'b9\'a6\'a8
+\f2 1
+\f0 \'b8\'55\'a5\'f7\'a1\'75\'a4\'e5\'a8\'e3\'c2\'a7\'aa\'ab\'a5\'5d\'a1\'76\'a1\'41\'ad\'c8\'b1\'6f\'a4\'40\'b4\'a3\'aa\'ba\'ac\'4f\'a1\'75\'a4\'e5\'a8\'e3\'c2\'a7\'aa\'ab\'a5\'5d\'a1\'76\'a5\'d1\'a4\'6a\'be\'c7\'a1\'42\'b0\'aa\'a4\'a4\'bb\'50\'b0\'ea\'a4\'a4\'a4\'70\'be\'c7\'a5\'cd\'a4\'40\'b0\'5f\'bb\'73\'a7\'40\'a1\'41\'a5\'fd\'a5\'d1\'a6\'55\'ae\'d5\'a6\'d1\'ae\'76\'a4\'b6\'b2\'d0\'b1\'d4\'a7\'51\'a8\'c8\'be\'d4\'aa\'a7\'bb\'50\'b2\'7b\'aa\'70\'a1\'41\'be\'c7\'a5\'cd\'bf\'cb\'a4\'e2\'a9\'f3\'b5\'a7\'b0\'4f\'a5\'bb\'a4\'a4\'c3\'b8\'b9\'cf\'af\'ac\'ba\'d6\'a1\'41\'b1\'4e\'b9\'5d\'b5\'a7\'a1\'42\'ab\'64\'b9\'5d\'b5\'a7\'be\'b9\'a4\'ce\'b5\'a7\'b0\'4f\'a5\'bb\'a9\'f1\'a4\'4a\'a7\'f4\'a4\'66\'b3\'55\'a4\'a4\'a1\'41\'a7\'b9\'a6\'a8\'c2\'a7\'aa\'ab\'a5\'5d\'a1\'43\'c0\'52\'a9\'79\'ae\'d5\'a4\'e8\'b7\'50\'c1\'c2\'a5\'5d\'ac\'41\'b4\'49\'b3\'d3\'af\'bc\'c2\'b4\'a1\'42\'a7\'51\'a6\'ca\'a5\'4e\'a4\'bd\'a5\'71\'a1\'42\'a9\'4d\'a8\'f3\'a5\'cd\'ac\'a1\'ae\'bd\'c3\'d8\'a1\'41\'a4\'5d\'a5\'48\'c0\'75\'b4\'66\'bb\'f9\'ae\'e6\'b4\'a3\'a8\'d1\'c0\'f4\'ab\'4f\'a4\'f2\'b4\'e0\'a1\'42\'ab\'64\'b9\'5d\'b5\'a7\'be\'b9\'a4\'ce\'b4\'d6\'a5\'ac\'a7\'f4\'a4\'66\'b3\'55\'b5\'a5\'aa\'ab\'b8\'ea\'a1\'46\'c1\'d9\'a6\'b3\'a5\'78\'a4\'a4\'b1\'d0\'b0\'cf\'a5\'44\'b1\'d0\'a4\'bd\'b8\'70\'a1\'42\'a5\'78\'c6\'57\'a9\'fa\'b7\'52\'b7\'7c\'a1\'42\'ab\'44\'c0\'e7\'a7\'51\'b2\'d5\'c2\'b4
+\f2 EQUAL
+\f0 \'a1\'42\'be\'a4\'a4\'da\'b9\'e0\'a4\'d1\'a5\'44\'b1\'d0\'b7\'7c\'aa\'ba\'a8\'a9\'be\'7c\'af\'53\'a9\'76\'ae\'79\'a5\'4e\'aa\'aa\'b0\'cf
+\f2 C\'e9sar Essayan
+\f0 \'a5\'44\'b1\'d0\'a4\'ce\'a4\'a4\'b6\'50\'ae\'fc\'b6\'54\'b5\'a5\'a5\'f8\'b7\'7e\'a8\'f3\'a7\'55\'a1\'41\'b3\'6f\'a5\'f7\'a1\'75\'ad\'43\'bd\'cf\'c2\'a7\'aa\'ab\'a1\'76\'b1\'4e\'a5\'78\'c6\'57\'a4\'48\'b7\'52\'a4\'df\'b8\'cb\'a4\'4a
+\f2 40
+\f0 \'a4\'d8\'b3\'66\'c2\'64\'a1\'41
+\f2 12
+\f0 \'a4\'eb\'a4\'a4\'a6\'af\'b9\'42\'a8\'ec\'be\'a4\'a4\'da\'b9\'e0\'aa\'ba\'a1\'75\'b1\'d4\'a7\'51\'a8\'c8\'c3\'f8\'a5\'c1\'c0\'e7\'a1\'76\'a1\'43\'c0\'52\'a9\'79\'a4\'6a\'be\'c7\'c1\'d9\'a6\'b3\'a1\'75\'b8\'74\'bd\'cf\'a8\'74\'a6\'43\'ac\'a1\'b0\'ca\'a1\'76\'a1\'41\'ae\'76\'a5\'cd\'ac\'b0\'b3\'d5\'a5\'ae\'b0\'f2\'aa\'f7\'b7\'7c\'b5\'a5\'ab\'c4\'b5\'a3\'b6\'d2\'b6\'b0\'b8\'74\'bd\'cf\'b7\'52\'a4\'df\'c2\'a7\'aa\'ab\'a1\'41
+\f2 15
+\f0 \'a4\'e9\'a6\'62\'ae\'d5\'aa\'f9\'a4\'66\'a4\'6a\'af\'f3\'a9\'57\'c1\'7c\'a6\'e6\'a1\'75\'ad\'43\'bf\'71\'b8\'74\'bd\'cf\'b7\'52\'a4\'df\'b0\'a8\'bc\'d1\'a5\'ab\'b6\'b0\'a1\'76\'a1\'46
+\f2 24
+\f0 \'a4\'e9\'a9\'f3\'ad\'d7\'b0\'7c\'b8\'74\'b0\'f3\'c1\'7c\'a6\'e6\'b8\'74\'bd\'cf\'a4\'6c\'a9\'5d\'c0\'b1\'bc\'bb\'a1\'46\'ae\'76\'a5\'cd\'a4\'5d\'a7\'51\'a5\'ce\'bd\'d2\'be\'6c\'ae\'c9\'b6\'a1\'a6\'dc\'a5\'78\'a4\'a4\'a4\'6b\'a4\'6c\'ba\'ca\'ba\'bb\'a1\'42\'a5\'78\'a4\'a4\'ac\'dd\'a6\'75\'a9\'d2\'a1\'42\'a5\'fa\'a5\'d0\'c5\'40\'b2\'7a\'a4\'a7\'ae\'61\'a1\'42\'b7\'71\'bc\'77\'c5\'40\'b2\'7a\'a4\'a7\'ae\'61\'b5\'a5\'be\'f7\'ba\'63\'b8\'74\'bd\'cf\'b3\'f8\'a8\'ce\'ad\'b5\'a1\'41\'c5\'fd\'aa\'c0\'b7\'7c\'a5\'52\'ba\'a1\'c3\'f6\'b7\'52\'bb\'50\'b3\'df\'bc\'d6\'a1\'43
+\f2 \
+cnn predict :  education\
+rnn predict :  education\
+\
+
+\f0 \'a5\'78\'a4\'6a\'ae\'d5\'aa\'f8\'bf\'ee\'bf\'ef\'ae\'d7\'b3\'b4\'bb\'f8\'a7\'bd\'a1\'41\'a5\'78\'a4\'6a\'a6\'db\'a5\'44\'c1\'70\'b7\'f9\'a4\'b5\'a4\'d1\'a9\'49\'c6\'7e\'b1\'d0\'a8\'7c\'b3\'a1\'aa\'f8\'b8\'ad\'ab\'54\'ba\'61\'a9\'d2\'bf\'d7\'aa\'ba\'a1\'75\'a4\'40\'a8\'42\'a4\'a7\'bb\'bb\'a1\'76\'a1\'41\'a4\'a3\'af\'e0\'ad\'6e\'a8\'44\'a6\'58\'aa\'6b\'a6\'e6\'a8\'c6\'aa\'ba\'bf\'ee\'a9\'65\'b7\'7c\'b6\'7d\'b7\'7c\'ad\'ab\'bf\'ef\'a1\'41\'a6\'d3\'ac\'4f\'b9\'48\'aa\'6b\'aa\'ba\'b1\'d0\'a8\'7c\'b3\'a1\'a9\'d3\'bb\'7b\'bf\'f9\'bb\'7e\'a1\'42\'ab\'69\'b4\'b1\'b8\'f3\'a5\'58\'b3\'cc\'ab\'e1\'a4\'40\'a8\'42\'a1\'41\'ba\'c9\'b3\'74\'b8\'75\'ba\'de\'a4\'a4\'b6\'7b\'ac\'b0\'a5\'78\'a4\'6a\'ae\'d5\'aa\'f8\'a1\'43\'a5\'78\'a4\'6a\'a4\'67\'a4\'ec\'a8\'74\'b1\'d0\'b1\'c2\'a7\'f5\'c2\'45\'b7\'bd\'aa\'ed\'a5\'dc\'a1\'41\'a1\'75\'bd\'d0\'b8\'ad\'ab\'54\'ba\'61\'a9\'fa\'bd\'54\'bb\'a1\'a5\'58\'a5\'64\'ba\'de\'ae\'d7\'ad\'49\'ab\'e1\'aa\'ba\'ac\'46\'aa\'76\'ad\'ec\'a6\'5d\'a1\'41\'a8\'c3\'a5\'42\'ad\'74\'ac\'46\'aa\'76\'b3\'64\'a5\'f4\'a1\'43\'a1\'76\'a4\'b5\'a6\'7e
+\f2 1
+\f0 \'a4\'eb
+\f2 5
+\f0 \'a4\'e9\'a1\'41\'a5\'78\'a4\'6a\'bf\'ee\'bf\'ef\'a9\'65\'ad\'fb\'b7\'7c\'a8\'cc\'aa\'6b\'bf\'ef\'a5\'58\'b7\'73\'ae\'d5\'aa\'f8\'a1\'41\'b1\'d0\'a8\'7c\'b3\'a1\'a6\'dc\'a4\'b5\'a5\'bc\'b8\'75\'a5\'f4\'a1\'41\'b6\'57\'b9\'4c
+\f2 11
+\f0 \'ad\'d3\'a4\'eb\'a5\'78\'a4\'6a\'a8\'53\'a6\'b3\'a5\'bf\'a6\'a1\'aa\'ba\'ae\'d5\'aa\'f8\'a1\'46\'a5\'42\'a6\'5d\'ac\'b0\'a6\'b9\'ae\'d7\'a1\'41\'a7\'e9\'b7\'6c\'a4\'46\'a8\'e2\'a6\'ec\'b1\'d0\'a8\'7c\'b3\'a1\'aa\'f8\'a1\'43\'b8\'ad\'ab\'54\'ba\'61\'ac\'51\'a4\'d1\'aa\'ed\'a5\'dc\'a1\'41\'a7\'c6\'b1\'e6\'a5\'78\'a4\'6a\'bf\'ee\'bf\'ef\'a9\'65\'ad\'fb\'b7\'7c\'af\'e0\'b0\'f7\'b6\'7d\'b7\'7c\'ba\'c9\'b3\'74\'b3\'42\'b2\'7a\'a1\'41\'a1\'75\'a5\'75\'a6\'b3\'a4\'40\'a8\'42\'a4\'a7\'bb\'bb\'a1\'76\'a1\'43\'a5\'78\'a4\'6a\'a6\'db\'a5\'44\'c1\'70\'b7\'f9\'a4\'b5\'a4\'d1\'c1\'7c\'a6\'e6
+\f2  
+\f0 \'a1\'75\'c1\'d9\'a7\'da\'ae\'d5\'aa\'f8\'a1\'d0\'a5\'78\'c6\'57\'b1\'d0\'a8\'7c\'a4\'a3\'af\'e0\'b5\'a5\'a1\'76\'b0\'4f\'aa\'cc\'b7\'7c\'a1\'41\'ba\'de\'a4\'a4\'b6\'7b\'a5\'bb\'a4\'48\'a4\'5d\'b2\'7b\'a8\'ad\'b0\'4f\'aa\'cc\'b7\'7c\'b2\'7b\'b3\'f5\'a1\'43\'a7\'f5\'c2\'45\'b7\'bd\'aa\'ed\'a5\'dc\'a1\'41\'a5\'78\'c6\'57\'a5\'c1\'a5\'44\'aa\'ba\'b0\'f2\'a5\'bb\'bb\'f9\'ad\'c8\'c0\'b3\'b8\'d3\'b3\'51\'b4\'4c\'ad\'ab\'a1\'41\'a1\'75\'b0\'b2\'a6\'70\'b3\'6f\'ad\'d3\'ab\'65\'b4\'a3\'a8\'53\'a6\'b3\'a4\'46\'a1\'41\'b5\'6f\'a5\'cd\'a6\'62\'ba\'de\'a4\'a4\'b6\'7b\'a4\'57\'aa\'ba\'a8\'c6\'b1\'a1\'a1\'41\'a4\'5d\'b7\'7c\'b5\'6f\'a5\'cd\'a6\'62\'a7\'41\'a7\'da\'a8\'ad\'a4\'57\'a1\'43\'a1\'76\'b0\'ea\'ae\'61\'be\'f7\'be\'b9\'bc\'c9\'a4\'4f\'a6\'61\'a7\'e2\'a4\'e2\'a6\'f9\'b6\'69\'ae\'d5\'b6\'e9\'a1\'41\'a1\'75\'c5\'fd\'a5\'78\'a4\'6a\'b3\'b4\'a4\'4a\'aa\'64\'d5\'ef\'a4\'a4\'a1\'76\'a1\'43\'a5\'40\'ac\'c9\'a6\'55\'a4\'6a\'be\'c7\'b3\'a3\'a6\'62\'b0\'6c\'a8\'44\'a5\'40\'ac\'c9\'a4\'6a\'be\'c7\'b1\'c6\'a6\'57\'a1\'41\'ad\'59\'a5\'78\'a4\'6a\'ab\'f9\'c4\'f2\'a8\'53\'a6\'b3\'ae\'d5\'aa\'f8\'a1\'41\'b1\'c6\'a6\'57\'a9\'b9\'ab\'e1\'b1\'bc\'ac\'4f\'a5\'b2\'b5\'4d\'aa\'ba\'a1\'41\'a6\'d3\'a5\'42\'b7\'7c\'b1\'bc\'b1\'6f\'ab\'44\'b1\'60\'bc\'46\'ae\'60\'a1\'41\'a6\'50\'ae\'c9\'a5\'4e\'aa\'ed\'b0\'ea\'a4\'4f\'a9\'b9\'ab\'e1\'b1\'bc\'a1\'43\'a1\'75\'ac\'4f\'a4\'a3\'ac\'4f\'bd\'c4\'b5\'db\'ba\'de\'a4\'a4\'b6\'7b\'a8\'d3\'a1\'48\'bd\'c4\'b5\'db\'a5\'78\'a4\'6a\'a8\'d3\'a1\'48\'a1\'76\'a7\'f5\'c2\'45\'b7\'bd\'bb\'a1\'a1\'41\'a4\'bd\'b0\'c8\'ad\'fb\'a5\'b2\'b6\'b7\'a8\'cc\'aa\'6b\'a6\'e6\'ac\'46\'a1\'41\'a4\'bd\'b0\'c8\'ad\'fb\'a4\'a3\'a5\'69\'a5\'48\'bf\'ef\'be\'dc\'a9\'ca\'b0\'f5\'aa\'6b\'a1\'43\'ae\'da\'be\'da\'b3\'6f\'a8\'e2\'ad\'d3\'ad\'ec\'ab\'68\'a1\'41\'a8\'d3\'c0\'cb\'b5\'f8\'a5\'78\'a4\'6a\'bf\'ee\'bf\'ef\'ae\'d5\'aa\'f8\'aa\'ba\'b9\'4c\'b5\'7b\'a1\'41\'b4\'4e\'a5\'69\'a5\'48\'aa\'be\'b9\'44\'b6\'a7\'a9\'fa\'a4\'6a\'be\'c7\'a4\'5d\'a6\'b3\'bf\'57\'b8\'b3\'b1\'a1\'a8\'c6\'a1\'41\'a6\'d3\'bf\'ee\'a9\'65\'a4\'a4\'a4\'5d\'a6\'b3\'a4\'a4\'ac\'e3\'b0\'7c\'b0\'7c\'aa\'f8\'a9\'4d\'b0\'c6\'b0\'7c\'aa\'f8\'a8\'53\'a6\'b3\'b0\'6a\'c1\'d7\'aa\'ba\'b1\'a1\'a7\'ce\'a1\'43\'a6\'5d\'a6\'d3\'c1\'61\'a6\'b3\'b7\'e5\'b2\'ab\'a1\'41\'a8\'c3\'ab\'44\'b9\'48\'aa\'6b\'a1\'41\'a8\'e4\'a4\'40\'ac\'4f\'a4\'a3\'b2\'c5\'a6\'58\'a4\'f1\'a8\'d2\'ad\'ec\'ab\'68\'a6\'d3\'a5\'fe\'bd\'4c\'b1\'c0\'c2\'bd\'bf\'ee\'bf\'ef\'b5\'b2\'aa\'47\'a1\'41\'a8\'e4\'a4\'47\'ac\'4f\'a1\'75\'aa\'6b\'a1\'76\'c0\'b3\'a4\'40\'b5\'f8\'a6\'50\'a4\'af\'a1\'41\'a4\'a3\'ac\'4f\'c2\'f9\'ad\'ab\'bc\'d0\'b7\'c7\'a1\'42\'b0\'77\'b9\'ef\'a9\'ca\'b0\'f5\'aa\'6b\'a1\'43\'a1\'75\'bd\'d0\'b8\'ad\'ab\'54\'ba\'61\'a9\'fa\'bd\'54\'bb\'a1\'a5\'58\'a5\'64\'ba\'de\'ae\'d7\'ad\'49\'ab\'e1\'aa\'ba\'ac\'46\'aa\'76\'ad\'ec\'a6\'5d\'a1\'41\'a8\'c3\'a5\'42\'ad\'74\'ac\'46\'aa\'76\'b3\'64\'a5\'f4\'a1\'43\'a1\'76\'a5\'78\'a4\'6a\'c2\'e5\'be\'c7\'a8\'74\'b1\'d0\'b1\'c2\'a4\'fd\'a9\'fa\'b9\'64\'b5\'4c\'a9\'60\'aa\'ed\'a5\'dc\'a1\'41\'b9\'4c\'a5\'68\'a6\'5d\'ac\'b0\'ac\'46\'a9\'b2\'a1\'42\'ac\'46\'c4\'d2\'bb\'50\'ac\'46\'aa\'76\'aa\'ba\'a6\'55\'ba\'d8\'a4\'7a\'b9\'77\'a1\'41\'c5\'fd\'a5\'78\'a4\'6a\'b7\'73\'ae\'d5\'aa\'f8\'c4\'61\'af\'ca\'aa\'f1\'a4\'40\'a6\'7e\'a1\'43\'a5\'48\'ab\'e1\'a5\'78\'a4\'6a\'a4\'5d\'b7\'7c\'a6\'b3\'bf\'ee\'bf\'ef\'a1\'41\'a8\'e4\'a5\'4c\'be\'c7\'ae\'d5\'a4\'5d\'b7\'7c\'bf\'ef\'ae\'d5\'aa\'f8\'a1\'41\'a6\'70\'aa\'47\'bf\'ee\'bf\'ef\'b5\'7b\'a7\'c7\'a4\'a3\'a7\'b9\'ac\'fc\'a1\'41\'a5\'48\'ab\'e1\'a5\'69\'a5\'48\'a7\'ef\'a1\'41\'a6\'fd\'ac\'4f\'b2\'7b\'a6\'62\'c5\'fd\'a5\'a6\'a8\'ab\'a7\'b9\'a1\'43\'b4\'c1\'ac\'df\'ac\'46\'a9\'b2\'a6\'62\'a4\'6a\'bf\'ef\'b5\'b2\'a7\'f4\'a5\'c1\'b7\'4e\'a7\'65\'b2\'7b\'aa\'ba\'a6\'b9\'a8\'e8\'a1\'41\'af\'e0\'b0\'f7\'b8\'a8\'b9\'ea\'aa\'6b\'aa\'76\'bb\'50\'b4\'4c\'ad\'ab\'a4\'6a\'be\'c7\'a6\'db\'aa\'76\'b1\'6f\'a8\'d3\'a4\'a3\'a9\'f6\'aa\'ba\'ba\'eb\'af\'ab\'a1\'41\'ad\'ab\'b7\'73\'ab\'e4\'a6\'d2\'bb\'50\'a8\'4d\'b5\'a6\'a1\'41\'c5\'fd\'a5\'78\'a4\'6a\'bb\'50\'a5\'78\'c6\'57\'aa\'ba\'b0\'aa\'b1\'d0\'af\'e0\'ba\'c9\'b3\'74\'c1\'da\'b6\'7d\'a4\'6a\'a8\'42\'a6\'56\'ab\'65\'a8\'ab\'a1\'43\'a1\'75\'b6\'56\'ac\'4f\'a6\'b3\'c5\'76\'a4\'4f\'aa\'ba\'a4\'48\'a1\'41\'b6\'56\'bb\'dd\'ad\'6e\'ab\'f6\'b7\'d3\'aa\'6b\'ab\'df\'bf\'ec\'a8\'c6\'a1\'43\'a1\'76\'a4\'fd\'a9\'fa\'b9\'64\'bb\'a1\'a1\'41\'a7\'c6\'b1\'e6\'a5\'c1\'b6\'69\'c4\'d2\'b5\'b9\'a5\'78\'a4\'6a\'ae\'d5\'aa\'f8\'be\'f7\'b7\'7c\'a1\'41\'a5\'fe\'a5\'c1\'a4\'7e\'b7\'7c\'b5\'b9\'a5\'c1\'b6\'69\'c4\'d2\'be\'f7\'b7\'7c\'a1\'43\'a1\'75\'a5\'c1\'a5\'44\'ac\'46\'aa\'76\'a4\'a3\'ac\'4f\'ad\'6e\'b1\'fe\'aa\'ba\'a7\'41\'bb\'50\'a7\'da\'ac\'a1\'a1\'41\'a6\'d3\'ac\'4f\'ad\'6e\'c5\'fd\'a5\'78\'c6\'57\'a7\'f3\'a6\'6e\'a1\'43\'a1\'76\'a5\'78\'a4\'6a\'a6\'db\'a5\'44\'c1\'70\'b7\'f9\'a6\'50\'ae\'c9\'b9\'ef\'bd\'b2\'ad\'5e\'a4\'e5\'c1\'60\'b2\'ce\'b3\'db\'b8\'dc\'a1\'41\'ae\'b3\'a5\'58\'a6\'e6\'b0\'ca\'a1\'41\'b5\'6f\'b5\'b9\'a5\'78\'a4\'6a\'a4\'40\'af\'c8\'ae\'d5\'aa\'f8\'b8\'75\'ae\'d1\'a1\'41\'c5\'fd\'a7\'da\'ad\'cc\'ac\'dd\'a8\'ec\'ac\'46\'a9\'b2\'b9\'ce\'b6\'a4\'a6\'62\'a4\'6a\'bf\'ef\'ae\'c0\'b1\'d1\'a4\'a7\'ab\'e1\'a1\'41\'af\'75\'a5\'bf\'c4\'40\'b7\'4e\'b6\'c9\'c5\'a5\'a5\'c1\'b7\'4e\'a1\'41\'ae\'69\'b2\'7b\'b8\'db\'b7\'4e\'a1\'41\'a8\'c3\'a5\'42\'b1\'4e\'a5\'78\'c6\'57\'b1\'d0\'a8\'7c\'aa\'ba\'b5\'6f\'ae\'69\'a1\'41\'b1\'60\'be\'6e\'a9\'f3\'a4\'df\'a1\'43
+\f2 \
+cnn predict :  political\
+rnn predict :  political\
+\
+
+\f0 \'b9\'c5\'b8\'71\'b0\'aa\'b0\'d3\'bc\'73\'a7\'69\'ac\'ec\'be\'c7\'a5\'cd\'b6\'c0\'be\'e5\'ad\'c5\'a1\'41\'b0\'ea\'a4\'a4\'b7\'7c\'a6\'d2\'c0\'f2
+\f2 5A
+\f0 \'a8\'ce\'c1\'5a\'a1\'41\'ab\'6f\'bf\'ef\'c5\'aa\'c2\'be\'ae\'d5\'a1\'41\'a4\'e9\'ab\'65\'c0\'f2\'a5\'fe\'b0\'ea\'b0\'d3\'b7\'7e\'c3\'fe\'be\'c7\'a5\'cd\'a7\'de\'c3\'c0\'c4\'76\'c1\'c9\'b9\'71\'b8\'a3\'c3\'b8\'b9\'cf\'b2\'d5\'aa\'f7\'a4\'e2\'bc\'fa\'a1\'41\'b0\'a3\'a4\'46\'a8\'fa\'b1\'6f\'ab\'4f\'b0\'65\'b0\'ea\'a5\'df\'ac\'ec\'a7\'de\'a4\'6a\'be\'c7\'b8\'ea\'ae\'e6\'a5\'7e\'a1\'41\'c1\'d9\'b1\'4e\'ad\'75\'ae\'fc\'a5\'7e\'ac\'e3\'b2\'df\'b0\'d1\'b3\'58
+\f2 12
+\f0 \'a4\'d1\'a1\'43\'b9\'c5\'b8\'71\'b0\'aa\'b0\'d3\'ae\'d5\'aa\'f8\'aa\'4c\'b8\'71\'b4\'c9\'a4\'b5\'a4\'d1\'a5\'6c\'b6\'7d\'b0\'4f\'aa\'cc\'b7\'7c\'aa\'ed\'a5\'dc\'a1\'41\'a4\'b5\'a6\'7e\'ac\'4f\'b9\'c5\'b8\'71\'b0\'aa\'b0\'d3\'b3\'d0\'ae\'d5
+\f2 80
+\f0 \'b6\'67\'a6\'7e\'a1\'41\'be\'c7\'ae\'d5\'ac\'a3\'a5\'58
+\f2 8
+\f0 \'b2\'d5\'be\'c7\'a5\'cd\'b0\'d1\'a5\'5b\'a5\'bb\'a4\'eb
+\f2 4
+\f0 \'a4\'e9\'a6\'dc
+\f2 6
+\f0 \'a4\'e9\'a6\'62\'b0\'aa\'b6\'af\'a5\'ab\'bb\'f1\'a4\'73\'b0\'d3\'a4\'75\'c1\'7c\'bf\'ec\'aa\'ba\'a5\'fe\'b0\'ea\'b0\'d3\'b7\'7e\'c3\'fe\'be\'c7\'a5\'cd\'a7\'de\'c3\'c0\'c4\'76\'c1\'c9\'a1\'41\'b5\'b2\'aa\'47\'ae\'b3\'a4\'55
+\f2 3
+\f0 \'ae\'79\'aa\'f7\'a4\'e2\'bc\'fa\'a1\'42
+\f2 5
+\f0 \'ae\'79\'c0\'75\'b3\'d3\'bc\'fa\'a1\'41\'c0\'f2\'bc\'fa\'b2\'76
+\f2 100%
+\f0 \'a1\'43\'a8\'e4\'a4\'a4\'a1\'41\'bc\'73\'a7\'69\'ac\'ec
+\f2 3
+\f0 \'a6\'7e\'af\'c5\'be\'c7\'a5\'cd\'b6\'c0\'be\'e5\'ad\'c5\'c0\'f2\'b9\'71\'b8\'a3\'c3\'b8\'b9\'cf\'b2\'d5\'aa\'f7\'a4\'e2\'bc\'fa\'a1\'41\'bd\'54\'a9\'77\'a8\'fa\'b1\'6f\'ab\'4f\'b0\'65\'b0\'ea\'a5\'df\'ac\'ec\'a7\'de\'a4\'6a\'be\'c7\'b8\'ea\'ae\'e6\'a1\'41\'a8\'c3\'b1\'4e\'c0\'f2\'b0\'ea\'b1\'d0\'b8\'70\'b1\'c0\'c2\'cb\'b0\'d1\'a5\'5b\'ae\'fc\'a5\'7e
+\f2 12
+\f0 \'a4\'d1\'ac\'e3\'b2\'df\'b0\'d1\'b3\'58\'a1\'43\'ab\'fc\'be\'c9\'b1\'d0\'ae\'76\'c3\'43\'ae\'61\'b6\'76\'aa\'ed\'a5\'dc\'a1\'41\'b6\'c0\'be\'e5\'ad\'c5\'b1\'71\'a4\'70\'b3\'df\'c5\'77\'b5\'65\'b5\'65\'a1\'41\'a6\'6f\'aa\'ba\'a4\'f7\'bf\'cb\'ac\'4f\'b5\'7b\'a6\'a1\'b3\'5d\'ad\'70\'ae\'76\'a1\'41\'a5\'c0\'bf\'cb\'ac\'4f\'ae\'61\'ae\'78\'a5\'44\'b0\'fc\'a1\'43\'a5\'c0\'bf\'cb\'ac\'dd\'a6\'6f\'a5\'ce\'b9\'71\'b8\'a3\'b7\'c6\'b9\'ab\'c3\'b8\'b9\'cf\'a1\'41\'c4\'b1\'b1\'6f\'a4\'51\'a4\'c0\'a4\'a3\'ab\'4b\'a1\'41\'b4\'4e\'a6\'62\'a6\'6f\'c5\'aa\'b0\'ea\'a4\'a4\'ae\'c9\'b0\'65\'a6\'6f\'a4\'40\'b6\'f4\'c3\'b8\'b9\'cf\'aa\'4f\'a1\'43\'a6\'6f\'bb\'a1\'a1\'41\'b6\'c0\'be\'e5\'ad\'c5\'b0\'ea\'a4\'a4\'b7\'7c\'a6\'d2\'c0\'f2
+\f2 5A
+\f0 \'a8\'ce\'c1\'5a\'a1\'41\'a5\'d1\'a9\'f3\'b3\'df\'c5\'77\'b5\'65\'b5\'65\'a1\'41\'ae\'61\'a4\'48\'b4\'4c\'ad\'ab\'a6\'6f\'aa\'ba\'bf\'b3\'bd\'ec\'bb\'50\'a7\'d3\'a6\'56\'a1\'41\'a9\'f1\'b1\'f3\'b4\'4e\'c5\'aa\'b9\'c5\'b8\'71\'a4\'6b\'a4\'a4\'aa\'ba\'be\'f7\'b7\'7c\'a1\'41\'bf\'ef\'be\'dc\'b9\'c5\'b0\'d3\'bc\'73\'a7\'69\'b3\'5d\'ad\'70\'ac\'ec\'a1\'41
+\f2 3
+\f0 \'a6\'7e\'a8\'d3\'a6\'a8\'c1\'5a\'b3\'a3\'ab\'4f\'ab\'f9\'a5\'fe\'ac\'ec\'b2\'c4\'a4\'40\'a6\'57\'a1\'43\'b6\'c0\'be\'e5\'ad\'c5\'aa\'ed\'a5\'dc\'a1\'41\'a6\'6f\'ad\'ec\'a5\'bb\'a5\'75\'b7\'51\'a6\'d2\'b2\'ce\'b4\'fa\'a1\'41\'a4\'a3\'b7\'51\'b0\'d1\'a5\'5b\'ae\'d5\'a4\'ba\'aa\'ec\'bf\'ef\'a1\'41\'b8\'67\'ae\'76\'aa\'f8\'b9\'aa\'c0\'79\'a1\'41\'b3\'cc\'ab\'e1\'a4\'7e\'a8\'fa\'b1\'6f\'b9\'71\'c3\'b8\'bf\'ef\'a4\'e2\'b8\'ea\'ae\'e6\'a1\'43\'a6\'6f\'b1\'60\'a6\'62\'ba\'f4\'af\'b8\'a4\'57\'b3\'5d\'ad\'70\'a4\'48\'aa\'ab\'a8\'a4\'a6\'e2\'a1\'41\'b1\'4e\'a8\'d3\'a7\'c6\'b1\'e6\'a9\'b9\'b9\'43\'c0\'b8\'b3\'5d\'ad\'70\'a4\'e8\'a6\'56\'b5\'6f\'ae\'69\'a1\'43
+\f2 \
+cnn predict :  education\
+rnn predict :  education\
+\
+
+\f0 \'a4\'b5\'a4\'e9\'aa\'ba\'b4\'fa\'b8\'d5\'aa\'41\'a7\'f3\'b7\'73\'a4\'77\'b8\'67\'b1\'c0\'a5\'58\'c5\'6f\'a1\'49\'a5\'bb\'a4\'e9\'a5\'44\'ad\'6e\'aa\'ba\'a7\'f3\'b7\'73\'a4\'ba\'ae\'65\'a6\'b3\'a1\'47\'a1\'75\'a5\'76\'a5\'cb\'a9\'67\'a1\'42\'a6\'e3\'a7\'c6\'a1\'42\'a6\'4e\'af\'f4\'cf\'c8\'b5\'b7\'a1\'42\'a7\'c6\'ba\'fb\'ba\'b8\'a1\'42\'ab\'62\'b6\'ae\'a1\'76\'a5\'ad\'bf\'c5\'bd\'d5\'be\'e3\'a1\'41\'a1\'75\'a8\'be\'bf\'6d\'b6\'f0\'a1\'76\'bc\'fa\'c0\'79\'bd\'d5\'be\'e3\'a1\'49\'b5\'f9\'a1\'47
+\f2 PBE
+\f0 \'a5\'75\'ac\'4f\'ab\'f9\'c4\'f2\'b4\'fa\'b8\'d5\'aa\'ba\'b9\'4c\'b5\'7b\'a1\'41\'b4\'c2\'a5\'4f\'a4\'69\'a7\'ef\'a8\'d2\'a4\'6c\'ab\'dc\'a6\'68\'a1\'41\'a5\'42\'b8\'ea\'b0\'54\'a5\'69\'af\'e0\'bb\'50\'a5\'bf\'a6\'a1\'aa\'a9\'a5\'bb\'a6\'b3\'a8\'c7\'b3\'5c\'a5\'58\'a4\'4a\'a1\'41\'a4\'40\'a4\'c1\'a5\'48\'a9\'78\'ba\'f4\'b8\'ea\'b0\'54\'ac\'b0\'a5\'44\'a1\'43\'a1\'69\'a5\'ad\'bf\'c5\'a7\'ef\'b0\'ca\'a1\'6a\'a1\'69\'ad\'5e\'b6\'af\'a1\'6a\'a5\'76\'a5\'cb\'a9\'67\'b0\'f2\'c2\'a6\'bc\'c6\'ad\'c8\'b0\'f2\'c2\'a6\'c5\'5d\'a8\'be\'a5\'d1
+\f2 27.1
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 \'a032.1
+\f0 \'a1\'43\'a6\'a8\'aa\'f8\'c5\'5d\'a8\'be\'a5\'d1
+\f2 0.75
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 1.25
+\f0 \'a1\'43\'a6\'a8\'aa\'f8\'aa\'ab\'a8\'be\'a5\'d1
+\f2 3
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 4.25
+\f0 \'a1\'43\'a6\'a8\'aa\'f8\'a5\'cd\'a9\'52\'a5\'d1
+\f2 88
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 105
+\f0 \'a1\'43\'a5\'5f\'b9\'d2\'a4\'a7\'ab\'e3\'c5\'40\'a5\'d2\'ae\'f8\'a5\'a2\'ae\'c9\'b6\'a1\'a5\'d1\'a8\'fc\'a8\'ec\'b6\'cb\'ae\'60\'ab\'e1
+\f2 2
+\f0 \'ac\'ed\'a9\'b5\'aa\'f8\'a6\'dc
+\f2 3
+\f0 \'ac\'ed\'a1\'43\'b7\'a5\'a6\'61\'bd\'c4\'a8\'eb\'b0\'f2\'c2\'a6\'b6\'cb\'ae\'60\'a5\'d1
+\f2 60/90/120/150/180
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 80/120/160/200/240
+\f0 \'a1\'43\'bb\'fe\'a5\'56\'a8\'67\'ab\'e3\'b2\'c4\'a4\'47\'ac\'71\'c3\'40\'a5\'b4\'a4\'a7\'b0\'f2\'c2\'a6\'b6\'cb\'ae\'60\'a5\'d1
+\f2 \'a030/65/100/135/170\'a0
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 30/70/110/150/190
+\f0 \'a1\'43\'a5\'c3\'ab\'ed\'ad\'e1\'a4\'67
+\f2 \'a0
+\f0 \'b7\'77\'af\'74\'ae\'c9\'b6\'a1\'a5\'d1
+\f2 1.0/1.1/1.2/1.3/1.4
+\f0 \'ac\'ed\'c1\'59\'b5\'75\'a6\'dc
+\f2 1.0
+\f0 \'ac\'ed\'a1\'43\'b0\'f2\'c2\'a6\'b6\'cb\'ae\'60\'a5\'d1
+\f2 20/35/50/65/80
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 40/100/160/220/280
+\f0 \'a1\'43\'ac\'49\'a9\'f1\'b6\'5a\'c2\'f7\'a5\'d1
+\f2 750
+\f0 \'b4\'ee\'a4\'d6\'a6\'dc
+\f2 560
+\f0 \'a1\'43\'a6\'e3\'a7\'c6\'c6\'4e\'c0\'bb\'aa\'f8\'aa\'c5
+\f2 \'a0
+\f0 \'a1\'69\'b7\'73\'bc\'57\'a1\'6a\'b2\'7b\'a6\'62\'ad\'59\'a8\'cf\'a5\'ce\'a6\'b9\'a7\'de\'af\'e0\'b4\'a6\'c5\'53\'be\'d4\'aa\'a7\'b0\'67\'c3\'fa\'a4\'a4\'aa\'ba\'bc\'c4\'a4\'48\'a1\'41\'a5\'42\'b8\'d3\'bc\'c4\'a4\'48\'a6\'62\'b5\'75\'ae\'c9\'b6\'a1\'a4\'ba\'b3\'51\'b6\'a4\'a4\'cd\'c0\'bb\'b1\'fe\'aa\'ba\'b8\'dc\'a6\'e3\'a7\'c6\'b1\'4e\'a5\'69\'a5\'48\'c0\'f2\'b1\'6f\'a7\'55\'a7\'f0\'a1\'43\'a6\'4e\'af\'f4\'cf\'c8\'b5\'b7\'ab\'a6\'ab\'a6\'a1\'49
+\f2 \'a0
+\f0 \'a1\'69\'b7\'73\'bc\'57\'a1\'6a\'b2\'7b\'a6\'62\'b7\'7c\'c0\'48\'b5\'db\'a7\'f0\'b3\'74\'b4\'a3\'a4\'c9\'c1\'59\'b5\'75\'ac\'49\'aa\'6b\'ae\'c9\'b6\'a1\'a1\'43\'a7\'c6\'ba\'fb\'ba\'b8\'b0\'6a\'b1\'db\'a4\'a7\'a4\'62\'a1\'69\'bd\'d5\'be\'e3\'a1\'6a\'b2\'7b\'a6\'62\'a5\'75\'a6\'b3\'ac\'ef\'b9\'4c\'ab\'44\'ad\'5e\'b6\'af\'b3\'e6\'a6\'ec\'ae\'c9\'b1\'4e\'a4\'7e\'b7\'7c\'bb\'bc\'b4\'ee
+\f2 \'a015%
+\f0 \'a7\'de\'af\'e0\'b6\'cb\'ae\'60\'a1\'43\'a4\'51\'a6\'72\'bc\'75\'ae\'67\'bc\'75\'ae\'67\'b6\'cb\'ae\'60\'a5\'d1
+\f2 50/55/60/65/70%
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 55/60/65/70/75%
+\f0 \'a1\'43\'ac\'bc\'c2\'79\'b3\'51\'b0\'ca\'a1\'47\'a8\'cf\'a5\'ce\'a4\'51\'a6\'72\'bc\'75\'ae\'67\'ae\'c9\'a7\'f0\'b3\'74\'a5\'5b\'a6\'a8\'a5\'d1
+\f2 30/45/60%
+\f0 \'bd\'d5\'be\'e3\'a6\'dc
+\f2 45%
+\f0 \'a1\'43\'b1\'5a\'b5\'b7\'b6\'f0\'ae\'52\'c3\'7a\'ac\'b5\'ae\'67\'c0\'bb\'a7\'4e\'ab\'6f\'ae\'c9\'b6\'a1\'a5\'d1
+\f2 16/15.5/15/14.5/14
+\f0 \'ac\'ed\'c1\'59\'b5\'75\'a6\'dc
+\f2 12/11/10/9/8
+\f0 \'ac\'ed\'a1\'43\'ab\'62\'b6\'ae\'ba\'a9\'a4\'d1\'a6\'e5\'a4\'62\'a1\'69\'b2\'be\'b0\'a3\'a1\'6a\'a4\'a3\'a6\'41\'a6\'5d\'bc\'c9\'c0\'bb\'b2\'76\'a6\'d3\'b4\'a3\'a4\'c9\'a7\'de\'af\'e0\'b6\'cb\'ae\'60\'a1\'43\'a1\'69\'b2\'c5\'a4\'e5\'a1\'6a\'a4\'4d\'be\'57\'a4\'a7\'b9\'72\'a7\'f0\'c0\'bb\'b3\'74\'ab\'d7\'a5\'5b\'a6\'a8\'a5\'d1
+\f2 125%
+\f0 \'b4\'ee\'a4\'d6\'a6\'dc
+\f2 110%
+\f0 \'a1\'43\'a1\'69\'a6\'61\'b9\'cf\'a1\'6a\'a5\'7e\'a8\'be\'bf\'6d\'b6\'f0\'b2\'7b\'a6\'62\'a5\'a2\'a5\'68\'a9\'d2\'a6\'b3\'c5\'40\'a5\'d2\'ab\'e1\'aa\'ba\'a8\'be\'bf\'6d\'a4\'4f\'a5\'d1
+\f2 0
+\f0 \'b4\'a3\'a4\'c9\'a6\'dc
+\f2 40
+\f0 \'a1\'43\'b1\'c0\'b6\'f0\'aa\'f7\'bf\'fa\'a1\'69\'a7\'f3\'a7\'ef\'ab\'65\'a1\'6a\'ba\'52\'b7\'b4\'a8\'be\'bf\'6d\'b6\'f0\'a5\'48\'a4\'ce\'ad\'ba\'b6\'f0\'aa\'f7\'bf\'fa\'bc\'fa\'c0\'79\'b1\'4e\'b7\'7c\'a4\'c0\'b5\'b9\'a8\'be\'bf\'6d\'b6\'f0\'aa\'fe\'aa\'f1\'aa\'ba\'a9\'d2\'a6\'b3\'ad\'5e\'b6\'af\'a1\'43\'a1\'69\'a7\'f3\'a7\'ef\'ab\'e1\'a1\'6a\'ba\'52\'b7\'b4\'a8\'be\'bf\'6d\'b6\'f0\'a5\'48\'a4\'ce\'ad\'ba\'b6\'f0\'aa\'f7\'bf\'fa\'bc\'fa\'c0\'79\'b1\'4e\'b7\'7c\'a4\'c0\'b5\'b9\'a8\'be\'bf\'6d\'b6\'f0\'aa\'fe\'aa\'f1\'aa\'ba\'a9\'d2\'a6\'b3\'ad\'5e\'b6\'af\'a4\'ce\'a8\'f3\'a7\'55\'b6\'69\'a6\'e6\'b6\'f0\'b1\'fe\'aa\'ba\'a7\'55\'a7\'f0\'ad\'5e\'b6\'af\'a1\'43
+\f2 \uc0\u9733 
+\f0 \'a7\'d6\'a5\'5b\'a4\'4a\'a1\'6d\'a4\'57\'b3\'f8\'a1\'6e\'a6\'6e\'a4\'cd\'a1\'49\'ac\'dd\'a7\'f3\'a6\'68\'b2\'60\'ab\'d7\'b7\'73\'bb\'44
+\f2 \uc0\u9733 \
+cnn predict :  game\
+rnn predict :  game\
+\
+
+\f0 \'aa\'be\'a6\'57\'c4\'d1\'a5\'5d\'ae\'76\'b3\'c5\'a7\'64\'c4\'5f\'ac\'4b\'a6\'62\'a4\'6a\'b3\'b0\'ae\'69\'a9\'b1\'a1\'41\'ab\'6f\'b3\'51\'a4\'6a\'b3\'b0\'b4\'43\'c5\'e9\'c2\'bd\'a5\'58\'b9\'4c\'a5\'68\'b1\'4d\'b3\'58\'a1\'41\'be\'44\'a4\'6a\'b3\'b0\'ba\'f4\'a4\'cd\'a9\'e8\'a8\'ee\'ac\'4f\'a1\'75\'a5\'78\'bf\'57\'c4\'d1\'a5\'5d\'a1\'76\'a1\'41\'a7\'64\'c4\'5f\'ac\'4b\'b5\'6f\'a5\'58\'c1\'6e\'a9\'fa\'a8\'e4\'a5\'cd\'a9\'f3\'a1\'75\'a4\'a4\'b0\'ea\'a5\'78\'c6\'57\'a1\'76\'a1\'42\'b0\'ed\'ab\'f9\'a1\'75\'a8\'e2\'a9\'a4\'a4\'40\'ae\'61\'bf\'cb\'a1\'76\'a1\'41\'a8\'c3\'bb\'a1\'a1\'75\'a8\'ad\'ac\'b0\'a4\'a4\'b0\'ea\'a4\'48\'a1\'41\'ac\'4f\'a7\'da\'aa\'ba\'c5\'ba\'b6\'c6\'a1\'76\'a1\'41\'a4\'de\'b5\'6f\'c1\'d6\'bd\'d7\'c3\'cf\'b5\'4d\'a1\'43\'b9\'ef\'a6\'b9\'a1\'41\'b0\'ea\'a5\'c1\'c4\'d2\'ab\'65\'a5\'df\'a9\'65\'ae\'5d\'a4\'6a\'a4\'64\'a4\'b5\'a1\'5d
+\f2 12
+\f0 \'a1\'5e\'a4\'e9\'aa\'ed\'a5\'dc\'a1\'41\'a1\'75\'bd\'d0\'a4\'6a\'ae\'61\'b0\'aa\'a9\'ef\'b6\'51\'a4\'e2\'a1\'41\'a9\'f1\'b9\'4c\'a7\'64\'c4\'5f\'ac\'4b\'a7\'61\'a1\'49\'a1\'76\'ae\'5d\'a4\'6a\'a4\'64\'a4\'b5\'a4\'e9\'a6\'62\'c1\'79\'ae\'d1\'a4\'57\'b5\'6f\'a4\'e5\'c1\'6e\'b4\'a9\'a7\'64\'c4\'5f\'ac\'4b\'a1\'43\'a5\'4c\'ab\'fc\'a5\'58\'a1\'41\'a1\'75\'a7\'64\'c4\'5f\'ac\'4b\'a5\'75\'ac\'4f\'b7\'ed\'ab\'65\'ba\'f2\'b1\'69\'b9\'ef\'a5\'df\'aa\'ba\'a8\'e2\'a9\'a4\'c3\'f6\'ab\'59\'b1\'a1\'b6\'d5\'a4\'55\'aa\'ba\'c4\'eb\'ac\'b9\'aa\'cc\'a1\'43\'a7\'41\'a5\'48\'ac\'b0\'a5\'4c\'b3\'df\'c5\'77\'b9\'b3\'a4\'40\'a4\'f9\'a7\'a8\'a4\'df\'bb\'e6\'b0\'ae\'a4\'40\'bc\'cb\'a1\'41\'a8\'43\'a4\'d1\'b3\'51\'b9\'47\'b5\'db\'aa\'ed\'ba\'41\'bf\'ef\'be\'dc\'a1\'41\'a1\'79\'a5\'4c\'a8\'73\'b3\'ba\'ac\'4f\'ad\'fe\'b8\'cc\'aa\'ba\'a4\'48\'b6\'dc\'a1\'7a\'a1\'48\'a1\'76\'ae\'5d\'a4\'6a\'a4\'64\'aa\'ed\'a5\'dc\'a1\'41\'b9\'ef\'a9\'f3\'a4\'40\'a6\'ec\'ad\'49\'ad\'74\'b5\'db\'b0\'ea\'a4\'ba\'a5\'7e\'a7\'eb\'b8\'ea\'aa\'cc\'b4\'c1\'b1\'e6\'aa\'ba\'a5\'f8\'b7\'7e\'b8\'67\'c0\'e7\'aa\'cc\'a8\'d3\'bb\'a1\'a1\'41\'a6\'70\'a6\'f3\'ab\'4f\'bb\'d9\'a7\'eb\'b8\'ea\'a4\'48\'aa\'ba\'c5\'76\'af\'71\'ac\'4f\'a5\'b2\'b6\'b7\'c0\'75\'a5\'fd\'a6\'d2\'b6\'71\'aa\'ba\'ad\'ab\'c2\'49\'a1\'43\'b1\'4e\'a4\'df\'a4\'f1\'a4\'df\'a1\'41\'ac\'b0\'a4\'b0\'bb\'f2\'a4\'a3\'af\'e0\'b5\'b9\'b3\'6f\'a6\'ec\'a7\'da\'ad\'cc\'a4\'de\'a5\'48\'ac\'b0\'b6\'c6\'aa\'ba\'a1\'75\'a5\'78\'c6\'57\'a4\'a7\'a5\'fa\'a1\'76\'a1\'41\'a6\'68\'a4\'40\'c2\'49\'c5\'e9\'bd\'cc\'a9\'4d\'a4\'e4\'ab\'f9\'a1\'48\'ae\'5d\'a4\'6a\'a4\'64\'a4\'5d\'a7\'e5\'b5\'fb\'a1\'41\'a4\'b5\'a4\'d1\'ad\'6e\'a4\'a3\'ac\'4f\'a6\'5d\'ac\'b0\'c1\'60\'b2\'ce\'bd\'b2\'ad\'5e\'a4\'e5\'b5\'4c\'aa\'6b\'a7\'49\'b2\'7b\'bf\'ef\'ab\'65\'ab\'4f\'c3\'d2\'a1\'75\'a8\'e2\'a9\'a4\'c3\'f6\'ab\'59\'ba\'fb\'ab\'f9\'b2\'7b\'aa\'ac\'a1\'76\'aa\'ba\'a9\'d3\'bf\'d5\'a1\'41\'a7\'64\'c4\'5f\'ac\'4b\'a4\'53\'a6\'f3\'a5\'b2\'b8\'a8\'a8\'ec\'b3\'6f\'bc\'cb\'a8\'e2\'ad\'b1\'a4\'a3\'ac\'4f\'a4\'48\'aa\'ba\'a4\'55\'b3\'f5\'a9\'4f\'a1\'48\'c1\'d9\'a6\'b3\'a1\'41\'ac\'59\'a6\'ec\'ab\'65\'a4\'ba\'bb\'d5\'bb\'d5\'ad\'fb\'a4\'5d\'ab\'f4\'b0\'55\'a4\'a3\'ad\'6e\'a7\'51\'a5\'ce\'be\'f7\'b7\'7c\'b8\'a8\'a4\'ab\'a4\'55\'a5\'db\'a1\'41\'a5\'e1\'a4\'48\'b2\'7b\'b2\'b4\'a4\'46\'a1\'43\'ae\'5d\'a4\'6a\'a4\'64\'aa\'ed\'a5\'dc\'a1\'41\'a5\'78\'c6\'57\'b3\'d2\'a4\'75\'aa\'ba\'a7\'43\'c1\'7e\'a9\'4d\'b9\'4c\'b3\'d2\'a1\'41\'a4\'a3\'b4\'4e\'ac\'4f\'a6\'e6\'ac\'46\'b0\'7c\'b3\'6f\'b8\'73\'b0\'b6\'a4\'6a\'aa\'ba\'a9\'78\'b9\'b1\'a9\'d2\'b3\'79\'a6\'a8\'aa\'ba\'b6\'dc\'a1\'48\'b8\'d3\'ab\'65\'bb\'d5\'ad\'fb\'a6\'62\'a6\'e6\'ac\'46\'b0\'7c\'aa\'41\'b0\'c8\'aa\'ba\'ae\'c9\'ad\'d4\'a1\'41\'ab\'e7\'bb\'f2\'a4\'a3\'b4\'b1\'bb\'a1\'a5\'58\'af\'75\'a4\'df\'b8\'dc\'a9\'4f\'a1\'48\'ae\'5d\'a4\'6a\'a4\'64\'bb\'a1\'a1\'41\'a1\'75\'b0\'4a\'a4\'df\'a6\'61\'af\'ac\'ba\'d6\'a7\'64\'c4\'5f\'ac\'4b\'ae\'76\'a4\'f7\'a1\'41\'af\'e0\'b0\'f7\'a7\'e2\'c4\'dd\'a9\'f3\'a5\'78\'c6\'57\'c5\'ba\'b6\'c6\'aa\'ba\'c4\'d1\'a5\'5d\'a1\'41\'b1\'61\'a8\'ec\'a5\'fe\'a5\'40\'ac\'c9\'aa\'ba\'a8\'43\'a4\'40\'ad\'d3\'a8\'a4\'b8\'a8\'a1\'43\'a1\'76
+\f2 \
+cnn predict :  political\
+rnn predict :  political\
+\
+CNN Cost 0.26739 seconds for predict 15 news!\
+RNN Cost 5.423585 seconds for predict 15 news!\
+\
+
+\f0 \'a5\'48\'a6\'b9\'b5\'b2\'aa\'47\'a8\'d3\'bb\'a1
+\f2 RNN
+\f0 \'a4\'c0\'c3\'fe\'b8\'fb\'a8\'ce\'a1\'41\'a6\'70\'c0\'5d\'aa\'f8\'bf\'ef\'c4\'b3\'ad\'fb\'b7\'73\'bb\'44
+\f2 CNN
+\f0 \'a4\'c0\'c3\'fe\'ac\'b0\'aa\'c0\'b7\'7c\'b7\'73\'bb\'44
+\f2 .RNN
+\f0 \'a4\'c0\'c3\'fe\'ac\'b0\'ac\'46\'aa\'76\'b7\'73\'bb\'44\'a1\'41\'b5\'d8\'ac\'b0\'b0\'c6\'b8\'b3\'a8\'c6\'aa\'f8\'b7\'73\'bb\'44CNN\'a4\'c0\'c3\'fe\'ac\'b0\'b1\'d0\'a8\'7c\'b7\'73\'bb\'44.RNN\'a4\'c0\'c3\'fe\'ac\'b0\'ac\'46\'aa\'76\'b7\'73\'bb\'44\'a1\'43\
+\
+
+\f2 \
+}
