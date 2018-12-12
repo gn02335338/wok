@@ -1,0 +1,305 @@
+記錄使用cnn rnn文本分析結果
+
+資料:
+使用THUCNews資料 http://thuctc.thunlp.org/sendMessage
+總共有14個主題
+
+sport : 131604
+fashion : 13367
+political : 63085
+finance : 37097
+property : 20049
+social : 50848
+stock : 154397
+constellation : 3577
+technology : 162928
+entertainment : 92631
+household : 32585
+lottery : 7587
+education : 41935
+game : 24372
+
+其中樂透與星座文章量較少，故先不放入訓練資料
+使用12個主題各12000篇文章，其中8000篇為training set，2000篇為validation set，2000篇為testing set
+並將內文轉為繁體中文(原為簡體中文)
+
+模型:
+分別使用CNN.RNN-LSTM.RNN-GRU測試
+
+CNN
+training:
+Training and evaluating...
+Epoch: 1
+Iter:      0, Train Loss:    2.5, Train Acc:  10.94%, Val Loss:    2.5, Val Acc:   8.34%, Time: 0:01:37 *
+Iter:    100, Train Loss:    1.4, Train Acc:  64.06%, Val Loss:    1.5, Val Acc:  62.18%, Time: 0:05:40 *
+Iter:    200, Train Loss:   0.54, Train Acc:  84.38%, Val Loss:   0.78, Val Acc:  74.34%, Time: 0:09:39 *
+Iter:    300, Train Loss:   0.43, Train Acc:  87.50%, Val Loss:   0.59, Val Acc:  81.21%, Time: 0:13:38 *
+Iter:    400, Train Loss:   0.36, Train Acc:  89.06%, Val Loss:   0.52, Val Acc:  83.00%, Time: 0:17:46 *
+Iter:    500, Train Loss:   0.15, Train Acc:  96.88%, Val Loss:   0.48, Val Acc:  84.38%, Time: 0:22:09 *
+Iter:    600, Train Loss:    0.3, Train Acc:  92.19%, Val Loss:   0.42, Val Acc:  86.97%, Time: 0:26:21 *
+Iter:    700, Train Loss:   0.29, Train Acc:  89.06%, Val Loss:   0.43, Val Acc:  86.12%, Time: 0:30:24 
+Iter:    800, Train Loss:   0.38, Train Acc:  87.50%, Val Loss:   0.37, Val Acc:  88.72%, Time: 0:34:24 *
+Iter:    900, Train Loss:   0.58, Train Acc:  85.94%, Val Loss:   0.41, Val Acc:  88.31%, Time: 0:38:21 
+Iter:   1000, Train Loss:   0.34, Train Acc:  92.19%, Val Loss:    0.4, Val Acc:  87.43%, Time: 0:42:22 
+Iter:   1100, Train Loss:    0.2, Train Acc:  93.75%, Val Loss:   0.38, Val Acc:  88.45%, Time: 0:46:20 
+Iter:   1200, Train Loss:   0.24, Train Acc:  93.75%, Val Loss:   0.43, Val Acc:  87.40%, Time: 0:50:17 
+Iter:   1300, Train Loss:   0.27, Train Acc:  90.62%, Val Loss:   0.41, Val Acc:  87.55%, Time: 0:54:14 
+Iter:   1400, Train Loss:   0.13, Train Acc:  93.75%, Val Loss:   0.33, Val Acc:  90.28%, Time: 0:58:11 *
+Epoch: 2
+Iter:   1500, Train Loss:   0.11, Train Acc:  95.31%, Val Loss:   0.34, Val Acc:  89.91%, Time: 1:02:09 
+Iter:   1600, Train Loss:   0.11, Train Acc:  95.31%, Val Loss:   0.35, Val Acc:  89.90%, Time: 1:06:45 
+Iter:   1700, Train Loss:  0.043, Train Acc: 100.00%, Val Loss:   0.35, Val Acc:  88.76%, Time: 1:10:44 
+Iter:   1800, Train Loss:  0.066, Train Acc:  98.44%, Val Loss:   0.38, Val Acc:  88.49%, Time: 1:14:39 
+Iter:   1900, Train Loss:   0.17, Train Acc:  92.19%, Val Loss:   0.39, Val Acc:  88.12%, Time: 1:18:36 
+Iter:   2000, Train Loss:  0.061, Train Acc:  98.44%, Val Loss:   0.37, Val Acc:  89.18%, Time: 1:22:38 
+Iter:   2100, Train Loss:   0.07, Train Acc:  98.44%, Val Loss:   0.34, Val Acc:  90.08%, Time: 1:26:43 
+Iter:   2200, Train Loss:  0.082, Train Acc:  95.31%, Val Loss:   0.32, Val Acc:  90.82%, Time: 1:30:46 *
+Iter:   2300, Train Loss:  0.023, Train Acc: 100.00%, Val Loss:   0.38, Val Acc:  88.67%, Time: 1:34:44 
+Iter:   2400, Train Loss:   0.11, Train Acc:  98.44%, Val Loss:   0.35, Val Acc:  90.00%, Time: 1:38:45 
+Iter:   2500, Train Loss:    0.2, Train Acc:  93.75%, Val Loss:   0.31, Val Acc:  90.82%, Time: 1:42:48 *
+Iter:   2600, Train Loss:  0.072, Train Acc:  96.88%, Val Loss:   0.34, Val Acc:  89.60%, Time: 1:46:46 
+Iter:   2700, Train Loss:    0.1, Train Acc:  96.88%, Val Loss:   0.34, Val Acc:  89.95%, Time: 1:50:48 
+Iter:   2800, Train Loss:  0.096, Train Acc:  96.88%, Val Loss:    0.3, Val Acc:  90.63%, Time: 1:54:48 
+Iter:   2900, Train Loss: 0.0084, Train Acc: 100.00%, Val Loss:   0.33, Val Acc:  89.72%, Time: 1:58:44 
+Epoch: 3
+Iter:   3000, Train Loss:  0.076, Train Acc:  98.44%, Val Loss:   0.32, Val Acc:  90.48%, Time: 2:02:40 
+Iter:   3100, Train Loss:  0.044, Train Acc:  98.44%, Val Loss:   0.36, Val Acc:  89.91%, Time: 2:06:42 
+Iter:   3200, Train Loss:  0.044, Train Acc: 100.00%, Val Loss:   0.33, Val Acc:  90.13%, Time: 2:10:42 
+Iter:   3300, Train Loss:  0.083, Train Acc:  96.88%, Val Loss:   0.31, Val Acc:  90.78%, Time: 2:14:38 
+Iter:   3400, Train Loss:   0.17, Train Acc:  96.88%, Val Loss:   0.36, Val Acc:  89.27%, Time: 2:19:09 
+Iter:   3500, Train Loss:  0.033, Train Acc:  96.88%, Val Loss:   0.33, Val Acc:  90.73%, Time: 2:23:28 
+No optimization for a long time, auto-stopping...
+
+testing:
+Test Loss:   0.27, Test Acc:  92.36%
+Precision, Recall and F1-Score...
+               precision    recall  f1-score   support
+
+        sport       0.98      0.98      0.98      2000
+      finance       0.96      0.96      0.96      2000
+     property       0.99      0.97      0.98      2000
+    household       0.92      0.91      0.92      2000
+    education       0.88      1.00      0.93      2000
+   technology       0.92      0.97      0.95      2000
+      fashion       0.89      0.77      0.83      2000
+    political       0.93      0.92      0.93      2000
+         game       0.96      0.98      0.97      2000
+entertainment       0.95      0.74      0.83      2000
+       social       0.79      0.93      0.86      2000
+        stock       0.94      0.95      0.94      2000
+
+    micro avg       0.92      0.92      0.92     24000
+    macro avg       0.93      0.92      0.92     24000
+ weighted avg       0.93      0.92      0.92     24000
+
+Confusion Matrix...
+[[1968    2    0    0    9    3    2    1    2    8    4    1]
+ [   0 1915    1    2    0    0    0    4    0    0    0   78]
+ [   0    9 1934   40    6    2    4    0    1    2    1    1]
+ [   0   11    3 1827   13   16   43   18    6   10   33   20]
+ [   0    0    0    0 1999    0    0    0    0    1    0    0]
+ [   2    0    0    5    3 1948   18    1   19    1    2    1]
+ [   3    0    0   44   85  101 1546   20   11   38  152    0]
+ [   1   11    3    4   41   13    1 1840    1    5   54   26]
+ [   1    2    0    0   10    7    8    1 1959    5    6    1]
+ [  25    8    2   23   55    5  116   39   16 1480  230    1]
+ [   4    9    0    5   55   10    2   39    5   12 1859    0]
+ [   0   24    5   43    1    9    5    7   13    2    0 1891]]
+Time usage: 0:03:18
+
+RNN-LSTM
+training:
+Training and evaluating...
+Epoch: 1
+Iter:      0, Train Loss:    2.5, Train Acc:  13.28%, Val Loss:    2.5, Val Acc:  10.57%, Time: 0:06:14 *
+Iter:    100, Train Loss:    1.4, Train Acc:  48.44%, Val Loss:    1.6, Val Acc:  37.81%, Time: 0:23:33 *
+Iter:    200, Train Loss:    1.2, Train Acc:  63.28%, Val Loss:    1.6, Val Acc:  48.19%, Time: 0:40:53 *
+Iter:    300, Train Loss:    1.7, Train Acc:  44.53%, Val Loss:    2.2, Val Acc:  31.64%, Time: 0:58:15 
+Iter:    400, Train Loss:    1.0, Train Acc:  66.41%, Val Loss:    1.2, Val Acc:  60.18%, Time: 1:15:37 *
+Iter:    500, Train Loss:    1.1, Train Acc:  60.94%, Val Loss:    1.4, Val Acc:  58.01%, Time: 1:33:01 
+Iter:    600, Train Loss:   0.92, Train Acc:  63.28%, Val Loss:    1.3, Val Acc:  57.42%, Time: 1:50:33 
+Iter:    700, Train Loss:    1.0, Train Acc:  66.41%, Val Loss:    1.3, Val Acc:  55.69%, Time: 2:08:04 
+Epoch: 2
+Iter:    800, Train Loss:   0.77, Train Acc:  77.34%, Val Loss:    1.0, Val Acc:  67.05%, Time: 2:25:42 *
+Iter:    900, Train Loss:    1.3, Train Acc:  59.38%, Val Loss:    1.4, Val Acc:  55.15%, Time: 2:43:12 
+Iter:   1000, Train Loss:    1.4, Train Acc:  55.47%, Val Loss:    1.4, Val Acc:  53.78%, Time: 3:00:08 
+Iter:   1100, Train Loss:   0.97, Train Acc:  64.06%, Val Loss:    1.1, Val Acc:  64.03%, Time: 3:17:05 
+Iter:   1200, Train Loss:    1.3, Train Acc:  63.28%, Val Loss:    1.4, Val Acc:  58.40%, Time: 3:34:01 
+Iter:   1300, Train Loss:    1.2, Train Acc:  60.16%, Val Loss:    1.4, Val Acc:  58.50%, Time: 3:50:58 
+Iter:   1400, Train Loss:   0.75, Train Acc:  76.56%, Val Loss:    1.1, Val Acc:  64.79%, Time: 4:07:53 
+Epoch: 3
+Iter:   1500, Train Loss:   0.75, Train Acc:  76.56%, Val Loss:    1.0, Val Acc:  66.36%, Time: 4:24:55 
+Iter:   1600, Train Loss:   0.75, Train Acc:  73.44%, Val Loss:    1.1, Val Acc:  65.30%, Time: 4:41:51 
+Iter:   1700, Train Loss:   0.79, Train Acc:  71.09%, Val Loss:    1.1, Val Acc:  62.30%, Time: 4:58:48 
+Iter:   1800, Train Loss:   0.89, Train Acc:  70.31%, Val Loss:    1.1, Val Acc:  65.92%, Time: 5:15:45 
+No optimization for a long time, auto-stopping...
+
+不知道為什麼效果很差，故無進行test
+
+RNN-GRU
+training:
+Training and evaluating...
+Epoch: 1
+Iter:      0, Train Loss:    2.5, Train Acc:   8.59%, Val Loss:    2.5, Val Acc:   7.40%, Time: 0:05:12 *
+Iter:    100, Train Loss:   0.83, Train Acc:  72.66%, Val Loss:    1.0, Val Acc:  65.85%, Time: 0:21:38 *
+Iter:    200, Train Loss:   0.46, Train Acc:  85.16%, Val Loss:   0.77, Val Acc:  74.61%, Time: 0:37:51 *
+Iter:    300, Train Loss:   0.53, Train Acc:  83.59%, Val Loss:    0.8, Val Acc:  76.34%, Time: 0:53:46 *
+Iter:    400, Train Loss:    0.3, Train Acc:  92.19%, Val Loss:   0.68, Val Acc:  79.39%, Time: 1:10:25 *
+Iter:    500, Train Loss:   0.48, Train Acc:  88.28%, Val Loss:   0.69, Val Acc:  79.25%, Time: 1:28:09 
+Iter:    600, Train Loss:   0.32, Train Acc:  88.28%, Val Loss:    0.6, Val Acc:  81.85%, Time: 1:48:14 *
+Iter:    700, Train Loss:   0.27, Train Acc:  90.62%, Val Loss:   0.67, Val Acc:  78.73%, Time: 2:08:49 
+Epoch: 2
+Iter:    800, Train Loss:   0.32, Train Acc:  89.06%, Val Loss:   0.57, Val Acc:  82.67%, Time: 2:27:48 *
+Iter:    900, Train Loss:   0.22, Train Acc:  92.97%, Val Loss:   0.51, Val Acc:  84.75%, Time: 2:47:46 *
+Iter:   1000, Train Loss:   0.44, Train Acc:  87.50%, Val Loss:   0.59, Val Acc:  82.57%, Time: 3:06:53 
+Iter:   1100, Train Loss:   0.42, Train Acc:  88.28%, Val Loss:   0.51, Val Acc:  84.87%, Time: 3:25:52 *
+Iter:   1200, Train Loss:   0.33, Train Acc:  91.41%, Val Loss:   0.52, Val Acc:  85.16%, Time: 3:43:03 *
+Iter:   1300, Train Loss:  0.059, Train Acc:  98.44%, Val Loss:   0.57, Val Acc:  84.28%, Time: 4:01:18 
+Iter:   1400, Train Loss:   0.28, Train Acc:  92.97%, Val Loss:   0.49, Val Acc:  84.65%, Time: 4:19:59 
+Epoch: 3
+Iter:   1500, Train Loss:   0.27, Train Acc:  92.97%, Val Loss:   0.51, Val Acc:  84.95%, Time: 4:38:02 
+Iter:   1600, Train Loss:   0.17, Train Acc:  95.31%, Val Loss:   0.47, Val Acc:  86.97%, Time: 4:56:25 *
+Iter:   1700, Train Loss:   0.19, Train Acc:  93.75%, Val Loss:   0.46, Val Acc:  86.36%, Time: 5:14:46 
+Iter:   1800, Train Loss:   0.22, Train Acc:  93.75%, Val Loss:   0.53, Val Acc:  85.10%, Time: 5:34:09 
+Iter:   1900, Train Loss:   0.14, Train Acc:  96.09%, Val Loss:   0.44, Val Acc:  87.04%, Time: 5:51:08 *
+Iter:   2000, Train Loss:    0.1, Train Acc:  99.22%, Val Loss:   0.41, Val Acc:  87.84%, Time: 6:08:05 *
+Iter:   2100, Train Loss:   0.15, Train Acc:  94.53%, Val Loss:   0.48, Val Acc:  86.03%, Time: 6:23:57 
+Iter:   2200, Train Loss:   0.18, Train Acc:  93.75%, Val Loss:   0.47, Val Acc:  85.96%, Time: 6:39:26 
+Epoch: 4
+Iter:   2300, Train Loss:   0.13, Train Acc:  97.66%, Val Loss:   0.44, Val Acc:  87.86%, Time: 6:54:53 *
+Iter:   2400, Train Loss:   0.24, Train Acc:  93.75%, Val Loss:   0.39, Val Acc:  88.68%, Time: 7:10:21 *
+Iter:   2500, Train Loss:  0.069, Train Acc:  97.66%, Val Loss:   0.38, Val Acc:  89.43%, Time: 7:26:16 *
+Iter:   2600, Train Loss:    0.2, Train Acc:  93.75%, Val Loss:   0.44, Val Acc:  87.65%, Time: 7:42:53 
+Iter:   2700, Train Loss:   0.21, Train Acc:  94.53%, Val Loss:    0.4, Val Acc:  89.05%, Time: 7:58:37 
+Iter:   2800, Train Loss:  0.097, Train Acc:  98.44%, Val Loss:   0.38, Val Acc:  89.17%, Time: 8:14:11 
+Iter:   2900, Train Loss:   0.21, Train Acc:  93.75%, Val Loss:   0.41, Val Acc:  89.09%, Time: 8:29:52 
+Epoch: 5
+Iter:   3000, Train Loss:   0.21, Train Acc:  95.31%, Val Loss:   0.35, Val Acc:  89.78%, Time: 8:45:40 *
+Iter:   3100, Train Loss:  0.066, Train Acc:  96.88%, Val Loss:   0.36, Val Acc:  89.75%, Time: 9:01:22 
+Iter:   3200, Train Loss:   0.13, Train Acc:  94.53%, Val Loss:   0.37, Val Acc:  89.81%, Time: 9:16:47 *
+Iter:   3300, Train Loss:   0.16, Train Acc:  96.88%, Val Loss:   0.42, Val Acc:  88.35%, Time: 9:32:05 
+Iter:   3400, Train Loss:   0.11, Train Acc:  96.09%, Val Loss:    0.4, Val Acc:  88.44%, Time: 9:47:23 
+Iter:   3500, Train Loss:   0.14, Train Acc:  97.66%, Val Loss:   0.39, Val Acc:  89.04%, Time: 10:02:42 
+Iter:   3600, Train Loss:  0.089, Train Acc:  98.44%, Val Loss:   0.42, Val Acc:  88.62%, Time: 10:18:00 
+Iter:   3700, Train Loss:   0.13, Train Acc:  96.09%, Val Loss:   0.39, Val Acc:  88.93%, Time: 10:36:00 
+Epoch: 6
+Iter:   3800, Train Loss:  0.076, Train Acc:  97.66%, Val Loss:   0.38, Val Acc:  89.73%, Time: 10:51:32 
+Iter:   3900, Train Loss:   0.17, Train Acc:  95.31%, Val Loss:   0.41, Val Acc:  89.02%, Time: 11:06:48 
+Iter:   4000, Train Loss:  0.072, Train Acc:  96.88%, Val Loss:   0.34, Val Acc:  90.11%, Time: 11:22:02 *
+Iter:   4100, Train Loss:   0.16, Train Acc:  96.09%, Val Loss:   0.41, Val Acc:  89.33%, Time: 11:37:17 
+Iter:   4200, Train Loss:   0.11, Train Acc:  95.31%, Val Loss:   0.44, Val Acc:  87.15%, Time: 11:52:33 
+Iter:   4300, Train Loss:   0.16, Train Acc:  96.09%, Val Loss:   0.41, Val Acc:  88.77%, Time: 12:07:49 
+Iter:   4400, Train Loss:  0.076, Train Acc:  97.66%, Val Loss:   0.46, Val Acc:  87.81%, Time: 12:23:04 
+Epoch: 7
+Iter:   4500, Train Loss:  0.072, Train Acc:  97.66%, Val Loss:   0.42, Val Acc:  89.03%, Time: 12:38:20 
+Iter:   4600, Train Loss:  0.068, Train Acc:  98.44%, Val Loss:   0.45, Val Acc:  88.05%, Time: 12:53:34 
+Iter:   4700, Train Loss:   0.26, Train Acc:  93.75%, Val Loss:   0.41, Val Acc:  89.91%, Time: 13:08:49 
+Iter:   4800, Train Loss:   0.13, Train Acc:  95.31%, Val Loss:    0.4, Val Acc:  89.42%, Time: 13:24:04 
+Iter:   4900, Train Loss:   0.18, Train Acc:  94.53%, Val Loss:   0.41, Val Acc:  88.97%, Time: 13:39:19 
+Iter:   5000, Train Loss:   0.12, Train Acc:  95.31%, Val Loss:   0.38, Val Acc:  89.95%, Time: 13:54:35 
+No optimization for a long time, auto-stopping...
+
+testing:
+Test Loss:   0.29, Test Acc:  92.37%
+Precision, Recall and F1-Score...
+               precision    recall  f1-score   support
+
+        sport       0.99      0.98      0.98      2000
+      finance       0.92      0.98      0.95      2000
+     property       1.00      0.96      0.98      2000
+    household       0.88      0.91      0.89      2000
+    education       0.94      1.00      0.97      2000
+   technology       0.87      0.97      0.92      2000
+      fashion       0.93      0.73      0.82      2000
+    political       0.91      0.93      0.92      2000
+         game       0.92      0.99      0.95      2000
+entertainment       0.94      0.82      0.87      2000
+       social       0.87      0.89      0.88      2000
+        stock       0.95      0.93      0.94      2000
+
+    micro avg       0.92      0.92      0.92     24000
+    macro avg       0.92      0.92      0.92     24000
+ weighted avg       0.92      0.92      0.92     24000
+
+Confusion Matrix...
+[[1951    1    0    0    9    3    0    5    2   15    3   11]
+ [   1 1964    1    1    0    0    0    2    0    0    0   31]
+ [   0    7 1920   57    4    2    2    3    1    2    0    2]
+ [   0   17    2 1810    9   24   33   40   11   10   26   18]
+ [   0    0    0    0 1994    0    0    4    0    1    0    1]
+ [   0    0    0   12    0 1949    9    2   24    0    2    2]
+ [   1    1    0   67   45  187 1460   19   99   53   68    0]
+ [   1   29    0   14   10   14    1 1861    3    5   31   31]
+ [   2    4    0    2    0    4    1    4 1973    5    4    1]
+ [  19    9    2   49   27   13   67   17   20 1640  135    2]
+ [   3   46    0    8   21   34    4   72    5   22 1784    1]
+ [   0   66    2   37    0    3    0   18   10    1    0 1863]]
+Time usage: 0:10:55
+
+結果:
+使用15篇文章測試CNN及RNN-GRU結果
+
+〔體育中心／綜合報導〕老鷹進入重建模式，培養新血才是首要目標，30歲林書豪作為中生代，被賦予的任務為輔佐菜鳥，儘管自家球員有時在場上表現不如預期，但他會用「沒關係」3字鼓勵球員，林書豪受訪時也透露此句話的真正用意。林書豪接受中國節目《NBA最前線》採訪，分享在老鷹帶新人的歷程，他說：「以前都是做得比較多，可是因為我們很年輕，所以我們一直教、一直教，所以要講比較多話。」林書豪也藉機分享他的3字哲學，他說：「打籃球的時候，如果你做錯事，你一直生氣或是難過，那下一個Play你就會再次犯錯，你需要迅速的從錯誤中走出來。」林書豪時常以「沒關係」鼓勵球員，他認為與其陷入自責的情緒中，應該要提醒自己哪裡犯錯，盡可能的趕快改變，「你不能一直：『喔，為什麼我這樣子，或是我投籃沒進』，然後下次你投籃，如果一直想你上次沒進，那你下次投的時候一定不會進，所以還是沒關係，下一個球打好就好。」老鷹上季就打掉重建，陣中多以年輕球員為主，球隊高層也以培養新血為主，30歲的林書豪在NBA闖蕩多年，球隊也相當看重他的經驗，盼能有效輔佐陣中小將。
+cnn predict :  sport
+rnn predict :  sport
+
+每年智慧型手機總是不斷推陳出新，究竟哪款手機拍出來的相片最好？外國知名科技開箱YouTuber日前就在網路上舉辦一場手機相機盲測活動，沒想到iPhone XS卻在第一輪的盲測當中就被BlackBerry Key2打敗，而iPhone X則是敗給小米的Pocophone F1。YouTube知名科技頻道《Marques Brownlee》舉辦2018智慧型手機盲測，測試的手機包括蘋果iPhone X、iPhoneXS、谷歌Pixel 2、Pixel 3、三星Note 9、HTC U12+等16支各大品牌智慧型手機。測試方式則是每兩組手機為一組，分別來自不同品牌，之後再透過手機拍攝出來的照片供網友投票，比賽總共分為四輪，每張照片都是在相同的條件下拍攝。在眾所矚目的iPhone表現上，iPhone XS在第一輪投票中對上BlackBerry Key2，iPhone X則對上小米Pocophone F1。出人意料地，iPhone XS及iPhone X在第一輪盲測中都分別敗給對手，無緣晉級第二輪比賽。而在其他對決部分，三星Note9打敗HTC U12+，晉級第二輪比賽，最後四輪投票後，華為Mate 20 Pro榮登相機比賽第1名，跌破不少科技YouTuber的眼鏡。「在每一輪的投票中，較為明亮的相片總是能勝出，」對於這種結果，主持人表示：「雖然這樣的調查方式不一定科學，但卻反映了網友在挑選手機功能上，最在乎的其實是影像的表現是否『夠明亮』，而不一定是看起來最接近實物的相片，」他解釋。
+cnn predict :  technology
+rnn predict :  entertainment
+
+華為副董事長兼財務長孟晚舟1日在美中貿易談判重要關口被加拿大當局拘捕，並可能引渡到美國受審，北京火冒三丈，威脅將造成「嚴重後果」。中國外交部的發言人陸慷9日被問到中方會否採取「報復行動」時表示，中國一向依法保護外國公民在中國合法權益，但他們在中國期間，「也應遵守中國的法律法規」。假如美國堅持不撤逮捕令、加拿大堅持不放人，中國將會有怎樣的後續動作？加拿大不列顛哥倫比亞大學亞洲研究中心的中加關係專家埃文斯(Paul Evans)對英國廣播公司(BBC)表示，加拿大是迫不得已才被捲入美中貿易戰的漩渦，中國有多個方法向加拿大施壓，或會限制中國資金在加拿大的投資，特別是研究及發展費用。不過他認為，加拿大正在認真考慮讓華為在該國發展5G系統業務，這使得華為的處境變得困難，華為目前的回應是「自然反應」，但等待案件發展才能作進一步計算及行動。前加拿大駐中國大使馬大維(David Mulroney)對路透表示，中國和加拿大有可能凍結高層互訪交流活動，兩國自由貿易談判亦可能受到影響。「但我們也沒辦法，這就是與中國這種國家交涉所付出的代價」。路透報導，華為高管被捕引發美國的企業高管憂慮，早前多名美國大公司高管在新加坡出席一場閉門安全會議時，提到公司正考慮限制不必要的中國旅行，甚至考慮把公司會議移至中國境外。美國手機公司思科的員工收到電郵，建議他們停止不必要的訪華行程，但思科其後稱，電郵屬誤發，並沒有限制員工對中國進行商務旅遊。在北京的美國商會主席蔡瑞德(William Zarit)認為，中國不會直接向美國高管報復。他對「金融時報」說，「他們不想殺死生金蛋的鵝，他不想向第三國投資者發放負面訊號」。香港英文「南華早報」指出，由中國外交部、新華社和「人民日報」聯合發出對加拿大的譴責「是很不尋常的一步」。雖然中方還未表明會對加拿大採取何種行動，但從官方和官媒用字遣詞的強烈，可看出中方是有報復計畫的。
+cnn predict :  education
+rnn predict :  political
+
+日本共同社報導，日本政府10日在首相官邸召開各府省廳網路攻擊對策負責人出席的會議，決定將中國通信設備巨頭華為技術和中興通訊（ZTE）的產品排除出政府採購清單。美國川普政府擔心中國大陸的非法監聽等可能構成國家安全上的威脅，日本也認為作為同盟國「有必要統一步調」。共同社報導，這是鑑於兩公司被指與中國情報機構有關的舉措。日本官房長官菅義偉10日在記者會上指出：「不採購被植入竊取、破壞信息和令信息系統停止等惡意功能的設備極其重要。」他還表示「目的並非排除特定的企業和設備」，避開對兩家公司直接點名。據分析，此舉是顧及了處於改善態勢的日中關係。日本媒體上周就得到相關消息。日本共同社12月7日報導，多名日本政府消息人士當地時間12月7日透露，日本政府已經決定不採購華為與中興的通訊產品。日本中央政府各部門12月10日將召開會議，正式確認此事。值得注意的是，日本「產經新聞」8月26日就曾援引不具名消息人士的話稱，日本政府計畫禁止華為與中興參與建設資訊系統的投標活動，原因是基於「安全保障」考慮，美國和澳洲均把這兩家中國企業視為「問題公司」。報導說，在應對洩露機密情報、網路攻擊等方面，日本政府意在和其他國家保持「步調一致」。美國結盟澳洲、紐西蘭、英國抵制華為之後，傳出日本也加入圍堵行列。日本「讀賣新聞」7日報導，日本將實質禁止本國政府向華為和中興通訊採購電信產品，擔心發生情報洩漏以及遭到網路攻擊。對於相關消息，在北京時間7日下午舉行的中共外交部例行記者會上，中共外交部發言人耿爽對此回應稱，「我們對有關報導表示嚴重關切。中國政府一貫鼓勵中國企業按照市場原則和國際規則，在遵守當地法律的基礎上開展對外友好合作。中日經貿合作本質是互利共贏的，華為和中興公司長期在日本合法經營。我們希望日方為中國企業在日運營提供公平的競爭環境，不要做有損雙方互信和友好合作的事情。」
+cnn predict :  political
+rnn predict :  political
+
+回顧2018九合一大選，不少候選人跨界與網路紅人合作，頻上直播節目和觀眾互動、拉近距離，選戰結果也再再顯示網路聲量已不是空氣票。擁有超高人氣的網紅「館長」陳之漢，日前不僅被台北市長柯文哲點名「如果選議員一定上」，也受到廣大粉絲鼓吹支持「出來選」，面對外界熱議不斷，他今（10）日凌晨在臉書PO文，寫下12字回應，強調絕對不參選。網紅「館長」平時在社群媒體上直播，熱愛針砭時事，選前更與多名候選人直播引起熱烈迴響，8日台北市長柯文哲赴世新大學演講，談及「館長」更不諱言「其實館長出來選立委的話一定會上，機會很大；選議員一定會上」，肯定他的網路高聲量。對此，「館長」隔日隨即在臉書上PO文回應，感謝柯文哲的青睞，但表明「自己不是當官的料，至少現在還不行。」他同時強調，若柯文哲參選總統，他必定鼎力支持。不過不少粉絲仍然對館長期望滿滿，頻頻詢問、鼓譟他進攻立委寶座，因此館長今凌晨在臉書上以12字堅決婉拒：「我不會出來選，我選我婊子X！」。貼文一出網友們大嘆可惜，紛紛留言「出來選為民請命吧」、「館長你選，而且當立法院院長，我捐20萬給動物相關團體」、「館長不能選立委，萬一上了其他立委就不敢打架、霸占主席台...那怎麼拖延會期」。不過也有人勸館長先別把話說死，「從政不從政，其實館長也不用把話講滿，或是講死，隨緣！也無需要跟他人流言起舞，凡事無愧於心與天地即可」。
+cnn predict :  social
+rnn predict :  political
+
+九合一大選民進黨慘敗，蔡英文隨即辭去黨主席身分負責，另外行政院長賴清德請辭後獲慰留，昨天又舉辦記者會說「時間一到，我也會堅定地離開，率領內閣總辭，負起政治責任，不讓檢討流為空言」，議員王世堅上政論節目時，稱讚賴揆記者會如出師表悲壯，旁邊朱學恒的誇張表情讓大家都笑歪了。王世堅上政論節目《關鍵時刻》上表示，蔡英文知道賴清德是人才，他現在留住對於大局有很大的幫助，所以不願意讓賴清德離開，但因為是責任政治，所以賴清德就不得不走，對於賴清德在記者會上的言論，王世堅說「有如看到出師表臨表涕泣」、「寫得很深層悲壯」。對於王世堅的言論，全場笑聲不斷，旁邊的來賓朱學恒更是露出了翻白眼吐舌頭的表情，最後還是忍不住的笑了出來，王世堅說賴清德遇到大敗堅定留下處理；接著負起責任堅定的走，賴清德已經明志了，王世堅最後也說了「這次賴清德不用氣餒，因為他就如『非戰之罪』。
+cnn predict :  political
+rnn predict :  political
+
+蘋果以新創品牌Beddit名稱 推出首款睡眠品質監控器 售價149.95美金 蘋果將以Beddit品牌推出睡眠監控器，透過可放在床墊下的薄型感測帶，藉此追蹤最多兩名使用者的整體睡眠時間、心跳、呼吸，以及是否有打呼、鼾聲問題，並且能進一步確認房間內的溫度與濕度變化，讓使用者可確認如何達到最佳睡眠品質，建議售價為149.95美元。蘋果先前持續傳出可能打造一款針對睡眠品質監控產品，甚至在去年初收購一家開發睡眠品質追蹤技術的新創公司Beddit，更引起不少猜測認為蘋果準備將睡眠品質偵測功能加進AppleWatch系列產品。不過，蘋果最終依然未將睡眠品質追蹤功能加入後來推出的AppleWatchseries3，就連今年推出的AppleWatchserie
+cnn predict :  household
+rnn predict :  technology
+
+鴻海(2317)11月合併營收6014.41億元，創下歷史同期新高，同時也是歷史單月次高，營收表現相較股王大立光及權王台積電出現月減的情況優，今(11)日股價止跌，暫時化解探底危機，盤中漲幅1.92%。鴻海11月合併營收月增1.99%，年增5.59%，累計前十一月營收4兆6770.37億元，年增15.99%；董事長郭台銘先前曾透露，看好營運將旺到明年1月的訊息，法人預估，第4季營收有機會挑戰單季營收歷史新高。鴻海近期股價受到不少雜音的影響，一度下探至67.6元的7年多波段低點，今日反彈，早盤以68.5元開出，一度拉升至69.1元，企圖挑戰5日線，化解再探底危機，盤中漲幅1.92%。
+cnn predict :  stock
+rnn predict :  stock
+
+選後高雄房市有新氣象，從南高雄到北高雄，甚至觀音山義大皇家別墅都熱鬧滾滾，「韓流紅利」熱潮市場反應熱烈，隆大、京城、義聯集團建設部門信心高昂，業界感受到市場氛圍偏多，對明年展望樂觀。博是博行銷總經理朱檠表示，新高雄誕生，南高雄遠雄「THE ONE」結合飯店及豪宅獲市場青睞，尤其亞洲新灣區是高雄未來發展重點，四大硬體高雄展覽館、海洋流行音樂中心、圖書總館以及港埠旅運大樓等陸續完成，人流緩步靠攏，新灣區內土地以及優質地點愈趨稀少，後續隨著港都地帶繁榮，商用不動產以及店面的表現將是主流，尤其是三多路、新光路、中山路地帶是高雄地王所在，值得投資者密切關注。九合一選後第九天，韓國瑜親訪高雄最大民間企業義聯集團，義聯董事長林義守說，市長還沒有上任就前來，拚經濟的誠意令人感動，未來一定加大投資力道做新市府的後盾。多位高雄建商及中小企業主表示，準市長腰彎得下去，讓企業感覺很好、印象也很好，相信他一定做得到。林義守表示，他並沒有幫助韓國瑜的選舉，沒想到選後不到十天，準市長就到集團來，使人印象太深刻了。韓國瑜重申，企業只要把生意做好，賺更多的錢，創造更多的工作機會，就是對高雄最大的幫助。資深建商說，今年九合一選舉高雄是重中之重，高雄知名度大增對房地產有高度加分效果。南高雄地區包括隆大、太普、城揚在高雄市政府生活圈合推「新都廳2期」選後上市吸引人潮。隆大董事陳又齊表示，選後各界普遍對高雄房市有信心，真的要有成長，最重要還是看新市長上任後會怎麼做，如果能夠有效吸引大廠到高雄投資，帶動高雄平均薪資上漲，從基本盤奠定基礎，北漂青年及更多人到高雄就業居住，房地產市場自然會有好的表現。城揚建設董事長楊振宗、太普建設董事長方健良指出，2018年高雄房市表現不錯，預期2019年會比今年更好，原本銷售鈍化的中大坪數產品，有機會逐步恢復動能。此外，北高雄原本二個月賣不到一戶的上億元豪宅「京城」，選後出現二天連續各賣出一戶佳績，顯示金字塔頂級客源重新擁抱高雄市場。京城建設董事長蔡天贊說，高雄新市長韓國瑜未上任就成功創造高雄紅利，而且未來兩岸會更和諧，觀光客大量到高雄，地方經濟繁榮可期，激勵豪宅市場，緊接著中坪數換屋建案受惠，買房子的人跑出來，對建築業是一大喜訊。京城建設經理周敬恆表示，都會經濟繁榮，房地產市場必定欣榮向上，加上建築業是火車頭產業，房地產表現好、可以帶動建材、家電等百業興盛，是經濟景氣的重要推動力。新高雄市政府強調拚經濟，令人對後市有信心。
+cnn predict :  household
+rnn predict :  finance
+
+國民黨高雄市長候選人韓國瑜競選辦公室今天表示，將針對最近攻擊韓國瑜的不實言論、網傳訊息等與律師研究，不排除提告。韓國瑜日前已表示，明天要在台北針對有人傳用line「抹紅」他之事提告，不再隱忍。韓國瑜競選辦公室今天也與律師團聯絡，不排除就這幾天網路、line上傳言韓國瑜買票、發走路工、甚至發傳單誣指韓國瑜如當選市長會把林園變成殯葬區等提告。今天韓國瑜辦公室接到支持者轉的Line，有人傳韓國瑜造勢場有發走路工，還說每人發1500元，更有人傳韓國瑜在各區買票，一票3000元到6000元不等。韓國瑜辦公室表示，這些line訊息都是假消息，是有人故意中傷韓國瑜，而且有違反選罷法之嫌，已與律師研商，可能會採取法律行動。關於林園要設殯葬區的事，韓國瑜競選辦公室掌握一些在林園散發的傳單，也與律師研議提告，因為傳單中所言不是事實。
+cnn predict :  political
+rnn predict :  political
+
+靜宜大學號召全台47所天主教學校，透過「天主教學校週」靜點亮象徵基督之光的彩燈，並募集5200條「520愛心毛毯」資金，及1萬份由全台天主教小學、國中、高中職、大學生製作的文具禮物包，12月中旬要送愛到黎巴嫩「敘利亞難民營」。耶誕節總是充滿歡樂、慶祝氣氛，但靜宜大學希望更是「愛的散播」，校長唐傳義說，透過聖誕點燈儀式，讓代表光明與溫暖的「光｣照亮校園，也點亮每個人內心的心燈，讓社會充滿關愛、和諧、正義與喜樂。靜宜大學「聖誕點燈」系列活動，由學生社團人聲樂團、火舞社、管樂社、西文系師生的西文聖誕歌曲演唱揭開序幕，但相較於慶祝，學校有一連串的愛心活動。靜宜今年就串連全台47所天主教學校師生，共募集5200條愛心毛毯的資金；另合力完成1萬份「文具禮物包」，值得一提的是「文具禮物包」由大學、高中與國中小學生一起製作，先由各校老師介紹敘利亞戰爭與現況，學生親手於筆記本中繪圖祝福，將鉛筆、削鉛筆器及筆記本放入束口袋中，完成禮物包。靜宜校方感謝包括富勝紡織、利百代公司、和協生活捐贈，也以優惠價格提供環保毛毯、削鉛筆器及棉布束口袋等物資；還有台中教區主教公署、台灣明愛會、非營利組織EQUAL、黎巴嫩天主教會的貝魯特宗座代牧區César Essayan主教及中賀海貿等企業協助，這份「耶誕禮物」將台灣人愛心裝入40尺貨櫃，12月中旬運到黎巴嫩的「敘利亞難民營」。靜宜大學還有「聖誕系列活動」，師生為博幼基金會等孩童募集聖誕愛心禮物，15日在校門口大草坪舉行「耶穌聖誕愛心馬槽市集」；24日於修院聖堂舉行聖誕子夜彌撒；師生也利用課餘時間至台中女子監獄、台中看守所、光田護理之家、敬德護理之家等機構聖誕報佳音，讓社會充滿關愛與喜樂。
+cnn predict :  education
+rnn predict :  education
+
+台大校長遴選案陷僵局，台大自主聯盟今天呼籲教育部長葉俊榮所謂的「一步之遙」，不能要求合法行事的遴委會開會重選，而是違法的教育部承認錯誤、勇敢跨出最後一步，盡速聘管中閔為台大校長。台大土木系教授李鴻源表示，「請葉俊榮明確說出卡管案背後的政治原因，並且負政治責任。」今年1月5日，台大遴選委員會依法選出新校長，教育部至今未聘任，超過11個月台大沒有正式的校長；且因為此案，折損了兩位教育部長。葉俊榮昨天表示，希望台大遴選委員會能夠開會盡速處理，「只有一步之遙」。台大自主聯盟今天舉行 「還我校長－台灣教育不能等」記者會，管中閔本人也現身記者會現場。李鴻源表示，台灣民主的基本價值應該被尊重，「假如這個前提沒有了，發生在管中閔上的事情，也會發生在你我身上。」國家機器暴力地把手伸進校園，「讓台大陷入泥淖中」。世界各大學都在追求世界大學排名，若台大持續沒有校長，排名往後掉是必然的，而且會掉得非常厲害，同時代表國力往後掉。「是不是衝著管中閔來？衝著台大來？」李鴻源說，公務員必須依法行政，公務員不可以選擇性執法。根據這兩個原則，來檢視台大遴選校長的過程，就可以知道陽明大學也有獨董情事，而遴委中也有中研院院長和副院長沒有迴避的情形。因而縱有瑕疵，並非違法，其一是不符合比例原則而全盤推翻遴選結果，其二是「法」應一視同仁，不是雙重標準、針對性執法。「請葉俊榮明確說出卡管案背後的政治原因，並且負政治責任。」台大醫學系教授王明鉅無奈表示，過去因為政府、政黨與政治的各種干預，讓台大新校長懸缺近一年。以後台大也會有遴選，其他學校也會選校長，如果遴選程序不完美，以後可以改，但是現在讓它走完。期盼政府在大選結束民意呈現的此刻，能夠落實法治與尊重大學自治得來不易的精神，重新思考與決策，讓台大與台灣的高教能盡速邁開大步向前走。「越是有權力的人，越需要按照法律辦事。」王明鉅說，希望民進黨給台大校長機會，全民才會給民進黨機會。「民主政治不是要殺的你與我活，而是要讓台灣更好。」台大自主聯盟同時對蔡英文總統喊話，拿出行動，發給台大一紙校長聘書，讓我們看到政府團隊在大選挫敗之後，真正願意傾聽民意，展現誠意，並且將台灣教育的發展，常駐於心。
+cnn predict :  political
+rnn predict :  political
+
+嘉義高商廣告科學生黃曉倩，國中會考獲5A佳績，卻選讀職校，日前獲全國商業類學生技藝競賽電腦繪圖組金手獎，除了取得保送國立科技大學資格外，還將赴海外研習參訪12天。嘉義高商校長林義棟今天召開記者會表示，今年是嘉義高商創校80週年，學校派出8組學生參加本月4日至6日在高雄市鳳山商工舉辦的全國商業類學生技藝競賽，結果拿下3座金手獎、5座優勝獎，獲獎率100%。其中，廣告科3年級學生黃曉倩獲電腦繪圖組金手獎，確定取得保送國立科技大學資格，並將獲國教署推薦參加海外12天研習參訪。指導教師顏家鈞表示，黃曉倩從小喜歡畫畫，她的父親是程式設計師，母親是家庭主婦。母親看她用電腦滑鼠繪圖，覺得十分不便，就在她讀國中時送她一塊繪圖板。她說，黃曉倩國中會考獲5A佳績，由於喜歡畫畫，家人尊重她的興趣與志向，放棄就讀嘉義女中的機會，選擇嘉商廣告設計科，3年來成績都保持全科第一名。黃曉倩表示，她原本只想考統測，不想參加校內初選，經師長鼓勵，最後才取得電繪選手資格。她常在網站上設計人物角色，將來希望往遊戲設計方向發展。
+cnn predict :  education
+rnn predict :  education
+
+今日的測試服更新已經推出囉！本日主要的更新內容有：「史瓦妮、艾希、吉茵珂絲、希維爾、剎雅」平衡調整，「防禦塔」獎勵調整！註：PBE只是持續測試的過程，朝令夕改例子很多，且資訊可能與正式版本有些許出入，一切以官網資訊為主。【平衡改動】【英雄】史瓦妮基礎數值基礎魔防由27.1提升至 32.1。成長魔防由0.75提升至1.25。成長物防由3提升至4.25。成長生命由88提升至105。北境之怒護甲消失時間由受到傷害後2秒延長至3秒。極地衝刺基礎傷害由60/90/120/150/180提升至80/120/160/200/240。凜冬狂怒第二段鞭打之基礎傷害由 30/65/100/135/170 提升至30/70/110/150/190。永恆凍土 暈眩時間由1.0/1.1/1.2/1.3/1.4秒縮短至1.0秒。基礎傷害由20/35/50/65/80提升至40/100/160/220/280。施放距離由750減少至560。艾希鷹擊長空 【新增】現在若使用此技能揭露戰爭迷霧中的敵人，且該敵人在短時間內被隊友擊殺的話艾希將可以獲得助攻。吉茵珂絲咻咻！ 【新增】現在會隨著攻速提升縮短施法時間。希維爾迴旋之刃【調整】現在只有穿過非英雄單位時將才會遞減 15%技能傷害。十字彈射彈射傷害由50/55/60/65/70%提升至55/60/65/70/75%。狩獵被動：使用十字彈射時攻速加成由30/45/60%調整至45%。崔絲塔娜爆炸射擊冷卻時間由16/15.5/15/14.5/14秒縮短至12/11/10/9/8秒。剎雅漫天血刃【移除】不再因暴擊率而提升技能傷害。【符文】刀鋒之雹攻擊速度加成由125%減少至110%。【地圖】外防禦塔現在失去所有護甲後的防禦力由0提升至40。推塔金錢【更改前】摧毀防禦塔以及首塔金錢獎勵將會分給防禦塔附近的所有英雄。【更改後】摧毀防禦塔以及首塔金錢獎勵將會分給防禦塔附近的所有英雄及協助進行塔殺的助攻英雄。★快加入《上報》好友！看更多深度新聞★
+cnn predict :  game
+rnn predict :  game
+
+知名麵包師傅吳寶春在大陸展店，卻被大陸媒體翻出過去專訪，遭大陸網友抵制是「台獨麵包」，吳寶春發出聲明其生於「中國台灣」、堅持「兩岸一家親」，並說「身為中國人，是我的驕傲」，引發輿論譁然。對此，國民黨前立委孫大千今（12）日表示，「請大家高抬貴手，放過吳寶春吧！」孫大千今日在臉書上發文聲援吳寶春。他指出，「吳寶春只是當前緊張對立的兩岸關係情勢下的犧牲者。你以為他喜歡像一片夾心餅乾一樣，每天被逼著表態選擇，『他究竟是哪裡的人嗎』？」孫大千表示，對於一位背負著國內外投資者期望的企業經營者來說，如何保障投資人的權益是必須優先考量的重點。將心比心，為什麼不能給這位我們引以為傲的「台灣之光」，多一點體諒和支持？孫大千也批評，今天要不是因為總統蔡英文無法兌現選前保證「兩岸關係維持現狀」的承諾，吳寶春又何必落到這樣兩面不是人的下場呢？還有，某位前內閣閣員也拜託不要利用機會落井下石，丟人現眼了。孫大千表示，台灣勞工的低薪和過勞，不就是行政院這群偉大的官僚所造成的嗎？該前閣員在行政院服務的時候，怎麼不敢說出真心話呢？孫大千說，「衷心地祝福吳寶春師父，能夠把屬於台灣驕傲的麵包，帶到全世界的每一個角落。」
+cnn predict :  political
+rnn predict :  political
+
+CNN Cost 0.26739 seconds for predict 15 news!
+RNN Cost 5.423585 seconds for predict 15 news!
+
+以此結果來說RNN分類較佳，如館長選議員新聞CNN分類為社會新聞.RNN分類為政治新聞，華為副董事長新聞CNN分類為教育新聞.RNN分類為政治新聞。
